@@ -1,0 +1,377 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 600px;
+    background: #78451a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e582c, #b88b5c), url(../img/portada.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8e582c, #b88b5c), url(../img/portada.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.fa-solid {
+    font-size: 30px;
+    }
+
+nav{
+    text-align: center;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 30px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+    
+}
+
+header .textos-header{
+    display: flex;
+    height: 210px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.textos-header h1{
+    font-size: 150px;
+    color:#ffffff;
+    font-family: 'Montserrat';
+}
+
+h3{
+    font-size: 80px;
+    text-align: center;
+    color:#ffffff;
+    font-family: 'Montserrat';
+    margin-left: 20px}
+
+.top-header {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.texto {
+    font-size: 50px;
+    font-family: 'Montserrat';
+    color: #623307;
+    }
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #623307;
+    font-size: 40px;    
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.buscar {
+    height: 35px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* header*/
+
+.tento {
+    font-family: 'Montserrat';
+    color: #623307;
+}
+
+body {
+    background-color:#d0ab7a;
+    font-family: 'Roboto', sans-serif;
+}
+
+button{
+    height: auto;
+    width: auto;
+}
+
+.fotoalmedio {
+    align-items: flex;  
+    align-items: center;
+    text-align: center;
+}
+
+/* footer*/
+footer {
+    background-color: #8e582c;
+    color: white;
+    align-items: bottom;
+    margin-top: 120px;
+}
+
+.footer2 {
+    font-size: 15px; 
+}
+
+.redessociales {
+    text-align: right;
+    margin-right: 30px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+    }
+
+.powered {
+    text-align: center;
+}
+/*footer*/
+
+
+/* compras*/
+.chocolate {
+    width: 80px;
+    font-size: 10px;
+}
+.container-miscompras {
+  display: flex;
+  text-align: center;
+  border-radius: 3px;
+  align-items: left;
+  justify-content: center;
+}
+
+.medios {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    text-decoration:underline;
+    color: #623307;
+    
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #623307
+
+}
+
+.profile input, .profile label{
+    width: auto;
+    width: auto;
+}
+
+.tablas-compras {
+
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+}
+
+.total-pedido p{
+    display: flex;
+    height: 30px;
+    width: 250px;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    position: relative;
+    font-weight: bold;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.items {
+    justify-content: space-between;
+}
+
+.pago {
+
+  align-items: right;
+  justify-content: right;
+
+}
+
+/* formularios */
+.login input ,
+.register input{
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px solid grey;
+    border: 10px;
+    align-self: center;
+    }
+
+
+.login input[type='submit'],
+.register input[type='submit']{
+    color: #FFF;
+    background-color: #8e582c;  
+    border-radius: 5px;
+}
+
+.login input[type='submit']:hover,
+.register input[type='submit']:hover{
+    background-color: green;
+}
+
+.register input[type='reset']{
+    color: #FFF;
+    background-color: #8e582c;
+}
+
+.register input[type='reset']:hover{
+    background-color: red;
+}
+/*formularios*/
+/*header mercadolibre*/
+    header div.top-header{
+        padding: 2%;    
+    }
+
+    header div.top-header{
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header div.top-header div.logo{
+        flex-grow: 5;
+        width: auto ;
+    }
+
+    header div.top-header form{
+        flex-grow: 5;
+        width: auto ;
+    }
+
+    header div.top-header p{
+        flex-grow: 1;
+        width: auto;
+    }
+
+
+    div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+    
+
+    
+    .price {
+        width: 70%;
+    }
+    .discount{
+        width: 30%;
+    }
+
+    .top-header {
+        flex-direction: row-reverse,
+        }
+    
+    .inicio {
+        padding-right: 40px
+    }
+    
+    .copy-header {
+        max-width: 350px;
+        text-align: right;
+    }
+/*header mercadolibre*/
+    .logofondo {
+        opacity: 30%;
+        align-items: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+        font-size: 300px;
+    }
+    #tabla-precios {
+        display:inline-block;
+        width:100%;
+        margin-top:50px
+    }
+    
+
+    /*Columnas*/
+    
+    .precio-col {
+        display:inline-block;
+        background-color:#f3f3f3;
+        width:100%;
+        max-width:500px;
+        border-radius:10px;
+        margin-bottom:50px;
+        box-shadow: 0px 2px 5px #ddd
+    }
+
+   
+
+     /*Columnas*/
+/*media ver*/
+   
+
+.grid-container-inicio{
+    display: grid;
+    gap: 20px;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+.grid-container-inicio > div {
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.product_img {
+    width: 50%;
+}
+
+
+.grid-container{
+    display: grid;
+    gap: 20px;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+}
+
+.grid-container > div {
+    text-align: center;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+i {
+    width: 5px;
+    height: 5px;
+    color:#78451a;
+}
