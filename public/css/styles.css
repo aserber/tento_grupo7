@@ -97,7 +97,11 @@ h2 {
     border-radius: 10px;
 }
 
-/* header*/
+/* headerfin*/
+
+
+
+
 /* footer*/
 footer {
     background-color: #8e582c;
@@ -121,7 +125,7 @@ footer {
 .powered {
     text-align: center;
 }
-/*footer*/
+/*footer fin*/
 
 body {
     background-color:#d0ab7a;
@@ -223,17 +227,6 @@ body {
 } /*carrito-compras*/
 
 
-.registercompras input.textInput {
-    width: 50%;
-    padding: 10px;
-    margin: 20px 0px;
-    border-radius: 5px solid grey;
-    border: 10px;
-    align-self: center;
-}
-
-
-
 .profile {
     display: flex;
     align-items: center;
@@ -269,7 +262,7 @@ body {
     justify-content: space-between;
 }/*carrito productos tabla*/
 
-.registercompras input/*COMPRAS */{
+.registercompras input.textInput/*COMPRAS */{
     width: 50%;
     padding: 10px;
     margin: 20px 0px;
@@ -277,7 +270,7 @@ body {
     border: 10px;
     align-self: center;
     }
-
+    
 .registercompras input[type='submit']/*COMPRAS */{
     color: #FFF;
     background-color: #8e582c;  
@@ -299,6 +292,7 @@ body {
 
 .botonera {
     margin-top: 20px;
+    color: #623307;
 } /*medios de pago en mis compras*/
 
         .botonera input {
@@ -313,26 +307,6 @@ body {
 /*COMPRAS CARRITO FIN*/
 
 
-
-/*eliminar*/
-.total-pedido p{
-    display: flex;
-    height: 30px;
-    width: 250px;
-    background-color: #ffffff;
-    flex-wrap: wrap;
-    position: relative;
-    font-weight: bold;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-} /*NO EXISTE SOLO ESTA TOTAL-PRICE*/
-
-
-
-
-
-
 /*descproducto*/
 .imagenprod {
     width: 30%;
@@ -345,7 +319,7 @@ h5 {
     display : flex;
     justify-content: right;
     flex-direction: column;
-    width: 30%;
+    width: 35%;
     font-size: 30px;
     font-family: "Monserrat";
     color:#623307;
@@ -362,7 +336,7 @@ h5 {
 
 .descp {
     font-size: 25px;
-    padding: 10px;
+    padding: 15px;
     margin: 10px;
     font-family: "Monserrat";
     color:#623307;
@@ -370,12 +344,21 @@ h5 {
     }   
 
 .botonerapro {
-    display:flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #623307;
+    padding: 10px 20px;
 }
 
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #623307;
+    font-size: 30px ; 
+}
 
-/*descproducto*/
+/*descproducto fin*/
 
 
 
@@ -387,7 +370,7 @@ h5 {
 /*PRODUCTOS Y PRODUCTOSTORTAS*/
 
 .product_img {
-    width: 50%;
+    width: 40%;
 }/*producto,productostortas*/
 
 .grid-container{
@@ -404,7 +387,7 @@ h5 {
     height: 400px;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 40px;
 }/*producto,productostortas*/
 
 i {
@@ -412,5 +395,15 @@ i {
     height: 5px;
     color:#78451a;
 } /*producto,productostorta*/
+
+.price {
+    font-size: 18px;
+}/*producto,productostorta*/
+.discount{
+    font-size: 18px;
+}/*producto,productostorta*/
+.description{
+    font-size: 22px;
+}/*producto,productostorta*/
 
 /*PRODUCTOS Y PRODUCTOSTORTAS FIN*/
