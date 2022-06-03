@@ -219,7 +219,19 @@ body {
   border-radius: 3px;
   align-items: left;
   justify-content: center;
+  
 } /*carrito-compras*/
+
+
+.registercompras input.textInput {
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px solid grey;
+    border: 10px;
+    align-self: center;
+}
+
 
 
 .profile {
