@@ -323,8 +323,46 @@ body {
 
 /*descproducto*/
 .imagenprod {
-    width: 50%;
+    width: 30%;
+    float:left;
+    position: right;
+    padding: 3%    
 }
+
+h5 {
+    display : flex;
+    justify-content: right;
+    flex-direction: column;
+    width: 30%;
+    font-size: 30px;
+    font-family: "Monserrat";
+    color:#623307;
+    font-weight: bold;
+}
+.preciop {
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    font-family: "Monserrat";
+    color:#623307;
+    font-weight: bold;
+}
+
+.descp {
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    font-family: "Monserrat";
+    color:#623307;
+    font-weight: bold;
+    }   
+
+.botonerapro {
+    display:flex;
+    justify-content: center;
+}
+
+
 /*descproducto*/
 
 
