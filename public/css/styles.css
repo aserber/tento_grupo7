@@ -203,12 +203,15 @@ body {
 /* compras*/
 
 .medios {
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-    text-decoration:underline;
     color: #623307;
+    font-size: 25px;
+    margin: auto;
+    width: 50%;
 } /*medios de pago en mis compras*/
+
+    .medios label {
+        font-size: 18px;
+    }/*medios de pago en mis compras*/
 
 .container-miscompras {
   display: flex;
@@ -281,6 +284,19 @@ body {
 .registercompras input[type='reset']:hover/*COMPRAS*/{
     background-color: red;
 }
+
+.botonera {
+    margin-top: 20px;
+} /*medios de pago en mis compras*/
+
+        .botonera input {
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+            color: #623307;
+            padding: 10px 20px;
+        } /*medios de pago en mis compras*/
+
 
 /*COMPRAS CARRITO FIN*/
 
