@@ -1,0 +1,23 @@
+{
+  "name": "tento",
+  "version": "1.0.0",
+  "description": "Integrantes: \r Alan Serber\r Tatiana Goyenechea\r Francisco Vilaplana\r Camila Caracciolo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aserber/grupo_7_tento.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aserber/grupo_7_tento/issues"
+  },
+  "homepage": "https://github.com/aserber/grupo_7_tento#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
