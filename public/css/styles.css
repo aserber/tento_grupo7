@@ -223,17 +223,6 @@ body {
 } /*carrito-compras*/
 
 
-.registercompras input.textInput {
-    width: 50%;
-    padding: 10px;
-    margin: 20px 0px;
-    border-radius: 5px solid grey;
-    border: 10px;
-    align-self: center;
-}
-
-
-
 .profile {
     display: flex;
     align-items: center;
@@ -269,7 +258,7 @@ body {
     justify-content: space-between;
 }/*carrito productos tabla*/
 
-.registercompras input/*COMPRAS */{
+.registercompras input.textInput/*COMPRAS */{
     width: 50%;
     padding: 10px;
     margin: 20px 0px;
@@ -277,7 +266,7 @@ body {
     border: 10px;
     align-self: center;
     }
-
+    
 .registercompras input[type='submit']/*COMPRAS */{
     color: #FFF;
     background-color: #8e582c;  
@@ -299,6 +288,7 @@ body {
 
 .botonera {
     margin-top: 20px;
+    color: #623307;
 } /*medios de pago en mis compras*/
 
         .botonera input {
@@ -311,26 +301,6 @@ body {
 
 
 /*COMPRAS CARRITO FIN*/
-
-
-
-/*eliminar*/
-.total-pedido p{
-    display: flex;
-    height: 30px;
-    width: 250px;
-    background-color: #ffffff;
-    flex-wrap: wrap;
-    position: relative;
-    font-weight: bold;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-} /*NO EXISTE SOLO ESTA TOTAL-PRICE*/
-
-
-
-
 
 
 /*descproducto*/
@@ -370,10 +340,19 @@ h5 {
     }   
 
 .botonerapro {
-    display:flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #623307;
+    padding: 10px 20px;
 }
 
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #623307;
+    font-size: 30px ; 
+}
 
 /*descproducto*/
 
