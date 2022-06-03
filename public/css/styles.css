@@ -97,7 +97,11 @@ h2 {
     border-radius: 10px;
 }
 
-/* header*/
+/* headerfin*/
+
+
+
+
 /* footer*/
 footer {
     background-color: #8e582c;
@@ -121,7 +125,7 @@ footer {
 .powered {
     text-align: center;
 }
-/*footer*/
+/*footer fin*/
 
 body {
     background-color:#d0ab7a;
@@ -354,7 +358,7 @@ h6 {
     font-size: 30px ; 
 }
 
-/*descproducto*/
+/*descproducto fin*/
 
 
 
@@ -366,7 +370,7 @@ h6 {
 /*PRODUCTOS Y PRODUCTOSTORTAS*/
 
 .product_img {
-    width: 50%;
+    width: 40%;
 }/*producto,productostortas*/
 
 .grid-container{
@@ -383,7 +387,7 @@ h6 {
     height: 400px;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 40px;
 }/*producto,productostortas*/
 
 i {
@@ -391,5 +395,15 @@ i {
     height: 5px;
     color:#78451a;
 } /*producto,productostorta*/
+
+.price {
+    font-size: 18px;
+}/*producto,productostorta*/
+.discount{
+    font-size: 18px;
+}/*producto,productostorta*/
+.description{
+    font-size: 22px;
+}/*producto,productostorta*/
 
 /*PRODUCTOS Y PRODUCTOSTORTAS FIN*/
