@@ -333,7 +333,7 @@ h5 {
     display : flex;
     justify-content: right;
     flex-direction: column;
-    width: 30%;
+    width: 35%;
     font-size: 30px;
     font-family: "Monserrat";
     color:#623307;
@@ -350,7 +350,7 @@ h5 {
 
 .descp {
     font-size: 25px;
-    padding: 10px;
+    padding: 15px;
     margin: 10px;
     font-family: "Monserrat";
     color:#623307;
