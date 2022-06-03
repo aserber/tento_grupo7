@@ -11,8 +11,9 @@ app.use(express.static(publicPath));
 app.listen(3000, () => console.log("esto fue exitoso"));
 
 app.get('/', function(req, res){
-    res.send('Tentó, sitio en construccion')
-}); 
+    let htmlPath = path.resolve(__dirname, './views/index.html');
+    res.sendFile(htmlPath);
+})
 
 app.get('/login', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/login.html');
@@ -29,13 +30,13 @@ app.get('/index', function(req, res){
     res.sendFile(htmlPath);
 })
 
-app.get('/formulario-registro', function(req, res){
-    let htmlPath = path.resolve(__dirname, './views/formulario-registro.html');
+app.get('/registro', function(req, res){
+    let htmlPath = path.resolve(__dirname, './views/registro.html');
     res.sendFile(htmlPath)
 })
 
-app.get('/productos', function(req, res){
-    let htmlPath = path.resolve(__dirname, './views/productos.html');
+app.get('/producto', function(req, res){
+    let htmlPath = path.resolve(__dirname, './views/producto.html');
     res.sendFile(htmlPath)
 })
 app.get('/productostortas', function(req, res){
@@ -48,15 +49,7 @@ app.get('/inicio', function(req, res){
     res.sendFile(htmlPath);
 })
 
-app.get('/index3', function(req, res){
-    let htmlPath = path.resolve(__dirname, './views/index3.html');
-    res.sendFile(htmlPath);
-})
 
-app.get('/compras', function(req, res){
-    let htmlPath = path.resolve(__dirname, './views/compras.html');
-    res.sendFile(htmlPath);
-})
 
 app.get('/carrito', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/carrito.html');
