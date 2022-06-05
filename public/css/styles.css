@@ -273,27 +273,32 @@ body {
     
 .registercompras input[type='submit']/*COMPRAS */{
     color: #FFF;
-    background-color: #8e582c;  
-    border-radius: 5px;
+    background-color:#623307;  
+    transition:all 450ms;
 }
 
 .registercompras input[type='submit']:hover/*COMPRAS*/{
-    background-color: green;
+    background-color:#8e582c;
+    border-radius: 20%;
 }
 
 .registercompras input[type='reset']/*COMPRAs*/{
     color: #FFF;
-    background-color: #8e582c;
+    background-color: #623307;
+    transition: all 450ms
 }
 
 .registercompras input[type='reset']:hover/*COMPRAS*/{
-    background-color: red;
+    background-color:#8e582c;
+    border-radius: 20%;
 }
 
 .botonera {
     margin-top: 20px;
     color: #623307;
-} /*medios de pago en mis compras*/
+
+} 
+ /*medios de pago en mis compras*/
 
         .botonera input {
             align-items: center;
@@ -349,6 +354,7 @@ h5 {
     font-size: 15px;
     color: #623307;
     padding: 10px 20px;
+ 
 }
 
 h6 {
