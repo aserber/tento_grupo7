@@ -4,7 +4,7 @@
   "description": "Integrantes: \r Alan Serber\r Tatiana Goyenechea\r Francisco Vilaplana\r Camila Caracciolo",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
