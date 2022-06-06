@@ -4,7 +4,7 @@
   "description": "Integrantes: \r Alan Serber\r Tatiana Goyenechea\r Francisco Vilaplana\r Camila Caracciolo",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
