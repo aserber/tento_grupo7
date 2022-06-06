@@ -42,7 +42,7 @@ app.get('/producto', function(req, res){
     res.sendFile(htmlPath)
 })
 app.get('/productostortas', function(req, res){
-    let htmlPath = path.resolve(__dirname, '.\views\productostortas.html');
+    let htmlPath = path.resolve(__dirname, './views/productostortas.html');
     res.sendFile(htmlPath)
 })
 
