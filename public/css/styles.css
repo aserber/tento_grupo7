@@ -140,7 +140,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 } /*header*/
 
-.grid-container-inicio > div {
+.grid-container-inicio div {
     text-align: center;
     color: #FFF;
     display: flex;
@@ -169,7 +169,7 @@ body {
     align-self: center;
     }
 
-
+/*BOTONES*/
 .login input[type='submit']/* LOGIN */,
 .register input[type='submit']/*REGISTRO*/{
     color: #FFF;
@@ -190,7 +190,7 @@ body {
 .register input[type='reset']:hover/*REGISTRO*/{
     background-color: red;
 }
-
+/*BOTONES*/
 .container-registro,
 .container-login{
     display: flex;
@@ -270,7 +270,7 @@ body {
     border: 10px;
     align-self: center;
     }
-    
+/*BOTONES*/  
 .registercompras input[type='submit']/*COMPRAS */{
     color: #FFF;
     background-color:#623307;  
@@ -307,7 +307,7 @@ body {
             color: #623307;
             padding: 10px 20px;
         } /*medios de pago en mis compras*/
-
+/*BOTONES*/  
 
 /*COMPRAS CARRITO FIN*/
 
