@@ -211,38 +211,30 @@ body {
     font-family: "Monserrat";
 }
 
-
-.botonerapro input [type='submit']{
-    display: flex;
-    justify-items: center;
-    color: #FFF;
-    background-color: #623307;
-    font-size: 20px;
+ 
+.small-input2 /*descripcion producto*/{
+    display:grid;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    width: 15%;
+    height: 10%;
+    font-size: 15px;
     font-family: "Monserrat";
-    margin-top: 15px;
-    transition: all 450ms;
-}
+    font-weight: bold;
+    background-color:#d0ab7a;
+    border-radius: 20px;
+    transition: 450ms;
+    margin-left: 450px;
+}   
 
-.botonerapro input [type='reset']/*producto*/{
-    display: flex;
-    justify-items: center;
-    color: #FFF;
-    background-color: #623307;
-    font-size: 20px;
-    font-family: "Monserrat";
-    margin-top: 15px;
-    transition: all 450ms;
-}
-
-.botonerapro [type='reset']:hover/*producto*/,
-.botonerapro input[type='submit']:hover{
+.small-input2 [type=submit]:hover/*descripcion producto*/,
+.small-input2 [type=reset]:hover/*descripcion producto*/{
     background-color: #8e582c;
     color: #FFF;
     border-radius: 20%;
     font-family: "Monserrat";
-    font-size: 20px; 
 }
-
 
 .botoncarro2  input[type='reset']/*carrito-tabla*/{
     color: #FFF;
@@ -365,15 +357,11 @@ color: #3f2104;
     justify-content: space-between;
     font-size: 25px;
     font-family: "Monserrat";
-
-
 }
 
 /*carrito productos tabla*/
 
-.registercompras input.textInput
-
-/*COMPRAS */
+.registercompras input.textInput/*COMPRAS */
     {
     width: 50%;
     padding: 10px;
@@ -388,6 +376,14 @@ color: #3f2104;
 
 
 /*descproducto*/
+.contenedor-prod{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+
+}
 .imagenprod {
     width: 30%;
     float: left;
@@ -395,45 +391,34 @@ color: #3f2104;
     padding: 3%
 }
 
-h5 {
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 35%;
-    font-size: 30px;
-    font-family: "Monserrat";
-    color: #623307;
-    font-weight: bold;
-
-}
-
-.preciop {
-    font-size: 25px;
-    padding: 10px;
-    margin: 10px;
-    font-family: "Monserrat";
-    color: #623307;
-    font-weight: bold;
-}
-
-.descp {
-    font-size: 25px;
-    padding: 15px;
-    margin: 10px;
-    font-family: "Monserrat";
-    color: #623307;
-    font-weight: bold;
-
-}
-
-
-
 h6 {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     background-color: #623307;
     font-size: 30px;
+}
+
+.descp, 
+.preciop{
+    display: flex;
+    justify-content: left;
+    font-size: 23px;
+    padding: 5px;
+    margin: 6px;   
+    font-family: "Monserrat";
+    color: #ffffff;
+    font-weight: bold;
+}
+.description {
+    display: inline-block;
+    justify-content: right;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 35%;
+    font-size: 27px;
+    font-family: "Monserrat";
+    color: #623307;
+    font-weight: bold;
 }
 
 /*descproducto fin*/
@@ -463,7 +448,7 @@ h6 {
 
 
 @media screen and (max-width: 1200px) {
-    .contenedor img {
+    .contenedor img{
         width: 40%;
     }
 }
@@ -475,7 +460,7 @@ h6 {
 }
 
 @media screen and (max-width: 500px) {
-    .contenedor img {
+    .contenedor img{
         width: 70%;
     }
 }
