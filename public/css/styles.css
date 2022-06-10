@@ -8,7 +8,7 @@
 
 header {
     width: 100%;
-    height: 600px;
+    height: 450px;
     background: #78451a;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #8e582c, #b88b5c), url(../img/portada.jpg);
@@ -50,6 +50,8 @@ header .textos-header {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    position: relative;
+    z-index: 10;
 
 }
 
