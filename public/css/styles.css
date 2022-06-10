@@ -413,3 +413,83 @@ i {
 }/*producto,productostorta*/
 
 /*PRODUCTOS Y PRODUCTOSTORTAS FIN*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    
+ }
+
+.contenedor img{
+    width: 100%;
+    height:220px;
+    margin: 5px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px white;
+    flex: auto;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .contenedor img {
+        width: 40%;
+    }    
+}
+
+@media screen and (max-width: 800px) {
+    .contenedor img {
+        width: 50%;
+    }    
+}
+
+@media screen and (max-width: 500px) {
+    .contenedor img {
+        width: 70%;
+    }    
+}
+
+@media screen and (max-width: 360px) {
+    .contenedor img {
+        width: 95%;
+    
+    }    
+}
+
+.h3-producto {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.producto-chocolate {
+    text-align: center;
+    margin: 50px;
+}
