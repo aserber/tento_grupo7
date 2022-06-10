@@ -140,7 +140,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 } /*header*/
 
-.grid-container-inicio > div {
+.grid-container-inicio div {
     text-align: center;
     color: #FFF;
     display: flex;
@@ -155,7 +155,7 @@ body {
     align-items: center;
     text-align: center;
 }
- /*INDEX FIN*/
+/*INDEX FIN*/
 
 
 /* formularios */
@@ -169,27 +169,66 @@ body {
     align-self: center;
     }
 
-
+/*BOTONES*/
 .login input[type='submit']/* LOGIN */,
-.register input[type='submit']/*REGISTRO*/{
+.register input[type='submit']/*REGISTRO*/,
+.producto-chocolate input[type='submit'] /*productos*/,
+.botoncarro input[type='submit'],
+.botonerapro input[type='submit'],
+.registercompras input[type='submit']{
     color: #FFF;
-    background-color: #8e582c;  
-    border-radius: 5px;
+    background-color: #623307;  
+    font-size: 20px;
+    font-family: "Monserrat";
+    transition:all 450ms;
 }
+.login input[type='reset']/* LOGIN */,
+.register input[type='reset']/*REGISTRO*/,
+.botoncarro input[type='reset'],
+.botonerapro [type='reset'],
+.registercompras input[type='reset']{
+    color: #FFF;
+    background-color: #623307; 
+    font-size: 20px;
+    font-family: "Monserrat"; 
+    transition:all 450ms;
+} 
 
 .login input[type='submit']:hover/* LOGIN */,
-.register input[type='submit']:hover/*REGISTRO*/{
-    background-color: green;
-}
-
-.register input[type='reset']/*REGISTRO*/{
+.register input[type='submit']:hover/*REGISTRO*/,
+.producto-chocolate input[type='submit']:hover/*productos*/,
+.botoncarro input[type='submit']:hover,
+.botonerapro input[type='submit']:hover,
+.registercompras input[type='submit']:hover{
+    background-color: #8e582c;  
     color: #FFF;
-    background-color: #8e582c;
+    border-radius: 20%;
 }
 
-.register input[type='reset']:hover/*REGISTRO*/{
-    background-color: red;
+.login input[type='reset']:hover/* LOGIN */,
+.register input[type='reset']:hover/*REGISTRO*/,
+.botoncarro input[type='reset']:hover,
+.botonerapro [type='reset']:hover,
+.registercompras input[type='reset']:hover{
+    background-color: #8e582c;  
+    color: #FFF;
+    border-radius: 20%;
+    font-family: "Monserrat";
+    font-size: 20px;
 }
+
+/*BOTONES*/
+
+
+
+
+
+
+
+
+
+
+
 
 .container-registro,
 .container-login{
@@ -198,10 +237,8 @@ body {
     border-radius: 3px;
     align-items: left;
     justify-content: center;
-  } /*agregue ete contenedor para registro y login*/
- /*FORMUALRIOS FIN*/
-
-
+} /*agregue ete contenedor para registro y login*/
+/*FORMUALRIOS FIN*/
 
 
 /* compras*/
@@ -218,12 +255,12 @@ body {
     }/*medios de pago en mis compras*/
 
 .container-miscompras {
-  display: flex;
-  text-align: center;
-  border-radius: 3px;
-  align-items: left;
-  justify-content: center;
-  
+display: flex;
+text-align: center;
+border-radius: 3px;
+align-items: left;
+justify-content: center;
+
 } /*carrito-compras*/
 
 
@@ -244,8 +281,8 @@ body {
 
 .tablas-compras {
 
-  border-collapse: separate;
-  border-spacing: 10px 5px;
+border-collapse: separate;
+border-spacing: 10px 5px;
 } /*carrito*/
 
 .precio-col {
@@ -270,35 +307,15 @@ body {
     border: 10px;
     align-self: center;
     }
-    
-.registercompras input[type='submit']/*COMPRAS */{
-    color: #FFF;
-    background-color:#623307;  
-    transition:all 450ms;
-}
+/*BOTONES*/  
 
-.registercompras input[type='submit']:hover/*COMPRAS*/{
-    background-color:#8e582c;
-    border-radius: 20%;
-}
-
-.registercompras input[type='reset']/*COMPRAs*/{
-    color: #FFF;
-    background-color: #623307;
-    transition: all 450ms
-}
-
-.registercompras input[type='reset']:hover/*COMPRAS*/{
-    background-color:#8e582c;
-    border-radius: 20%;
-}
 
 .botonera {
     margin-top: 20px;
     color: #623307;
 
 } 
- /*medios de pago en mis compras*/
+/*medios de pago en mis compras*/
 
         .botonera input {
             align-items: center;
@@ -307,7 +324,7 @@ body {
             color: #623307;
             padding: 10px 20px;
         } /*medios de pago en mis compras*/
-
+/*BOTONES*/  
 
 /*COMPRAS CARRITO FIN*/
 
@@ -348,14 +365,7 @@ h5 {
     font-weight: bold;
     }   
 
-.botonerapro {
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-    color: #623307;
-    padding: 10px 20px;
- 
-}
+
 
 h6 {
     font-family: Arial, Helvetica, sans-serif;
@@ -377,7 +387,7 @@ h6 {
     justify-content: center;
     flex-direction: row;
     
- }
+}
 
 .contenedor img{
     width: 100%;
@@ -427,6 +437,3 @@ h6 {
 
 /*productos y tortas fin*/
 
-
-
-cami 
