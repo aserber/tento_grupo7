@@ -22,27 +22,27 @@ header {
 
 .fa-solid {
     font-size: 30px;
-    }
+}
 
-nav{
+nav {
     text-align: center;
     padding: 30px 50px 0 0;
 }
 
-nav > a{
-    color:#fff;
+nav>a {
+    color: #fff;
     font-weight: 30px;
     text-decoration: none;
     margin-right: 10px;
     font-size: 20px;
 }
 
-nav > a:hover{
+nav>a:hover {
     text-decoration: underline;
-    
+
 }
 
-header .textos-header{
+header .textos-header {
     display: flex;
     height: 210px;
     width: 100%;
@@ -50,21 +50,22 @@ header .textos-header{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    
+
 }
 
-.textos-header h1{
+.textos-header h1 {
     font-size: 150px;
-    color:#ffffff;
+    color: #ffffff;
     font-family: 'Montserrat';
 }
 
-h3{
+h3 {
     font-size: 80px;
     text-align: center;
-    color:#ffffff;
+    color: #ffffff;
     font-family: 'Montserrat';
-    margin-left: 20px}
+    margin-left: 20px
+}
 
 .top-header {
     justify-content: space-between;
@@ -76,16 +77,16 @@ h3{
     font-size: 50px;
     font-family: 'Montserrat';
     color: #623307;
-    }
+}
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     background-color: #623307;
-    font-size: 40px;    
+    font-size: 40px;
 }
 
-.wave{
+.wave {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -111,7 +112,7 @@ footer {
 }
 
 .footer2 {
-    font-size: 15px; 
+    font-size: 15px;
 }
 
 .redessociales {
@@ -120,97 +121,114 @@ footer {
     font-size: 40px;
     font-weight: bolder;
     color: black;
-    }
+}
 
 .powered {
     text-align: center;
 }
+
 /*footer fin*/
 
 body {
-    background-color:#d0ab7a;
+    background-color: #d0ab7a;
     font-family: 'Roboto', sans-serif;
 }
 
 /*INDEX*/
-.grid-container-inicio{
-    display: grid;
-    gap: 20px;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-} /*header*/
 
-.grid-container-inicio div {
-    text-align: center;
-    color: #FFF;
-    display: flex;
-    height: 400px;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-}/*header*/
 
 .fotoalmedio {
-    align-items: flex;  
+    align-items: flex;
     align-items: center;
     text-align: center;
 }
+
 /*INDEX FIN*/
 
 
 /* formularios */
-.login input /* LOGIN */,
-.register input/*REGISTRO*/{
+.login input
+/* LOGIN */
+,
+.register input
+
+/*REGISTRO*/
+    {
     width: 50%;
     padding: 10px;
     margin: 20px 0px;
     border-radius: 5px solid grey;
     border: 10px;
     align-self: center;
-    }
+}
 
 /*BOTONES*/
-.login input[type='submit']/* LOGIN */,
-.register input[type='submit']/*REGISTRO*/,
-.producto-chocolate input[type='submit'] /*productos*/,
+.login input[type='submit']
+/* LOGIN */
+,
+.register input[type='submit']
+/*REGISTRO*/
+,
+.producto-chocolate input[type='submit']
+
+/*productos*/
+,
 .botoncarro input[type='submit'],
 .botonerapro input[type='submit'],
-.registercompras input[type='submit']{
+.registercompras input[type='submit'] {
     color: #FFF;
-    background-color: #623307;  
+    background-color: #623307;
     font-size: 20px;
     font-family: "Monserrat";
-    transition:all 450ms;
+    transition: all 450ms;
 }
-.login input[type='reset']/* LOGIN */,
-.register input[type='reset']/*REGISTRO*/,
+
+.login input[type='reset']
+/* LOGIN */
+,
+.register input[type='reset']
+
+/*REGISTRO*/
+,
 .botoncarro input[type='reset'],
 .botonerapro [type='reset'],
-.registercompras input[type='reset']{
+.registercompras input[type='reset'] {
     color: #FFF;
-    background-color: #623307; 
+    background-color: #623307;
     font-size: 20px;
-    font-family: "Monserrat"; 
-    transition:all 450ms;
-} 
+    font-family: "Monserrat";
+    transition: all 450ms;
+}
 
-.login input[type='submit']:hover/* LOGIN */,
-.register input[type='submit']:hover/*REGISTRO*/,
-.producto-chocolate input[type='submit']:hover/*productos*/,
+.login input[type='submit']:hover
+/* LOGIN */
+,
+.register input[type='submit']:hover
+/*REGISTRO*/
+,
+.producto-chocolate input[type='submit']:hover
+
+/*productos*/
+,
 .botoncarro input[type='submit']:hover,
 .botonerapro input[type='submit']:hover,
-.registercompras input[type='submit']:hover{
-    background-color: #8e582c;  
+.registercompras input[type='submit']:hover {
+    background-color: #8e582c;
     color: #FFF;
     border-radius: 20%;
 }
 
-.login input[type='reset']:hover/* LOGIN */,
-.register input[type='reset']:hover/*REGISTRO*/,
+.login input[type='reset']:hover
+/* LOGIN */
+,
+.register input[type='reset']:hover
+
+/*REGISTRO*/
+,
 .botoncarro input[type='reset']:hover,
 .botonerapro [type='reset']:hover,
-.registercompras input[type='reset']:hover{
-    background-color: #8e582c;  
+.registercompras input[type='reset']:hover {
+    background-color: #8e582c;
     color: #FFF;
     border-radius: 20%;
     font-family: "Monserrat";
@@ -231,13 +249,15 @@ body {
 
 
 .container-registro,
-.container-login{
+.container-login {
     display: flex;
     text-align: center;
     border-radius: 3px;
     align-items: left;
     justify-content: center;
-} /*agregue ete contenedor para registro y login*/
+}
+
+/*agregue ete contenedor para registro y login*/
 /*FORMUALRIOS FIN*/
 
 
@@ -248,20 +268,26 @@ body {
     font-size: 25px;
     margin: auto;
     width: 50%;
-} /*medios de pago en mis compras*/
+}
 
-    .medios label {
-        font-size: 18px;
-    }/*medios de pago en mis compras*/
+/*medios de pago en mis compras*/
+
+.medios label {
+    font-size: 18px;
+}
+
+/*medios de pago en mis compras*/
 
 .container-miscompras {
-display: flex;
-text-align: center;
-border-radius: 3px;
-align-items: left;
-justify-content: center;
+    display: flex;
+    text-align: center;
+    border-radius: 3px;
+    align-items: left;
+    justify-content: center;
 
-} /*carrito-compras*/
+}
+
+/*carrito-compras*/
 
 
 .profile {
@@ -270,61 +296,95 @@ justify-content: center;
     justify-content: space-between;
     font-size: 15px;
     color: #623307
-}/* dentro de medios en compras*/ 
+}
+
+/* dentro de medios en compras*/
 
 
-.profile input, .profile label{
+.profile input,
+.profile label {
     width: auto;
     width: auto;
-}/* dentro de medios en compras*/
+}
+
+/* dentro de medios en compras*/
 
 
 .tablas-compras {
 
-border-collapse: separate;
-border-spacing: 10px 5px;
-} /*carrito*/
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+    font-size: 25px;
+    font-family: "Monserrat";
+    color: #3f2104
+}
 
+/*carrito*/
+
+.small-input{
+font-size: 15px;
+font-family: "Monserrat";
+color: #3f2104;
+}
+    
 .precio-col {
-    display:inline-block;
-    background-color:#f3f3f3;
-    width:100%;
-    max-width:500px;
-    border-radius:10px;
-    margin-bottom:50px;
-    box-shadow: 0px 2px 5px #ddd
-} /*tabla carrito*/
+    display: inline-block;
+    background-color: #f3f3f3;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0px 2px 5px #ddd;
+    font-size: 25px;
+    font-family: "Monserrat";
+    color: #3f2104
+}
+
+/*tabla carrito*/
 
 .items {
     justify-content: space-between;
-}/*carrito productos tabla*/
+    font-size: 25px;
+    font-family: "Monserrat";
 
-.registercompras input.textInput/*COMPRAS */{
+
+}
+
+/*carrito productos tabla*/
+
+.registercompras input.textInput
+
+/*COMPRAS */
+    {
     width: 50%;
     padding: 10px;
     margin: 20px 0px;
     border-radius: 5px solid grey;
     border: 10px;
     align-self: center;
-    }
-/*BOTONES*/  
+}
+
+/*BOTONES*/
 
 
 .botonera {
     margin-top: 20px;
     color: #623307;
 
-} 
+}
+
 /*medios de pago en mis compras*/
 
-        .botonera input {
-            align-items: center;
-            justify-content: space-between;
-            font-size: 15px;
-            color: #623307;
-            padding: 10px 20px;
-        } /*medios de pago en mis compras*/
-/*BOTONES*/  
+.botonera input {
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #623307;
+    padding: 10px 20px;
+}
+
+/*medios de pago en mis compras*/
+/*BOTONES*/
 
 /*COMPRAS CARRITO FIN*/
 
@@ -332,27 +392,28 @@ border-spacing: 10px 5px;
 /*descproducto*/
 .imagenprod {
     width: 30%;
-    float:left;
+    float: left;
     position: right;
-    padding: 3%    
+    padding: 3%
 }
 
 h5 {
-    display : flex;
+    display: flex;
     justify-content: right;
     flex-direction: column;
     width: 35%;
     font-size: 30px;
     font-family: "Monserrat";
-    color:#623307;
+    color: #623307;
     font-weight: bold;
 }
+
 .preciop {
     font-size: 25px;
     padding: 10px;
     margin: 10px;
     font-family: "Monserrat";
-    color:#623307;
+    color: #623307;
     font-weight: bold;
 }
 
@@ -361,9 +422,9 @@ h5 {
     padding: 15px;
     margin: 10px;
     font-family: "Monserrat";
-    color:#623307;
+    color: #623307;
     font-weight: bold;
-    }   
+}
 
 
 
@@ -371,7 +432,7 @@ h6 {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     background-color: #623307;
-    font-size: 30px ; 
+    font-size: 30px;
 }
 
 /*descproducto fin*/
@@ -386,12 +447,12 @@ h6 {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    
+
 }
 
-.contenedor img{
+.contenedor img {
     width: 100%;
-    height:220px;
+    height: 220px;
     margin: 5px;
     border: 2px solid;
     box-shadow: 0 0 0 2px white;
@@ -403,26 +464,26 @@ h6 {
 @media screen and (max-width: 1200px) {
     .contenedor img {
         width: 40%;
-    }    
+    }
 }
 
 @media screen and (max-width: 800px) {
     .contenedor img {
         width: 50%;
-    }    
+    }
 }
 
 @media screen and (max-width: 500px) {
     .contenedor img {
         width: 70%;
-    }    
+    }
 }
 
 @media screen and (max-width: 360px) {
     .contenedor img {
         width: 95%;
-    
-    }    
+
+    }
 }
 
 .h3-producto {
@@ -436,4 +497,3 @@ h6 {
 }
 
 /*productos y tortas fin*/
-
