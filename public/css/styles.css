@@ -427,7 +427,7 @@ h6 {
 
 /*productos y tortas*/
 
-.contenedor {
+.contenedor, .container-agregar {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -477,9 +477,12 @@ h6 {
     font-size: 30px;
 }
 
-.producto-chocolate {
+.producto-chocolate, .productonuevo{
     text-align: center;
     margin: 50px;
 }
 
 /*productos y tortas fin*/
+
+
+

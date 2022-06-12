@@ -4,7 +4,9 @@ const path = require('path');
 
 
 let app = express();
-app.set ("view engine","ejs")
+app.set ("view engine","ejs");
+app.set ("views", __dirname + "/views")
+
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
@@ -60,5 +62,10 @@ app.get('/carrito', function(req, res){
 
 app.get('/descproducto', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/descproducto.html');
+    res.sendFile(htmlPath);
+})
+
+app.get('/administrador', function(req, res){
+    let htmlPath = path.resolve(__dirname, './views/adminproduc.html');
     res.sendFile(htmlPath);
 })
