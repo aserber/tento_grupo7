@@ -1,15 +1,13 @@
 const express = require('express');
 const app = express();
-const mainRoutes = require('.routes/mainRoutes');
+const mainRoutes = require('./routes/mainRoutes');
 const res = require('express/lib/response');
 const path = require('path'); 
 
 
-app.set('view engine', ejs); 
+app.set('view engine', 'ejs'); 
 
 app.use('/', mainRoutes);
-
-module.exports = router;
 
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));

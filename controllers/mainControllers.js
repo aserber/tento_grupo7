@@ -1,9 +1,9 @@
 const controller = {
     index: (req, res) => {
-        return res.send('Home');
+        return res.render('index.ejs');
     },
     register: (req, res) => {
-        return res.send('Registro');
+        return res.render('registro.ejs');
     },
     login: (req, res) => {
         return res.send('Login');
