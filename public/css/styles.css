@@ -8,7 +8,7 @@
 
 header {
     width: 100%;
-    height: 600px;
+    height: 450px;
     background: #78451a;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #8e582c, #b88b5c), url(../img/portada.jpg);
@@ -50,6 +50,8 @@ header .textos-header {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    position: relative;
+    z-index: 10;
 
 }
 
@@ -147,13 +149,8 @@ body {
 
 
 /* formularios */
-.login input
-/* LOGIN */
-,
-.register input
-
-/*REGISTRO*/
-    {
+.login input/* LOGIN */,
+.register input/*REGISTRO*/{
     width: 50%;
     padding: 10px;
     margin: 20px 0px;
@@ -161,92 +158,6 @@ body {
     border: 10px;
     align-self: center;
 }
-
-/*BOTONES*/
-.login input[type='submit']
-/* LOGIN */
-,
-.register input[type='submit']
-/*REGISTRO*/
-,
-.producto-chocolate input[type='submit']
-
-/*productos*/
-,
-.botoncarro input[type='submit'],
-.botonerapro input[type='submit'],
-.registercompras input[type='submit'] {
-    color: #FFF;
-    background-color: #623307;
-    font-size: 20px;
-    font-family: "Monserrat";
-    transition: all 450ms;
-}
-
-.login input[type='reset']
-/* LOGIN */
-,
-.register input[type='reset']
-
-/*REGISTRO*/
-,
-.botoncarro input[type='reset'],
-.botonerapro [type='reset'],
-.registercompras input[type='reset'] {
-    color: #FFF;
-    background-color: #623307;
-    font-size: 20px;
-    font-family: "Monserrat";
-    transition: all 450ms;
-}
-
-.login input[type='submit']:hover
-/* LOGIN */
-,
-.register input[type='submit']:hover
-/*REGISTRO*/
-,
-.producto-chocolate input[type='submit']:hover
-
-/*productos*/
-,
-.botoncarro input[type='submit']:hover,
-.botonerapro input[type='submit']:hover,
-.registercompras input[type='submit']:hover {
-    background-color: #8e582c;
-    color: #FFF;
-    border-radius: 20%;
-}
-
-.login input[type='reset']:hover
-/* LOGIN */
-,
-.register input[type='reset']:hover
-
-/*REGISTRO*/
-,
-.botoncarro input[type='reset']:hover,
-.botonerapro [type='reset']:hover,
-.registercompras input[type='reset']:hover {
-    background-color: #8e582c;
-    color: #FFF;
-    border-radius: 20%;
-    font-family: "Monserrat";
-    font-size: 20px;
-}
-
-/*BOTONES*/
-
-
-
-
-
-
-
-
-
-
-
 
 .container-registro,
 .container-login {
@@ -261,7 +172,115 @@ body {
 /*FORMUALRIOS FIN*/
 
 
-/* compras*/
+
+
+
+
+/*BOTONES*/
+
+
+.login input[type='submit']/* LOGIN */,
+.register input[type='submit']/*REGISTRO*/,
+.producto-chocolate input[type='submit']/*productos*/,
+.botoncarro input[type='submit']/*carrito*/,
+.registercompras input[type='submit']/*compras*/,
+.login input[type='reset']/* LOGIN */,
+.register input[type='reset']/*REGISTRO*/,
+.botoncarro input[type='reset']/*carro*/,
+.registercompras input[type='reset']/*compras*/ {
+    color: #FFF;
+    background-color: #623307;
+    font-size: 20px;
+    font-family: "Monserrat";
+    margin-top: 15px;
+    transition: all 450ms;
+}
+
+.login input[type='submit']:hover/* LOGIN */,
+.register input[type='submit']:hover/*REGISTRO*/,
+.producto-chocolate input[type='submit']:hover/*productos*/,
+.botoncarro input[type='submit']:hover/*carrito*/,
+.registercompras input[type='submit']:hover/*compras*/,
+.login input[type='reset']:hover/* LOGIN */,
+.register input[type='reset']:hover/*REGISTRO*/,
+.botoncarro input[type='reset']:hover/*carrito*/,
+.registercompras input[type='reset']:hover /*compras*/ {
+    background-color: #8e582c;
+    color: #FFF;
+    border-radius: 20%;
+    font-family: "Monserrat";
+}
+
+ 
+.small-input2 /*descripcion producto*/{
+    display:grid;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    width: 15%;
+    height: 10%;
+    font-size: 15px;
+    font-family: "Monserrat";
+    font-weight: bold;
+    background-color:#d0ab7a;
+    border-radius: 20px;
+    transition: 450ms;
+    margin-left: 450px;
+}   
+
+.small-input2 [type=submit]:hover/*descripcion producto*/,
+.small-input2 [type=reset]:hover/*descripcion producto*/{
+    background-color: #8e582c;
+    color: #FFF;
+    border-radius: 20%;
+    font-family: "Monserrat";
+}
+
+.botoncarro2  input[type='reset']/*carrito-tabla*/{
+    color: #FFF;
+    background-color: #623307;
+    font-size: 20px;
+    font-family: "Monserrat";
+    transition: all 450ms;
+    margin-left : 45px;
+}
+
+.botoncarro2 input[type='reset']:hover /*carrito-tabla*/{
+    background-color: #8e582c;
+    color: #FFF;
+    border-radius: 20%;
+    font-family: "Monserrat";
+    font-size: 20px;
+}
+
+.botonera {
+    margin-top: 20px;
+    color: #623307;
+
+}
+
+/*medios de pago en mis compras*/
+
+.botonera input {
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #623307;
+    padding: 10px 20px;
+}
+
+/*medios de pago en mis compras*/
+/*BOTONES FIN*/
+
+
+
+
+
+
+
+
+
+/* COMPRAS*/
 
 .medios {
     color: #623307;
@@ -285,9 +304,7 @@ body {
     align-items: left;
     justify-content: center;
 
-}
-
-/*carrito-compras*/
+} /*carrito-compras*/
 
 
 .profile {
@@ -296,18 +313,14 @@ body {
     justify-content: space-between;
     font-size: 15px;
     color: #623307
-}
-
-/* dentro de medios en compras*/
+} /* dentro de medios en compras*/
 
 
 .profile input,
 .profile label {
     width: auto;
     width: auto;
-}
-
-/* dentro de medios en compras*/
+} /* dentro de medios en compras*/
 
 
 .tablas-compras {
@@ -317,9 +330,7 @@ body {
     font-size: 25px;
     font-family: "Monserrat";
     color: #3f2104
-}
-
-/*carrito*/
+} /*carrito*/
 
 .small-input{
 font-size: 15px;
@@ -346,15 +357,11 @@ color: #3f2104;
     justify-content: space-between;
     font-size: 25px;
     font-family: "Monserrat";
-
-
 }
 
 /*carrito productos tabla*/
 
-.registercompras input.textInput
-
-/*COMPRAS */
+.registercompras input.textInput/*COMPRAS */
     {
     width: 50%;
     padding: 10px;
@@ -364,69 +371,25 @@ color: #3f2104;
     align-self: center;
 }
 
-/*BOTONES*/
-
-
-.botonera {
-    margin-top: 20px;
-    color: #623307;
-
-}
-
-/*medios de pago en mis compras*/
-
-.botonera input {
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-    color: #623307;
-    padding: 10px 20px;
-}
-
-/*medios de pago en mis compras*/
-/*BOTONES*/
 
 /*COMPRAS CARRITO FIN*/
 
 
 /*descproducto*/
+.contenedor-prod{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+
+}
 .imagenprod {
     width: 30%;
     float: left;
     position: right;
     padding: 3%
 }
-
-h5 {
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
-    width: 35%;
-    font-size: 30px;
-    font-family: "Monserrat";
-    color: #623307;
-    font-weight: bold;
-}
-
-.preciop {
-    font-size: 25px;
-    padding: 10px;
-    margin: 10px;
-    font-family: "Monserrat";
-    color: #623307;
-    font-weight: bold;
-}
-
-.descp {
-    font-size: 25px;
-    padding: 15px;
-    margin: 10px;
-    font-family: "Monserrat";
-    color: #623307;
-    font-weight: bold;
-}
-
-
 
 h6 {
     font-family: Arial, Helvetica, sans-serif;
@@ -435,13 +398,36 @@ h6 {
     font-size: 30px;
 }
 
+.descp, 
+.preciop{
+    display: flex;
+    justify-content: left;
+    font-size: 23px;
+    padding: 5px;
+    margin: 6px;   
+    font-family: "Monserrat";
+    color: #ffffff;
+    font-weight: bold;
+}
+.description {
+    display: inline-block;
+    justify-content: right;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 35%;
+    font-size: 27px;
+    font-family: "Monserrat";
+    color: #623307;
+    font-weight: bold;
+}
+
 /*descproducto fin*/
 
 
 
 /*productos y tortas*/
 
-.contenedor {
+.contenedor, .container-agregar {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -462,7 +448,7 @@ h6 {
 
 
 @media screen and (max-width: 1200px) {
-    .contenedor img {
+    .contenedor img{
         width: 40%;
     }
 }
@@ -474,7 +460,7 @@ h6 {
 }
 
 @media screen and (max-width: 500px) {
-    .contenedor img {
+    .contenedor img{
         width: 70%;
     }
 }
@@ -491,9 +477,12 @@ h6 {
     font-size: 30px;
 }
 
-.producto-chocolate {
+.producto-chocolate, .productonuevo{
     text-align: center;
     margin: 50px;
 }
 
 /*productos y tortas fin*/
+
+
+

@@ -8,6 +8,10 @@ const controller = {
     login: (req, res) => {
         return res.send('Login');
     },
+
+    adminproduc: (req, res) => {
+        return res.render('adminproduc');
+    },
 }
 
 module.exports = controller;

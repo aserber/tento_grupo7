@@ -9,4 +9,7 @@ router.get('/registro', mainControllers.register);
 
 router.get('/login', mainControllers.login);
 
+router.get('/adminproduc', mainControllers.adminproduc);
+
+
 module.exports = router;
