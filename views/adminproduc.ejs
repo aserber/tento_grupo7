@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/adminproduc.css">
   <title>Tentó</title></a>
 </head>
 <header>
@@ -38,6 +39,21 @@
 
 
 <body>
+
+    <form action="POST" action="/users/register">
+        <label for="">Nombre</label>
+        <input type="text" name="nombre">
+        <p>Hobbies</p>
+        <% for(let i = 0; i < 10; i++) { %>
+            <label for="">Hobbie <%= i %></label>
+            <% if (i % 2 == 0) { %>
+            <input class="par" type="text" name="hobbies[]">
+        <% } else { %>
+            <input class="impar" type="text" name="hobbies[]">
+            <% } %>
+            <br>
+        <% } %>
+    </form>
 
     <h3>Agregar producto "va a tener q ser con ejs"</h3>
 

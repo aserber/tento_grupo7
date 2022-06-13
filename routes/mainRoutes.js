@@ -11,5 +11,6 @@ router.get('/login', mainControllers.login);
 
 router.get('/adminproduc', mainControllers.adminproduc);
 
+router.get('/list', mainControllers.list);
 
 module.exports = router;

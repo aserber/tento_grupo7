@@ -12,6 +12,17 @@ const controller = {
     adminproduc: (req, res) => {
         return res.render('adminproduc');
     },
+
+    list: (req, res)=> {
+        let users = [
+            'Dario',
+            'Javier',
+            'Maru',
+            'Ale'
+        ];
+
+        return res.render('userList', {'users': users});
+    },
 }
 
 module.exports = controller;
