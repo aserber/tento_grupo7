@@ -21,7 +21,7 @@ const controller = {
             'Ale'
         ];
 
-        return res.render('userList', {'users': users});
+        return res.render('users', {users: users});
     },
 }
 
