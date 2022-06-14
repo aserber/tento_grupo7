@@ -23,6 +23,11 @@ const controller = {
 
         return res.render('users', {users: users});
     },
+
+
+index2: (req, res) => {
+    return res.render('index2');
+}
 }
 
 module.exports = controller;

@@ -13,4 +13,6 @@ router.get('/adminproduc', mainControllers.adminproduc);
 
 router.get('/users/list', mainControllers.list);
 
+router.get('/index2', mainControllers.index2);
+
 module.exports = router;
