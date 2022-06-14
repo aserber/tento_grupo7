@@ -6,7 +6,7 @@ const controller = {
         return res.render('registro.ejs');
     },
     login: (req, res) => {
-        return res.render('Login');
+        return res.render('login.ejs');
     },
 
     productostortas: (req, res) => {
@@ -19,10 +19,6 @@ const controller = {
     
     compras: (req, res) => {
         return res.render('compras');
-    },
-
-    carrito: (req, res) => {
-        return res.render('carrito');
     },
 
     carrito: (req, res) => {

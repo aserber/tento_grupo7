@@ -15,8 +15,7 @@ app.use(express.static(publicPath));
 app.listen(process.env.PORT || 3000, function () {
     console.log('Servidor corriendo, levantando pagina en el el puerto 3000');
 })
-
-app.get('/', function(req, res){
+/*app.get('/', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/index.html');
     res.sendFile(htmlPath);
 })
@@ -71,5 +70,5 @@ app.get('/carrito', function(req, res){
 app.get('/descproducto', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/descproducto.html');
     res.sendFile(htmlPath);
-})
+})*/
 
