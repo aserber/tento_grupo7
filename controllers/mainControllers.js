@@ -10,27 +10,27 @@ const controller = {
     },
 
     productostortas: (req, res) => {
-        return res.render('productostortas');
+        return res.render('productostortas.ejs');
     },
 
     producto: (req, res) => {
-        return res.render('producto');
+        return res.render('producto.ejs');
     },
     
     compras: (req, res) => {
-        return res.render('compras');
+        return res.render('compras.ejs');
     },
 
     carrito: (req, res) => {
-        return res.render('carrito');
+        return res.render('carrito.ejs');
     },
 
     descproducto: (req, res) => {
-        return res.render('descproducto');
+        return res.render('descproducto.ejs');
     },
 
     adminproduc: (req, res) => {
-        return res.render('adminproduc');
+        return res.render('adminproduc.ejs');
     },
 
     list: (req, res)=> {
@@ -46,7 +46,7 @@ const controller = {
 
 
 index2: (req, res) => {
-    return res.render('index2');
+    return res.render('index2.ejs');
 }
 }
 
