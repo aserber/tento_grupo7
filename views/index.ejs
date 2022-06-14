@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/7f31ea2864.js" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi sitio web</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <title>Tentó</title>
 </head>
+
+<%- include('partials/header.ejs') %>
 <body>
-    <h2>Estamos en el index</h2>
-        <img src="/images/tento-marca.jpg" alt="" width="200">
+
+    <h3>Inicio</h3><br><br>
+
+    <div class="fotoalmedio">
+        <img primerafoto text-align="center" src="/images/P1100984.jpg" alt="" height="75%" width="75%">
+    </div>
+    <br>
+    <div class="fotoalmedio">
+        <h2 text-align="center">¿Que te tentó?</h2>
+        <br>
+        <a href="producto"><img text-align="center" src="/images/P1110019.jpg" alt="" height="75%" width="75%"></a>
+        <a href="productostortas"><img text-align="center" src="/images/fotoProductoPagInicio.jpeg" alt="" height="75%"
+                width="75%"></a>
+    </div>
 </body>
+
+<%- include('partials/footer.ejs') %>
+
 </html>

@@ -21,6 +21,12 @@ app.get('/', function(req, res){
     res.sendFile(htmlPath);
 })
 
+app.get('/index', function(req, res){
+    let htmlPath = path.resolve(__dirname, './views/index.html');
+    res.render(htmlPath);
+})
+
+
 app.get('/login', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/login.html');
     res.sendFile(htmlPath);

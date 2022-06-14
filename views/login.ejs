@@ -14,26 +14,24 @@
     <title>Tentó</title>
 </head>
 
-
 <%- include('partials/header.ejs') %>
+
 <body>
-    
-    <h3>Inicio</h3><br><br>
 
-    <div class="fotoalmedio">
-        <img primerafoto text-align="center" src="/images/P1100984.jpg" alt="" height="75%" width="75%">
-    </div>
-    <br>
-    <div class="fotoalmedio">
-        <h2 text-align="center">¿Que te tentó?</h2>
-        <br>
-        <a href="producto"><img text-align="center" src="/images/P1110019.jpg" alt="" height="75%" width="75%"></a>
-        <a href="productostortas"><img text-align="center" src="/images/fotoProductoPagInicio.jpeg" alt="" height="75%"
-                width="75%"></a>
-    </div>
+    <h3>Ingresar</h3>
+
+    <main class="login">
+        <div class="container-login">
+            <form action="/" method="POST">
+                <input type="text" name="user" placeholder="Nombre de usuario">
+                <input type="password" name="pass" placeholder="Contraseña">
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+
 </body>
-
 <%- include('partials/footer.ejs') %>
-
 
 </html>
