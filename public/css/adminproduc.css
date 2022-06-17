@@ -5,3 +5,28 @@
 .par{
     border: 1px red solid;
 }
+
+.container-agregar{
+    display: flex;
+    text-align: righet;
+    border-radius: 3px;
+    align-items: left;
+    justify-content: center;
+};
+.botonagregar input[type='reset'],
+.botonagregar input[type='submit']/*compras*/ {
+    color: #FFF;
+    background-color: #623307;
+    font-size: 20px;
+    font-family: "Monserrat";
+    margin-top: 15px;
+    transition: all 450ms;
+}
+.botonagregar input[type='reset']:hover,
+.botonagregar input[type='reset']:hover /*compras*/ {
+    background-color: #8e582c;
+    color: #FFF;
+    border-radius: 20%;
+    font-family: "Monserrat";
+}
+
