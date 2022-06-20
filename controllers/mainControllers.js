@@ -83,7 +83,7 @@ create: function(req, res){
         email: req.body.email,
         // guardar
     }
-    res.send(usuario);
+   
     res.redirect("/users/list");
 }
 
