@@ -14,19 +14,6 @@
   <title>Tentó</title></a>
 </head>
 <body>
-    <h1>User list</h1>
-    <ul>
-        <% for (let i = 0 ; i < users.length; i++) { %>
-            <li>
-                <a href="/users/detail/<%= users[i].id %>"<%= users[i].nombre %></a>
-            </li>
-    <% } %>
-    </ul>
-    <h2>search</h2>
-    <form action="/users/search1" method="GET">
-        <input type="text" name="search">
-        <input type="submit" value="Search">
-    </form>
-
+   
 </body>
 </html>

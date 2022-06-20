@@ -35,57 +35,19 @@ const controller = {
         return res.render('adminproduc.ejs');
     },
 
-    list: (req, res)=> {
+
+//pruebas//
+    list: function(req,res){
         let users = [
-            {id: 1, name: 'Dario'},
-            {id: 2, name: 'Javier'},
-            {id: 3, name: 'Maru'},
-            {id: 4, name: 'Ale'},
-            {id: 5, name: 'Alan'},
+            {id: 1, name: "Dario"},
+            {id: 2, name: "javier"},
+            {id: 3, name: "maru"},
+            {id: 4, name: "ale"},
         ];
-
-        res.render('users', {users: users});
-    },
-
-
-index2: (req, res) => {
-    return res.render('index2.ejs');
-},
-
- search1: (req, res) => {
-    let loQueBuscoElUsuario = req.query.search1;
-    let users = [
-        {id: 1, name: 'Dario'},
-        {id: 2, name: 'Javier'},
-        {id: 3, name: 'Maru'},
-        {id: 4, name: 'Ale'},
-        {id: 5, name: 'Alan'},
-    ];
-
-
-
-let usersResults = [];
-
-for(let i = 0; i < users.length; i++){
-    if  (users[i].name.includes(loQueBuscoElUsuario)) {
-        usersResults.push(users[i]);
+        res.render ("userList", {"users": users})
     }
-}
 
-res.render('usersResults', {usersResults: usersResults})
 
-},
-
-create: function(req, res){
-    let usuario = {
-        nombre: req.body.nombre,
-        edad: req.body.edad,
-        email: req.body.email,
-        // guardar
-    }
-   
-    res.redirect("/users");
-}
 
 };
 
