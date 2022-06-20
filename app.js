@@ -3,18 +3,41 @@ const app = express();
 const mainRoutes = require('./routes/mainRoutes');
 const res = require('express/lib/response');
 const path = require('path'); 
-
-
-app.set('view engine', 'ejs'); 
-
-app.use('/', mainRoutes);
-
+const methodOverride =require("method-override");
+const multer =require("multer");
 const publicPath = path.resolve(__dirname, './public');
-app.use(express.static(publicPath));
 
+app.use(methodOverride("_method"));
+app.set('view engine', 'ejs'); 
+app.use('/', mainRoutes);
+app.use(express.static(publicPath));
 app.listen(process.env.PORT || 3000, function () {
     console.log('Servidor corriendo, levantando pagina en el el puerto 3000');
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*app.get('/', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/index.html');
     res.sendFile(htmlPath);
@@ -24,7 +47,6 @@ app.get('/index', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/index.html');
     res.render(htmlPath);
 })
-
 
 app.get('/login', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/login.html');
@@ -59,8 +81,6 @@ app.get('/inicio', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/index.html');
     res.sendFile(htmlPath);
 })
-
-
 
 app.get('/carrito', function(req, res){
     let htmlPath = path.resolve(__dirname, './views/carrito.html');
