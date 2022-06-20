@@ -84,7 +84,7 @@ create: function(req, res){
         // guardar
     }
    
-    res.redirect("/users/list");
+    res.redirect("/search1");
 }
 
 };

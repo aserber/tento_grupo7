@@ -25,7 +25,7 @@ router.get('/carrito', mainControllers.carrito);
 
 router.get('/descproducto', mainControllers.descproducto);
 
-router.get('/users/list', mainControllers.list);
+router.get('/users', mainControllers.list);
 
 router.get('/index2', mainControllers.index2);
 
