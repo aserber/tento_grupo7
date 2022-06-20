@@ -36,17 +36,47 @@ const controller = {
     },
 
 
-//pruebas//
-    list: function(req,res){
-        let users = [
-            {id: 1, name: "Dario"},
-            {id: 2, name: "javier"},
-            {id: 3, name: "maru"},
-            {id: 4, name: "ale"},
-        ];
-        res.render ("userList", {"users": users})
-    }
 
+//pruebas//
+
+    list: (req, res) => {
+        let users = [
+            {id:1, name: "Dario"},
+            {id:2, name: "Javier"},
+            {id:3, name: "Maru"},
+            {id:4, name: "Ale"},
+            {id:5, name: "Alan"},
+        ];
+    res.render("userlist.ejs", {"users": users});
+    },
+    search: (req, res) => {
+        let loQueBusco = req.query.search;
+        let users = [
+            {id:1, name: "Dario"},
+            {id:2, name: "Javier"},
+            {id:3, name: "Maru"},
+            {id:4, name: "Ale"},
+            {id:5, name: "Alan"},
+        ];
+
+        let usersResults= [];
+
+        for (let i= 0; i<users.length; i++){
+            if (users[i].name.includes(loQueBusco)){
+
+                usersResults.push(users[i]);
+            }
+        } res.render("usersResults.ejs", {"usersResults": usersResults})
+
+    },
+    crear: (req, res) => {
+        let usuario = {
+            nombre: req.body.name,
+            usuario: req.body.user,
+            mail: req.body.email,
+        }
+    res.redirect("/users/list");
+    },
 
 
 };

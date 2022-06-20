@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
-  <script src="https://kit.fontawesome.com/7f31ea2864.js" crossorigin="anonymous"></script>
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/adminproduc.css">
-  <title>Tentó</title></a>
-</head>
+
+  <%- include('partials/head.ejs') %>
+  <%- include('partials/header.ejs') %>
+
 <body>
-   
+  <h1>User List</h1>
+  <ul>
+   <% for (let i = 0; i < users.length; i++) { %>
+    <li>
+    <a href="/users/detail/<%= users[i].id %>"> <%= users[i].name %> </a>
+    </li>
+    <% } %>
+  </ul>
+  <h2>Search</h2>
+  <form action ="/search" method="get">
+    <input type="text" name="search">
+    <input type="submit" name="search" value="buscar">
+  </form>
 </body>
+
 </html>

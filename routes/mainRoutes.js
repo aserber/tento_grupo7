@@ -26,6 +26,8 @@ router.get('/descproducto', mainControllers.descproducto);
 
 //pruebas//
 
-
+router.get('/list', mainControllers.list);
+router.get('/search',mainControllers.search);
+router.post('/register', mainControllers.crear);
 
 module.exports = router;
