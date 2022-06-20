@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs') %>
+<%- include('partials/header.ejs') %>
+
+<body>
+
+    <h3>Registro</h3>
+
+
+    <main class="register">
+        <div class="container-registro">
+            <form action="/" method="POST">
+                <input type="text" name="name" placeholder="Nombre y apellido">
+                <input type="text" name="user" placeholder="Nombre de usuario">
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="password" name="contraseña" placeholder="Contraseña">
+                <input type="password" name="confirmar Contraseña" placeholder="Confirmar Contraseña">
+                <input type="text" name="addres" placeholder="Domicilio">
+                <div class="botonera">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </div>
+            </form>
+        </div>
+        <br>
+
+        <h1>register</h1>
+        <form method="POST" action="/registro">
+        <label for="">Edad</label>
+        <input type="text" name="edad">
+        <br>
+        <label for="">Email</label>
+        <input type="text" name="email">
+        <br>
+        <input type="submit" value="Registrar">
+    </form>
+
+
+
+
+    </main>
+</body>

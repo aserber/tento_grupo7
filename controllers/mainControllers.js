@@ -1,4 +1,4 @@
-const { search } = require("../routes/mainRoutes");
+// const { search } = require("../routes/mainRoutes");
 
 const controller = {
     index: (req, res) => {
@@ -52,8 +52,8 @@ index2: (req, res) => {
     return res.render('index2.ejs');
 },
 
-search1: (req, res) => {
-    let loQueBuscoElUsuario = req.query.search;
+ search1: (req, res) => {
+    let loQueBuscoElUsuario = req.query.search1;
     let users = [
         {id: 1, name: 'Dario'},
         {id: 2, name: 'Javier'},
@@ -61,6 +61,8 @@ search1: (req, res) => {
         {id: 4, name: 'Ale'},
         {id: 5, name: 'Alan'},
     ];
+
+
 
 let usersResults = [];
 
