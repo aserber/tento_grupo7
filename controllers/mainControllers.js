@@ -1,3 +1,5 @@
+const { search } = require("../routes/mainRoutes");
+
 const controller = {
     index: (req, res) => {
         return res.render('index');
@@ -35,19 +37,54 @@ const controller = {
 
     list: (req, res)=> {
         let users = [
-            'Dario',
-            'Javier',
-            'Maru',
-            'Ale'
+            {id: 1, name: 'Dario'},
+            {id: 2, name: 'Javier'},
+            {id: 3, name: 'Maru'},
+            {id: 4, name: 'Ale'},
+            {id: 5, name: 'Alan'},
         ];
 
-        return res.render('users', {users: users});
+        res.render('users', {users: users});
     },
 
 
 index2: (req, res) => {
     return res.render('index2.ejs');
+},
+
+search1: (req, res) => {
+    let loQueBuscoElUsuario = req.query.search;
+    let users = [
+        {id: 1, name: 'Dario'},
+        {id: 2, name: 'Javier'},
+        {id: 3, name: 'Maru'},
+        {id: 4, name: 'Ale'},
+        {id: 5, name: 'Alan'},
+    ];
+
+let usersResults = [];
+
+for(let i = 0; i < users.length; i++){
+    if  (users[i].name.includes(loQueBuscoElUsuario)) {
+        usersResults.push(users[i]);
+    }
 }
+
+res.render('usersResults', {usersResults: usersResults})
+
+},
+
+create: function(req, res){
+    let usuario = {
+        nombre: req.body.nombre,
+        edad: req.body.edad,
+        email: req.body.email,
+        // guardar
+    }
+    res.send(usuario);
+    res.redirect("/users/list");
 }
+
+};
 
 module.exports = controller;

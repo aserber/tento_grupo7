@@ -16,9 +16,9 @@
 <body>
     <h1>User list</h1>
     <ul>
-        <% for (let i = 0 ; i < users.length; i++) { %>
+        <% for (let i = 0 ; i < usersResults.length; i++) { %>
             <li>
-                <a href="/users/detail/<%= users[i].id %>"><%= users[i].name %></a>
+                <a href="/users/detail/<%= usersResults[i].id %>"><%= usersResults[i].name %></a>
             </li>
     <% } %>
     </ul>
