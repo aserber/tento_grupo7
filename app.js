@@ -3,7 +3,7 @@ const app = express();
 const mainRoutes = require('./routes/mainRoutes');
 const res = require('express/lib/response');
 const path = require('path'); 
-const methodOverride = require ("method-override");
+const methodOverride = require ('method-override');
 
 app.set('view engine', 'ejs'); 
 
@@ -15,7 +15,7 @@ app.use(express.json());
 
 const publicPath = path.resolve(__dirname, './public');
 
-app.use(methodOverride("_method"));
+app.use(methodOverride('_method'));
 app.set('view engine', 'ejs'); 
 app.use('/', mainRoutes);
 app.use(express.static(publicPath));
