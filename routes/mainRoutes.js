@@ -31,4 +31,6 @@ router.get('/index2', mainControllers.index2);
 
 router.get('/search1', mainControllers.search1);  
 
+
+
 module.exports = router;
