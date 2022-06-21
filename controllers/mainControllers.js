@@ -79,6 +79,28 @@ const controller = {
     },
 
 
-};
+
+
+//pruebas GET y PUT//
+
+edit: (req, res) => {
+    let idUser = req.params.idUser;
+
+    let users = [
+        {id:1, name: "Dario"},
+        {id:2, name: "Javier"},
+        {id:3, name: "Maru"},
+        {id:4, name: "Ale"},
+        {id:5, name: "Alan"},
+    ];
+
+    let userToEdit = users[idUser];
+
+    res.render('userEdit', {userToEdit: userToEdit});
+},
+
+
+
+}
 
 module.exports = controller;

@@ -30,4 +30,12 @@ router.get('/list', mainControllers.list);
 router.get('/search',mainControllers.search);
 router.post('/register', mainControllers.crear);
 
+//pruebas GET y PUT//
+
+router.get('/edit/:idUser', mainControllers.edit);
+
+router.put('/edit/:idUser', function(req, res){
+    res.send('fui por PUTo');
+})
+
 module.exports = router;
