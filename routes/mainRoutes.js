@@ -29,5 +29,15 @@ router.get('/descproducto', mainControllers.descproducto);
 router.get('/list', mainControllers.list);
 router.get('/search',mainControllers.search);
 router.post('/register', mainControllers.crear);
+//sprint4//
+
+router.get('/products', controlador.list);
+router.get('/create',controlador.create);
+router.get('/id',controlador.id);
+router.post('/products',controlador.crear);
+router.get('/edit',controlador.edit);
+router.put('/id',controlador.editar);
+router.delete('/id',controlador.borrar);
+
 
 module.exports = router;
