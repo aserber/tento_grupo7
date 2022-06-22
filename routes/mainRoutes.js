@@ -1,7 +1,15 @@
 const express = require('express');
 const router = express.Router();
-
+//const multer = require('multer');
 const mainControllers = require('../controllers/mainControllers');
+//const uploadFile = multer({ storage });
+//const storage = multer.diskStorage({ 
+//    destination: function (req, file, cb) { 
+//     cb(null, './public/images/productonuevo'); 
+//    }, 
+//    filename: function (req, file, cb) { 
+//       cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
+//  })
 
 router.get('/', mainControllers.index);
 
@@ -23,7 +31,8 @@ router.get('/carrito', mainControllers.carrito);
 
 router.get('/descproducto', mainControllers.descproducto);
 
-
+//router.post('/productostortas', mainControllers.productostortas);//
+//router.post('/register', uploadFile.single('avatar'), usersController.create);//
 //pruebas//
 
 router.get('/list', mainControllers.list);
@@ -31,13 +40,8 @@ router.get('/search',mainControllers.search);
 router.post('/register', mainControllers.crear);
 //sprint4//
 
-router.get('/products', controlador.list);
-router.get('/create',controlador.create);
-router.get('/id',controlador.id);
-router.post('/products',controlador.crear);
-router.get('/edit',controlador.edit);
-router.put('/id',controlador.editar);
-router.delete('/id',controlador.borrar);
+
+
 
 
 //pruebas GET y PUT//
