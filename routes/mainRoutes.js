@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-//const multer = require('multer');
+const multer = require('multer');
+const path = require('path');
 const mainControllers = require('../controllers/mainControllers');
 //const uploadFile = multer({ storage });
 //const storage = multer.diskStorage({ 
@@ -10,6 +11,19 @@ const mainControllers = require('../controllers/mainControllers');
 //    filename: function (req, file, cb) { 
 //       cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
 //  })
+
+const storage = multer.diskStorage({
+    destination: (req, file, callback) => {
+        callback(null, path.join(__dirname, '../public/groupsImages'))
+    },
+    filename: (req, file, callback) => {
+        const newFileName = 'group-' + Date.now() + path.extname(file.originalname);
+        callback(null, newFileName);
+    }
+})
+const upload = multer({storage});
+
+
 
 router.get('/', mainControllers.index);
 
