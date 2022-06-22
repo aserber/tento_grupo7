@@ -1,7 +1,21 @@
 const express = require('express');
 const router = express.Router();
-
+const multer = require('multer');
+const path = require('path');
 const mainControllers = require('../controllers/mainControllers');
+
+const storage = multer.diskStorage({
+    destination: (req, file, callback) => {
+        callback(null, path.join(__dirname, '../public/groupsImages'))
+    },
+    filename: (req, file, callback) => {
+        const newFileName = 'group-' + Date.now() + path.extname(file.originalname);
+        callback(null, newFileName);
+    }
+})
+const upload = multer({storage});
+
+
 
 router.get('/', mainControllers.index);
 
