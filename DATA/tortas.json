@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$2.500",
+        "Categoria": "chocolate1",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 1,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$2.500",
+        "Categoria": "chocolate1",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 1,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$2.500",
+        "Categoria": "chocolate1",
+        "Imagen": "images/chocolate1.JPG"
+    }
+]
