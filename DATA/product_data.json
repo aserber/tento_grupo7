@@ -2,90 +2,65 @@
     {
         "id": 1,
         "Nombre": "Bombones Dulce de Leche",
-        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Descripcion": "Tabletas de chocolate negro",
         "Precio": "$2.500",
         "Categoria": "chocolate1",
         "Imagen": "images/chocolate1.JPG"
     },
     {
         "id": 2,
-        "Nombre": null,
-        "Descripcion": "magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi",
-        "Precio": 3025,
-        "discount": 2,
-        "Categoria": "torta3",
-        "Imagen": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
+        "Nombre": "Bombones surtidos",
+        "Descripcion": "falta",
+        "Precio": "$2.500",
+        "Categoria": "chocolate2",
+        "Imagen": "images/chocolate2.JPG"
     },
     {
         "id": 3,
-        "Nombre": null,
-        "Descripcion": "dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et",
-        "Precio": 7550,
-        "discount": 3,
-        "Categoria": "torta1",
-        "Imagen": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
+        "Nombre": "Bombones Macizos",
+        "Descripcion": "falta",
+        "Precio": "$2.500",
+        "Categoria": "chocolate3",
+        "Imagen": "images/chocolate3.JPG"
     },
     {
         "id": 4,
-        "Nombre": null,
-        "Descripcion": "luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat",
-        "Precio": 9119,
-        "discount": 4,
-        "Categoria": "torta3",
-        "Imagen": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
+        "Nombre": "Bombones Rellenos",
+        "Descripcion": "falta",
+        "Precio":"$2.500",
+        "Categoria": "chocolate4",
+        "Imagen": "images/chocolate6.JPG"
     },
     {
         "id": 5,
-        "Nombre": null,
-        "Descripcion": "nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis",
-        "Precio": 6648,
-        "discount": 5,
-        "Categoria": "torta1",
-        "Imagen": ""
+        "Nombre": "Surtido de Bombones",
+        "Descripcion": "falta",
+        "Precio": "$1.500",
+        "Categoria": "chocolate5",
+        "Imagen": "images/alineateche.jpg"
     },
     {
         "id": 6,
-        "Nombre": null,
-        "Descripcion": "justo morbi ut odio cras mi pede malesuada in imperdiet et",
-        "Precio": 3016,
-        "discount": 6,
-        "Categoria": "torta3",
-        "Imagen": ""
+        "Nombre": "Pasas de Uva con Chocolate",
+        "Descripcion": "falta",
+        "Precio": "$800",
+        "Categoria": "chocolate6",
+        "Imagen": "images/confite2.JPG"
     },
     {
         "id": 7,
-        "Nombre": null,
-        "Descripcion": "in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla",
-        "Precio": 5114,
-        "discount": 7,
-        "Categoria": "torta2",
-        "Imagen": ""
+        "Nombre": "Almendras con Chocolate",
+        "Descripcion": "falta",
+        "Precio": "$1.200",
+        "Categoria": "chocolate7",
+        "Imagen":"images/confite3.JPG"
     },
     {
         "id": 8,
-        "Nombre": null,
-        "Descripcion": "iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales",
-        "Precio": 4766,
-        "discount": 8,
-        "Categoria": "torta3",
-        "Imagen": ""
-    },
-    {
-        "id": 9,
-        "Nombre": null,
-        "Descripcion": "quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam",
-        "Precio": 6925,
-        "discount": 9,
-        "Categoria": "torta2",
-        "Imagen": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
-    },
-    {
-        "id": 10,
-        "Nombre": null,
-        "Descripcion": "parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id",
-        "Precio": 296,
-        "discount": 10,
-        "Categoria": "torta2",
-        "Imagen": ""
+        "Nombre": "Mani con Chocolate",
+        "Descripcion": "falta",
+        "Precio": "$800",
+        "Categoria": "chocolate8",
+        "Imagen": "images/confite4.JPG"
     }
 ]
