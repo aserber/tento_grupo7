@@ -7,7 +7,7 @@ const path = require('path');
 const methodOverride = require ('method-override');
 const publicPath = path.resolve(__dirname, './public');
 
-app.listen(process.env.PORT || 3000, function () {
+app.listen(process.env.PORT || 7000, function () {
     console.log('Servidor corriendo, levantando pagina en el el puerto 3000');
 })
 app.set('view engine', 'ejs'); 
