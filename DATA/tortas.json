@@ -1,26 +1,98 @@
 [
     {
         "id": 1,
-        "Nombre": "Bombones Dulce de Leche",
+        "Nombre": "Torta Decorada con Macarones",
         "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
-        "Precio": "$2.500",
-        "Categoria": "chocolate1",
+        "Precio": "$8000",
+        "Categoria": "reposteria",
+        "Imagen": "images/fotoProducto4.jpg"
+    },
+    {
+        "id": 2,
+        "Nombre": "Torta Decorada Personalizada",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$8000",
+        "Categoria": "reposteria",
         "Imagen": "images/chocolate1.JPG"
     },
     {
-        "id": 1,
+        "id": 3,
         "Nombre": "Bombones Dulce de Leche",
         "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
-        "Precio": "$2.500",
-        "Categoria": "chocolate1",
+        "Precio": "$10000",
+        "Categoria": "reposteria",
         "Imagen": "images/chocolate1.JPG"
     },
     {
-        "id": 1,
+        "id": 4,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$8000",
+        "Categoria": "reposteria",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 5,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$8000",
+        "Categoria": "reposteria",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 6,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$8000",
+        "Categoria": "reposteria",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 7,
         "Nombre": "Bombones Dulce de Leche",
         "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
         "Precio": "$2.500",
-        "Categoria": "chocolate1",
+        "Categoria": "reposteria",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 8,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$2.500",
+        "Categoria": "reposteria",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 9,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$2.500",
+        "Categoria": "reposteria",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 10,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$2.500",
+        "Categoria": "reposteria",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 11,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$2.500",
+        "Categoria": "reposteria",
+        "Imagen": "images/chocolate1.JPG"
+    },
+    {
+        "id": 12,
+        "Nombre": "Bombones Dulce de Leche",
+        "Descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "Precio": "$2.500",
+        "Categoria": "reposteria",
         "Imagen": "images/chocolate1.JPG"
     }
 ]
