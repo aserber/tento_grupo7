@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mainRoutes = require('./routes/mainRoutes');
 
+const session = require('express-session');
 const res = require('express/lib/response');
 const path = require('path'); 
 const methodOverride = require ('method-override');
@@ -16,6 +17,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.static(publicPath));
+app.use(session({secret: 'Es un secreto' }));
 app.use ((req,res, next)=>{
     res.status(404).render("not-found");
 })
