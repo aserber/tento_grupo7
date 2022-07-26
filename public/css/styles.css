@@ -11,9 +11,9 @@ header {
     height: 450px;
     background: #78451a;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #8e582c, #b88b5c), url(../img/portada.jpg);
+    background: -webkit-linear-gradient(to right, #623307, #c89864), url(../img/portada.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #8e582c, #b88b5c), url(../img/portada.jpg);
+    background: linear-gradient(to right, #623307, #c89864), url(../img/portada.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
@@ -126,7 +126,8 @@ footer {
 }
 
 .powered {
-    text-align: center;
+    text-align: center !important;
+    margin-right: 70px;
 }
 
 /*footer fin*/
@@ -138,20 +139,23 @@ body {
 
 /*INDEX*/
 
-
+.row , .prod  {
+    background-color: #d0ab7a;
+    font-family: 'Roboto', sans-serif;
+    color:#3f2104
+}
 .fotoalmedio {
     align-items: flex;
     align-items: center;
     text-align: center;
+    background-color: #d0ab7a
 }
-
-/*INDEX FIN*/
 
 
 /* formularios */
 .login input/* LOGIN */,
 .register input/*REGISTRO*/{
-    width: 50%;
+    width: 60%;
     padding: 10px;
     margin: 20px 0px;
     border-radius: 5px solid grey;
@@ -488,6 +492,4 @@ h6 {
 }
 
 /*productos y tortas fin*/
-
-
 

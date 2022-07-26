@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+  <%- include('../partials/head.ejs') %>
+  <%- include('../partials/header.ejs') %>
+  <body class="prod">
+
+  <center>
+    <h3>Mis compras</h3>
+    
+  </center>
+  <style>
+    h3 {
+			font-size: 45px;
+      font-family: "Monserrat"; 
+      color: white;
+      text-decoration: underline solid 2px white;
+      }
+    </style>
+  <br><br><br><br>
+
+  <center><img primerafoto text-align="center"
+      src="/images/products/chocolate-shopping-trolley-red-background-14-february-sale-creative-minimal-concept_126267-7192.jpg"
+      alt="" height="50%" width="50%"></center>
+  <br><br><br><br>
+  <div class="container-miscompras">
+    <table class="tablas-compras">
+      <thead>
+        <tr>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col"></th>
+          <th scope="col">Total de producto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="items">
+          <td class="name col-7">Chocolate</td>
+          <td class="single-price">
+            <div>500$</div>
+          </td>
+          <td class="quantity"><input class="small-input" type="number" value="1" maxlength="4" size="4" required />
+          </td>
+          <td><div class ="botoncarro2"><input type="reset" value="Borrar"></div></td>
+          <td class="total-price col-2"><input class="small-input" type="text" maxlength="4" size="4" value=""
+              required /></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr class="items">
+          <td class="name col-7">Torta</td>
+          <td class="single-price">
+            <div>800$</div>
+          </td><br>
+          <td class="quantity"><input class="small-input" type="number" value="2" maxlength="4" size="4" required />
+          </td>
+          <td><div class ="botoncarro2"><input type="reset" value="Borrar"></div></td>
+
+          <td class="total-price col-2"><input class="small-input" type="text" value="" maxlength="4" size="4"
+              required /></td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div></div>
+  <div class= "botoncarro">
+    <center>
+      <a href="/compras"><input type="submit" value="Enviar"></a>
+      <input type="reset" value="Borrar">
+  </div>
+  </center>
+  </div>
+
+  <%- include('../partials/footer.ejs') %>
+
+</html>

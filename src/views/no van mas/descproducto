@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head.ejs') %>
+    <%- include('partials/header.ejs') %>
+
+<body>
+
+    <h6>
+        Mousse de MIX de Chocolates
+    </h6><br>
+    <div style="display:inline-block;vertical-align:text-top;"><img src="images/products/fotoProducto1.jpg" alt="chocolate"
+            class="imagenprod"><br><br>
+            <div class="contenedor-prod.">
+        <p class="preciop">$6.770</p>
+        <p class="descp">10% off</p>
+        <h5 class="description">Tabletas de chocolate negro, mantequilla, chocolate fondant de reposteria, claras y
+            yemas, leche, azúcar, esencia de vainilla, gelatina sin sabor, barras de chocolate kit kat, chocolate con
+            mani, ferrero rocher, barras de kinder, bombones suizos</h5>
+        </div>
+    </div>
+
+    <div class ="small-input2">
+        <input type="number" value="2" maxlength="4" size="4" required /><br>
+        <input type="submit" value="Enviar"><br>
+        <input type="reset" value="Borrar">
+        <br> <br>
+    </div>
+</body>
+
+<%- include('partials/footer.ejs') %>
+
+
+</html>

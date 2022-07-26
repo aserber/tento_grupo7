@@ -1,28 +1,37 @@
 {
-  "name": "tento",
-  "version": "1.0.0",
-  "description": "Integrantes: \r Alan Serber\r Tatiana Goyenechea\r Francisco Vilaplana\r Camila Caracciolo",
-  "main": "app.js",
+  "name": "baseapphtml",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon ./src/bin/www"
   },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bootstrap-icons": "^1.8.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "http-errors": "~1.6.3",
+    "method-override": "^3.0.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "validator": "^13.7.0"
+  },
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aserber/grupo_7_tento.git"
+    "url": "git+https://github.com/aserber/tento_grupo7.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aserber/grupo_7_tento/issues"
+    "url": "https://github.com/aserber/tento_grupo7/issues"
   },
-  "homepage": "https://github.com/aserber/grupo_7_tento#readme",
-  "dependencies": {
-    "bootstrap": "^5.2.0-beta1",
-    "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "express-session": "^1.17.3",
-    "method-override": "^3.0.0",
-    "multer": "^1.4.5-lts.1"
-  }
+  "homepage": "https://github.com/aserber/tento_grupo7#readme",
+  "description": ""
 }

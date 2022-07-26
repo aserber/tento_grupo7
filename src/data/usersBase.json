@@ -1,0 +1,18 @@
+[
+ {
+  "id": 1,
+  "name": "maria camila",
+  "last_name": "caracciolo",
+  "email": "camilacaracciolo@hotmail.com",
+  "password": "$2b$10$IznDjAY1Nu6bfOtAC1y7VOHvnH.X1n5wu8PxsNVrm1fZ77catiKM.",
+  "category": 1
+ },
+ {
+  "id": 2,
+  "name": "Alan",
+  "last_name": "Serber",
+  "email": "mi@email.com",
+  "password": "$2b$10$54ljCfVeKzeybwbc.azI..cEj9rc59d1hYJ8I1i0DMmPKFI1QksiG",
+  "category": 1
+ }
+]

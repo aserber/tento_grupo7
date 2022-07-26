@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {title: 'Todos los productos'}) %>
+<%- include('partials/header') %>
+<body class = prod>
+
+<h2> Hola </h2>
+
+<main>
+<div>
+ <form action = "" method = get>
+	<label for = "">Nombre	</label>
+
+	<input type="text" name="name" placeholder="Nombre y apellido">
+    <input type="text" name="user" placeholder="Nombre de usuario">
+    <input type="email" name="email" placeholder="E-mail">
+    <input type="password" name="contraseña" placeholder="Contraseña">
+    <input type="password" name="confirmar Contraseña" placeholder="Confirmar Contraseña">
+    <input type="text" name="addres" placeholder="Domicilio">
+
+    
+ </form>
+</div>
+</main>
+	<%- include('partials/footer') %>	
+</body>	
+</html>
+
+

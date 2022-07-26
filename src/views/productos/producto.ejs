@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/head.ejs') %>
+    <%- include('../partials/header.ejs') %>
+<body class = prod>
+<main>
+<div>
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title"><%= category %></h2>
+			</div>
+			<!-- Show the "visited" products -->	
+			<% productsArray.forEach(function(product){ 
+				let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+			%>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<section class="product-box">
+						<a href="../admin/detail/<%= product.id %>">
+							<figure class="product-box_image">
+								<img class= "img2" src="/images/products/<%= product.image %>" alt="imagen de producto">
+							</figure>
+							<article class="product-box_data">
+								<h2>$ <%= toThousand(finalPrice) %></h2>
+								<span><%= product.discount %> %OFF</span>
+								<p><%= product.name %></p>
+								<i class="fas fa-truck"></i>
+							</article>
+						</a>
+					</section>
+				</div>
+			<% }) %>
+			</div>
+			
+		</div>
+</div>
+</main>
+<%- include('../partials/footer.ejs') %>
+</body>	
+</html>

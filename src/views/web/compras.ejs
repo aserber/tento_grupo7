@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs') %>
+    <%- include('../partials/header.ejs') %>
+<body class="prod">
+
+    <h3>Mis Compras</h3>
+    <style>
+        h3 {
+                font-size: 45px;
+          font-family: "Monserrat"; 
+          color: white;
+          text-decoration: underline solid 2px white;
+          }
+        </style>
+
+    <main class="registercompras">
+        <div class="container-miscompras">
+            <form action="/" method="POST">
+                <input class="textInput" type="text" name="name" placeholder="Nombre y apellido">
+                <input class="textInput" type="text" name="user" placeholder="Nombre de usuario">
+                <input class="textInput" type="email" name="email" placeholder="E-mail">
+                <input class="textInput" type="password" name="contraseña" placeholder="Contraseña">
+                <input class="textInput" type="text" name="addres" placeholder="Domicilio"><br>
+                <div class="medios">
+                    <h4>Medios de pago</h4>
+                    <div class="profile">
+                        <div>
+                            <input type="radio" id="pago" name="pago" value="pago">
+                            <label for="pago"> Efectivo</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="pago" name="pago" value="Pago">
+                            <label for="pago"> Mercado Pago</label>
+                        </div>
+                    </div>
+                </div> <br><br>
+                <div class="botonera">
+                    <input type="submit" value="Confirmar">
+                    <input type="reset" value="Borrar">
+                </div>
+            </form>
+        </div>
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+    </main>
+</body>
+<%- include('../partials/footer.ejs') %>
+
+
+</html>
