@@ -77,8 +77,8 @@ app.use('/groups', groupsRouter);
 */
 
 
-
-/* app.post('registrar', [
+/*
+app.post('registrar', [
   body('nombre', 'Ingrese nombre completo')
   .exists()
   .isLength({min: 3}),
@@ -92,13 +92,19 @@ app.use('/groups', groupsRouter);
   .exists()
   .ispassword()
 ],(req, res) => { 
+
+ hasta aca /*
+
+
+
+
   /* const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
       console.log(errors)
     } */
 
-   /*
+   /* sigue aca
     const errors = validationResult(req)
     if (!errors.isEmpty()) {  
       console.log(req.body)
@@ -108,5 +114,6 @@ app.use('/groups', groupsRouter);
     }else {
       res.send('tu vieja')
     }
-*/
+  }
+   termina aca */
 

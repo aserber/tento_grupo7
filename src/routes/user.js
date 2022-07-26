@@ -15,7 +15,7 @@ router.get ('../profile/:userId', userController.profile);
 
 
 
-router.post('registrar', [
+/*router.post('registrar', [
     body('nombre', 'Ingrese nombre completo')
     .exists()
     .isLength({min: 3}),
