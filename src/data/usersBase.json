@@ -14,5 +14,21 @@
   "email": "mi@email.com",
   "password": "$2b$10$54ljCfVeKzeybwbc.azI..cEj9rc59d1hYJ8I1i0DMmPKFI1QksiG",
   "category": 1
+ },
+ {
+  "id": 3,
+  "name": "alan",
+  "last_name": "damian",
+  "email": "alan.serber01@gmail.com",
+  "password": "$2b$10$wUBwueKHRhO.V97h1vAKqOWz7i19QjxFXa.0t6vJEHRhw8HoJEXbK",
+  "category": 1
+ },
+ {
+  "id": 4,
+  "name": "",
+  "last_name": "",
+  "email": "",
+  "password": "$2b$10$j8FecM0kuXBSGbvlqwWuSer79uAc8n.b.0O4HmEh7W.eBDY.x/I3S",
+  "category": 1
  }
 ]
