@@ -26,6 +26,7 @@ const controller = {
 			email: req.body.email,
             password: bcrypt.hashSync(req.body.password,10),
 			category: 1,
+      image: req.file.filename,
 		}
 		console.log(newUser)
 		user.push(newUser);

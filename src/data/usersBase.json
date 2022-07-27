@@ -53,6 +53,16 @@
   "last_name": "Reimundes",
   "email": "lucareimundes@hotmail.com",
   "password": "$2b$10$6YcHUrNtGtIdjdfFwji3AOvRt9MwahpTiXld9xY6oHyX8KfUHKB/O",
-  "category": 1
+  "category": 1,
+  "image": "fotoProducto10.jpg"
+ },
+ {
+  "id": 8,
+  "name": "maria camila",
+  "last_name": "caracciolo",
+  "email": "camilacaracciolo@hotmail.com",
+  "password": "$2b$10$5KIR7myuW1N.wsB.SdGDpuLeE6VnLukQZwmbVkSgZ6U0J5z9wKpom",
+  "category": 1,
+  "image": "usuario-1658899726133.jpeg"
  }
 ]
