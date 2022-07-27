@@ -32,7 +32,7 @@ const productsRouter = require('./routes/productos'); // Rutas productos
 const userRouter = require('./routes/user'); // Rutas usuarios
 const adminRouter = require('./routes/admin'); // Rutas admin
 
-const logMiddleware = require('./middlewares/logMiddleware'); // Middleware de logs a la pagina
+//const logMiddleware = require('./middlewares/logMiddleware'); // Middleware de logs a la pagina
 
 app.use('/', mainRouter); //(web) home-index
 app.use('/usuario', userRouter); //usuarios
@@ -40,7 +40,7 @@ app.use('/productos', productsRouter); //productos
 app.use('/admin', adminRouter); //administracion
 
 
-app.use(logMiddleware); // app.use del Middleware de log a la pagina
+//app.use(logMiddleware); // app.use del Middleware de log a la pagina
 
 
 
