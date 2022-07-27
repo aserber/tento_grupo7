@@ -64,5 +64,14 @@
   "password": "$2b$10$5KIR7myuW1N.wsB.SdGDpuLeE6VnLukQZwmbVkSgZ6U0J5z9wKpom",
   "category": 1,
   "image": "usuario-1658899726133.jpeg"
+ },
+ {
+  "id": 9,
+  "name": "Alan",
+  "last_name": "Serber",
+  "email": "alan.serber01@gmail.com",
+  "password": "$2b$10$U6fpv1/x3xITYqJ/lfFGFemuQNntaR8mr6YD249XqSR4TL4DPYehK",
+  "category": 1,
+  "image": "usuario-1658944956278.png"
  }
 ]
