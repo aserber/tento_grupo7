@@ -30,5 +30,21 @@
   "email": "",
   "password": "$2b$10$j8FecM0kuXBSGbvlqwWuSer79uAc8n.b.0O4HmEh7W.eBDY.x/I3S",
   "category": 1
+ },
+ {
+  "id": 5,
+  "name": "",
+  "last_name": "",
+  "email": "",
+  "password": "$2b$10$KXZBpiWLltDvGeqesgxiWeUIj/NBlmYYI84etbcWThsgkl060xkhq",
+  "category": 1
+ },
+ {
+  "id": 6,
+  "name": "Alan",
+  "last_name": "Serber",
+  "email": "alan.serber01@gmail.com",
+  "password": "$2b$10$PbvGuY2jTcRaUvZEXqTC/ux.3i33y.yDcLyf5HMni6oNOTmnG3FoS",
+  "category": 1
  }
 ]

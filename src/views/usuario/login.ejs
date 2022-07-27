@@ -11,21 +11,24 @@
     <style>
         h3 {
                 font-size: 45px;
-          font-family: "Monserrat"; 
-          color: white;
-          text-decoration: underline solid 2px white;
-          }
+        font-family: "Monserrat"; 
+        color: white;
+        text-decoration: underline solid 2px white;
+        }
         </style>
 
     <main class="login">
         <div class="container-login">
             <form action="/" method="POST">
-                <input type="text" name="user" placeholder="Nombre de usuario">
+                <input type="email" name="user" placeholder="Email">
                 <input type="password" name="pass" placeholder="Contraseña">
 
                 <input type="submit" value="Enviar">
             </form>
+
         </div>
+        <div class="text-center mb-3"><a href="/registro">Aun no poseo una cuenta</a></div>
+
     </main>
 
 </body>
