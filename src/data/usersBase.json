@@ -46,5 +46,13 @@
   "email": "alan.serber01@gmail.com",
   "password": "$2b$10$PbvGuY2jTcRaUvZEXqTC/ux.3i33y.yDcLyf5HMni6oNOTmnG3FoS",
   "category": 1
+ },
+ {
+  "id": 7,
+  "name": "Luca",
+  "last_name": "Reimundes",
+  "email": "lucareimundes@hotmail.com",
+  "password": "$2b$10$6YcHUrNtGtIdjdfFwji3AOvRt9MwahpTiXld9xY6oHyX8KfUHKB/O",
+  "category": 1
  }
 ]
