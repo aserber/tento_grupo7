@@ -19,6 +19,7 @@ const controller = {
     	save: (req, res) => {
 
 		const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+    
 		let newUser = {
 			id: user[user.length - 1].id + 1,
 			name: req.body.name,
@@ -27,8 +28,9 @@ const controller = {
             password: bcrypt.hashSync(req.body.password,10),
 			category: 1,
 		}
-		console.log(newUser)
+		
 		user.push(newUser);
+   
 		fs.writeFileSync(userFilePath, JSON.stringify(user, null, ' '));
 		res.redirect('/');
 

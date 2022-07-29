@@ -6,7 +6,7 @@ const validator = require ("../middlewares/validateRegisterMiddlewares");
 
 
 router.get('/registro', userController.register); //u
-router.post('/registro', validator.register , userController.save);
+router.post('/registro', userController.save);
 router.get('/login', userController.login); //u
 router.get ('../profile/:userId', userController.profile);
 
