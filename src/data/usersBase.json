@@ -49,18 +49,29 @@
  },
  {
   "id": 7,
-  "name": "cvbdfdgbfbg",
-  "last_name": "gfgbfbfsgd",
-  "email": "lucas.cambon@digitalhouse.com",
-  "password": "$2b$10$/DmehWG3eBTEuu2C.BpMpuhMo4HBlzY/83Eno37G8g7nEpxFWZsRe",
-  "category": 1
+  "name": "Luca",
+  "last_name": "Reimundes",
+  "email": "lucareimundes@hotmail.com",
+  "password": "$2b$10$6YcHUrNtGtIdjdfFwji3AOvRt9MwahpTiXld9xY6oHyX8KfUHKB/O",
+  "category": 1,
+  "image": "fotoProducto10.jpg"
  },
  {
   "id": 8,
-  "name": "tatiana",
-  "last_name": "goyenechea",
-  "email": "goyenecheatatiana@gmail.com",
-  "password": "$2b$10$8cx7FG0bS9ThmXqn.IDAOOz3gpskvlKId1Bk3K24kDxziW8NfL7Gq",
-  "category": 1
+  "name": "maria camila",
+  "last_name": "caracciolo",
+  "email": "camilacaracciolo@hotmail.com",
+  "password": "$2b$10$5KIR7myuW1N.wsB.SdGDpuLeE6VnLukQZwmbVkSgZ6U0J5z9wKpom",
+  "category": 1,
+  "image": "usuario-1658899726133.jpeg"
+ },
+ {
+  "id": 9,
+  "name": "Alan",
+  "last_name": "Serber",
+  "email": "alan.serber01@gmail.com",
+  "password": "$2b$10$U6fpv1/x3xITYqJ/lfFGFemuQNntaR8mr6YD249XqSR4TL4DPYehK",
+  "category": 1,
+  "image": "usuario-1658944956278.png"
  }
 ]

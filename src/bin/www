@@ -12,7 +12,7 @@ const http = require('http');
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '7001');
 app.set('port', port);
 
 /**
@@ -27,9 +27,9 @@ const server = http.createServer(app);
 
 server.listen(port, () => { 
   console.log(`\\*-------------------------*\\`);
-  console.log(`Server running in ${port} port`);
-  console.log(`Now, you can open http://localhost:${port} in your favorite browser `);
-  console.log(`Happy programming and never stop learning!`);
+  console.log(`Server corriendo en el puerto ${port} `);
+  console.log(`entrá a http://localhost:${port} Lit  `);
+  console.log(`Y mira todo lo que hicimos!!`);
   
   console.log(`\\*-------------------------*\\`);
 });

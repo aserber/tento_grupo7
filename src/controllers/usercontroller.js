@@ -6,6 +6,7 @@ const { validationResult } = require('express-validator');
 const User = require ("../database/models/User");
 const userFilePath = path.join(__dirname, '../data/usersBase.json');
 
+
 const controller = {
     register: (req, res) => {
         return res.render('usuario/registro');
@@ -27,6 +28,7 @@ const controller = {
 			email: req.body.email,
             password: bcrypt.hashSync(req.body.password,10),
 			category: 1,
+      image: req.file.filename,
 		}
 		
 		user.push(newUser);
@@ -35,6 +37,10 @@ const controller = {
 		res.redirect('/');
 
 	},
+  administrarUsuarios: (req, res) => {
+    const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+    res.render('usuario/usuariosRegistrados');
+  }
     //processRegister: (req,res) => {
       //  const resultValidation = validationResult(req);
 
