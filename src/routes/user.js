@@ -22,7 +22,7 @@ router.post('/registro', validator.register, upload.single('avatar'), userContro
 router.get('/login', userController.login); //u
 router.get ('../profile/:userId', userController.profile);
 
-
+router.get('/adminUsuarios', userController.administrarUsuarios)
 
 
 
