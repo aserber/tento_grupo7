@@ -20,28 +20,18 @@
 
             <main class="register">
                 <div class="container-registro">
-                    <form action="./registro" method="POST" enctype="multipart/form-data">
+                    <form action="./registro" method="POST" >
                         
-                        <input type="text" name="name" placeholder="Nombre" id="nya" required>
-                        <input type="text" name="last_name" placeholder="Apellido" id="nya" required>
-                        <input type="email" name="email" placeholder="E-mail" id="nya" required>
-                        <input type="password" name="password" placeholder="Contraseña" id="nya" required>
-                        <input type="file"   name="archivo"  placeholder="Debes eligir tu avatar..." id="nya" required>
+                        <input type="text" name="name" placeholder="Nombre" required>
+                        <input type="text" name="last_name" placeholder="Apellido" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <input type="password" name="password" placeholder="Contraseña"required>
+                        
                         <div class="botonera">
                             <input type="submit" value="Enviar">
                             <input type="reset" value="Borrar">
                         </div>
                     </form>
-
-                    <% if (typeof validaciones != 'undefined') { %>
-                        <% validaciones.forEach(( validacion) => { %> 
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong><%= validacion.msg  %> </strong> You should check in on some of those fields below.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                          </div>
-                        <% }) %>
-                    <% } %> 
-
                 </div>
                 <br>
             </main>

@@ -18,16 +18,12 @@ const upload = multer({ storage })
 
 
 router.get('/registro', userController.register); //u
-<<<<<<< HEAD
-router.post('/registro', userController.save);
-=======
-router.post('/registro', validator.register, upload.single('avatar'), userController.save);
->>>>>>> 861c66a96762a1b594954633cef22f189d49245e
+router.post('/registro', validator.register , userController.save);
 router.get('/login', userController.login); //u
-router.get ('../profile/:userId', userController.profile);
+//router.get ('../profile/:userId', userController.profile);
 
-router.get('/adminUsuarios', userController.administrarUsuarios)
-
+//router.get('/adminUsuarios', userController.administrarUsuarios)
+// validator.register, upload.single('avatar')
 
 
 

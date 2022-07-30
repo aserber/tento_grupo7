@@ -55,5 +55,13 @@
   "password": "$2b$10$U6fpv1/x3xITYqJ/lfFGFemuQNntaR8mr6YD249XqSR4TL4DPYehK",
   "category": 1,
   "image": "usuario-1658944956278.png"
+ },
+ {
+  "id": 10,
+  "name": "camila",
+  "last_name": "caracciolo",
+  "email": "camila123@hotmail.com",
+  "password": "$2b$10$PIW8MXTb7uOc/eRCvDR8tOkwt0XLmcYR5bW8uPR31WIId0O5BkjiS",
+  "category": 1
  }
 ]
