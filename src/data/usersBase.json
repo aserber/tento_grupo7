@@ -70,6 +70,16 @@
   "last_name": "caracciolo",
   "email": "camilacaracciolo@gmail.com",
   "password": "$2b$10$lTDrOoV5gjvgKtmuXEUlTOlWRHpnNk24SJcc9h/TLPyVS/iU80mf2",
-  "category": 1
+  "category": 1,
+  "imagen": "dasdasd.jpg"
+ },
+ {
+  "id": 12,
+  "name": "maria camila",
+  "last_name": "caracciolo",
+  "email": "camilacaracciolo2@gmail.com.ar",
+  "password": "$2b$10$N11OfqB12ZtE7OgZoyOW5.zZ7ZhzETwoTjEjKFH82vSpVRfDd4yN.",
+  "category": 1,
+  "image": "usuario-1659216986508.webp"
  }
 ]
