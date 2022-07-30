@@ -63,5 +63,13 @@
   "email": "camila123@hotmail.com",
   "password": "$2b$10$PIW8MXTb7uOc/eRCvDR8tOkwt0XLmcYR5bW8uPR31WIId0O5BkjiS",
   "category": 1
+ },
+ {
+  "id": 11,
+  "name": "maria camila",
+  "last_name": "caracciolo",
+  "email": "camilacaracciolo@gmail.com",
+  "password": "$2b$10$lTDrOoV5gjvgKtmuXEUlTOlWRHpnNk24SJcc9h/TLPyVS/iU80mf2",
+  "category": 1
  }
 ]

@@ -6,7 +6,6 @@ const { validationResult } = require('express-validator');
 const User = require ("../database/models/User");
 const userFilePath = path.join(__dirname, '../data/usersBase.json');
 
-
 const controller = {
     register: (req, res) => {
         return res.render('usuario/registro');
@@ -17,27 +16,23 @@ const controller = {
     profile: (req,res) => {
         return res.render ("usuario/login");
     },
-    save: (req, res) => {
+    	save: (req, res) => {
 
-      const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-      let newUser = {
-        id: user[user.length - 1].id + 1,
-        name: req.body.name,
-        last_name: req.body.last_name,
-        email: req.body.email,
-              password: bcrypt.hashSync(req.body.password,10),
-        category: 1,
-      }
-      console.log(newUser)
-      user.push(newUser);
-      fs.writeFileSync(userFilePath, JSON.stringify(user, null, ' '));
-      res.redirect('/');
-  
-    },
-  administrarUsuarios: (req, res) => {
-    const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-    res.render('usuario/usuariosRegistrados');
-  }
+		const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+		let newUser = {
+			id: user[user.length - 1].id + 1,
+			name: req.body.name,
+			last_name: req.body.last_name,
+			email: req.body.email,
+            password: bcrypt.hashSync(req.body.password,10),
+			category: 1,
+		}
+		console.log(newUser)
+		user.push(newUser);
+		fs.writeFileSync(userFilePath, JSON.stringify(user, null, ' '));
+		res.redirect('/');
+
+	},
     //processRegister: (req,res) => {
       //  const resultValidation = validationResult(req);
 
@@ -60,3 +55,4 @@ const controller = {
 
 module.exports = controller;
 //create  logout show 
+
