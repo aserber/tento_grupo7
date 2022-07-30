@@ -18,7 +18,11 @@ const upload = multer({ storage })
 
 
 router.get('/registro', userController.register); //u
+<<<<<<< HEAD
 router.post('/registro', validator.register , userController.save);
+=======
+router.post('/registro', userController.save);
+>>>>>>> e2420910233e28ae40e9e90dbd4475f40cc9fc5a
 router.get('/login', userController.login); //u
 //router.get ('../profile/:userId', userController.profile);
 
