@@ -10,20 +10,20 @@
  },
  {
   "id": 1,
-  "name": "Bombones Dulce de Leche",
+  "name": "Bombones Rellenos Surtidos",
   "price": "3000",
   "discount": "15",
   "category": "Chocolate",
-  "description": "Tabletas de chocolate",
+  "description": "Bombones rellenos surtidos de 250gr sabor Dulce de leche, Banana, Menta y Licor. ",
   "image": "chocolate1.jpg"
  },
  {
   "id": 2,
-  "name": "Bombones Surtidos",
-  "price": "1750",
+  "name": "Bombones Macizos Surtidos",
+  "price": "2000",
   "discount": "15",
   "category": "Chocolate",
-  "description": "falta",
+  "description": "Bombones macizos surtidos de 250gr de chocolate Blanco, Leche y Amargo al %70.",
   "image": "chocolate2.jpg"
  },
  {
@@ -37,46 +37,46 @@
  },
  {
   "id": 4,
-  "name": "Bombones Rellenos",
-  "description": "falta",
-  "price": 2500,
+  "name": "Bombones Dulce de Leche",
+  "description": "Bombones rellenos de dulce de leche artesanal.",
+  "price": 1500,
   "discount": "15",
   "image": "chocolate6.jpg",
   "category": "Chocolate"
  },
  {
   "id": 5,
-  "name": "Surtido de Bombones",
-  "description": "falta",
-  "price": 20999,
-  "discount": 12,
+  "name": "Cajas Surtidas de Bombones",
+  "description": "Combo de dos cajas surtidas de bombones rellenos de Dulce de Leche y Menta Inglesa.",
+  "price": 5000,
+  "discount": 15,
   "image": "alineateche.jpg",
   "category": "Chocolate"
  },
  {
-  "id": 6,
-  "name": "Pasas de Uva con Chocolate",
-  "description": "falta",
-  "price": 36700,
-  "discount": 5,
-  "image": "confite2.jpg",
-  "category": "Chocolate"
- },
+    "id": 6,
+    "name": "Bombones de Frutas",
+    "price": "1450",
+    "discount": "5",
+    "category": "Chocolate",
+    "description": "Bombones de frutas surtidos sabor Banana, Naranja, Limon, Durazno y Manzana",
+    "image": "producto-1659362918545.JPG"
+   },
  {
   "id": 7,
   "name": "Almendras con Chocolate",
-  "description": "falta",
-  "price": 148000,
-  "discount": 2,
+  "description": "Confites de ALmendras bañadas en chocolate leche.",
+  "price": 2000,
+  "discount": 5,
   "image": "confite3.jpg",
   "category": "Chocolate"
  },
  {
   "id": 8,
   "name": "Mani con Chocolate",
-  "description": "Mani cubierto de chocolate amargo",
-  "price": 11399,
-  "discount": 0,
+  "description": "Confites de Mani cubiertos en chocolate semi-amargo al %60.",
+  "price": 1500,
+  "discount": 5,
   "image": "confite4.jpg",
   "category": "Chocolate"
  },
@@ -160,5 +160,32 @@
   "category": "Pasteleria",
   "description": "Mani cubierto de chocolate amargo",
   "image": "fotoProducto7.jpg"
- }
+ },
+ {
+  "id": 20,
+  "name": "Lemoncello",
+  "price": "2500",
+  "discount": "5",
+  "category": "Chocolate",
+  "description": "Confites de  Licor Lemoncello bañados en chocolate sabor Limón.",
+  "image": "producto-1659362648524.JPG"
+ },
+ {
+  "id": 21,
+  "name": "Avellanas al Chocolate",
+  "price": "2800",
+  "discount": "5",
+  "category": "Chocolate",
+  "description": "Confites de Avellanas bañadas en chocolate Leche.",
+  "image": "producto-1659362747689.JPG"
+ },
+ {
+    "id": 22,
+    "name": "Pasas de Uva con Chocolate",
+    "description": "Confites de Pasas de Uva bañadas en chocolate semi-amargo al %60.",
+    "price": 1800,
+    "discount": 5,
+    "image": "confite2.jpg",
+    "category": "Chocolate"
+   }
 ]
