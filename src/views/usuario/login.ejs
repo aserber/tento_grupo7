@@ -21,6 +21,11 @@
         <div class="container-login">
             <form action="/" method="POST">
                 <input type="email" name="user" placeholder="email">
+                <% if (locals.errors && errors.email) { %>
+            <div class="text-danger">
+                <%= errors.email.msg %>
+            </div>
+                <% } %>
                 <input type="password" name="pass" placeholder="Contraseña">
 
                 <input type="submit" value="Enviar">

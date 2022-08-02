@@ -81,5 +81,14 @@
   "password": "$2b$10$N11OfqB12ZtE7OgZoyOW5.zZ7ZhzETwoTjEjKFH82vSpVRfDd4yN.",
   "category": 1,
   "image": "usuario-1659216986508.webp"
+ },
+ {
+  "id": 13,
+  "name": "francisco",
+  "last_name": "Vilaplana",
+  "email": "vilaplanafrancisco@gmail.com",
+  "password": "$2b$10$4Z35IJucqHiR5sl0K3rroeJep.04dMObVbMwFDIPJ/r5jxNkncxsy",
+  "category": 1,
+  "image": "usuario-1659463010244.jpeg"
  }
 ]
