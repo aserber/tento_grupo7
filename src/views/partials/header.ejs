@@ -2,13 +2,18 @@
     <nav>
 
         <a href="/">Inicio</a>
-        <a href="/usuario/registro">Registrate</a>
-        <a href="/usuario/login">Acceder</a>
+        <% if (!locals.usuarioLogueado)  {%>
+            <a href="/usuario/registro">Registrate</a>
+            <a href="/usuario/login">Acceder</a>
+        <%}%>    
         <a href="/productos/Chocolate">Chocolates</a>
         <a href="/productos/Pasteleria">Pasteleria</a>
         <a href="/compras">Mis Compras</a>
-        <a href="/admin/administrar">Administrar</a>
         <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+        <% if (locals.userType)  {%>
+            <a href="/admin/administrar">Administrar</a>
+        <%}%>     
+        
 
     </nav>
 

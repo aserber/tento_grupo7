@@ -16,31 +16,30 @@
                     text-decoration: underline solid 2px white;
                 }
             </style>
-
+    <% if(typeof(errors) != 'undefined'){%>
+        <ul class="alert alert-danger">
+           <% errors.forEach(error => { %>
+              <li><%= error.msg%></li>
+           <%});%>
+         </ul>
+     <%}%> 
 
             <main class="register">
                 <div class="container-registro">
                     <form action="./registro" method="POST" enctype="multipart/form-data">
                         
-                        <input type="text" name="name" placeholder="Nombre" id="nya" required>
-                        <input type="text" name="last_name" placeholder="Apellido" id="nya" required>
-                        <input type="email" name="email" placeholder="E-mail" id="nya" required>
-                        <input type="password" name="password" placeholder="Contraseña" id="nya" required>
-                        <input type="file"   name="avatar"  placeholder="Debes eligir tu avatar...">
+                        <input type="text" name="name" placeholder="Nombre" id="nya" value="<%= typeof old != 'undefined' ? old.first_name : '' %>">
+                        <input type="text" name="last_name" placeholder="Apellido" id="nya" value="<%= typeof old != 'undefined' ? old.last_name : '' %>">
+                        <input type="email" name="email" placeholder="E-mail" id="nya"  value="<%= typeof old != 'undefined' ? old.email : '' %>">
+                        <input type="password" name="password" placeholder="Contraseña" id="nya" >
+                        <input type="file"   name="avatar"  placeholder="Debes eligir tu imagen...">
                         <div class="botonera">
                             <input type="submit" value="Enviar">
                             <input type="reset" value="Borrar">
                         </div>
+                        <div class="text-center my-3">Ya tengo una cuenta? <a href="./login">Inicia sesión</a></div>
                     </form>
-
-                    <% if (typeof validaciones != 'undefined') { %>
-                        <% validaciones.forEach(( validacion) => { %> 
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong><%= validacion.msg  %> </strong> You should check in on some of those fields below.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                          </div>
-                        <% }) %>
-                    <% } %> 
+ 
 
                 </div>
                 <br>

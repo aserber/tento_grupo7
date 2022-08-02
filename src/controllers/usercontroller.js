@@ -1,51 +1,69 @@
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcrypt');
-//const multer = require('multer');
-const { validationResult } = require('express-validator');
-const User = require ("../database/models/User");
 const userFilePath = path.join(__dirname, '../data/usersBase.json');
+const { validationResult } = require('express-validator');
+
 const controller = {
-    register: (req, res) => {
-        return res.render('usuario/registro');
-    },
-    login: (req, res) => {  
-        return res.render('usuario/login');
-    },
-    profile: (req,res) => {
-        return res.render ("usuario/login");
-    },
-    	save: (req, res) => {
-		const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-		let newUser = {
-			id: user[user.length - 1].id + 1,
-			name: req.body.name,
-			last_name: req.body.last_name,
-			email: req.body.email,
-            password: bcrypt.hashSync(req.body.password,10),
-			category: 1,
-      image: req.file.filename,
-		}
-		console.log(newUser)
-		user.push(newUser);
-		fs.writeFileSync(userFilePath, JSON.stringify(user, null, ' '));
-		res.redirect('/');
-	},
-    //processRegister: (req,res) => {
-      //  const resultValidation = validationResult(req);
-        //if(resultValidation.errors.length > 0) {
-          // return res.render ("usuario/registro", {
-            //errors: resultValidation.mapped(),
-              //oldData: req.body
-           // });
-        //}   
-        //let userToCreate = {
-         //   ...req.body,
-          //  avatar: req
-       // }
-         //   User.create(req.body);
-           // return res.send ("ok");
-     //}
+  register: (req, res) => {
+    return res.render('usuario/registro');
+  },
+  login: (req, res) => {
+    return res.render('usuario/login');
+  },
+
+  save: (req, res) => {
+    const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+    let newUser = {
+      id: user[user.length - 1].id + 1,
+      name: req.body.name,
+      last_name: req.body.last_name,
+      email: req.body.email,
+      password: bcrypt.hashSync(req.body.password, 10),
+      category: 1,
+      image: req.file ? req.file.filename : '',
+    }
+
+    console.log(newUser)
+    user.push(newUser);
+    fs.writeFileSync(userFilePath, JSON.stringify(user, null, ' '));
+    res.redirect('/');
+  },
+
+  ingresar: (req, res) => {
+    const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+    let usuario= users.find(user => user.email == req.body.email )
+    if (usuario){
+      let passOk = bcrypt.compareSync(req.body.password, usuario.password)
+      if (passOk){
+        delete usuario.password
+        req.session.usuarioLogueado = usuario
+        if(req.body.recordarme){
+          res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60})
+        }
+        res.redirect ("/");
+      } else {
+        return res.render ("usuario/login", {
+          errors: {
+            datosMal: {
+              msg: "Las credenciales son inválidas"
+            }
+          }
+        })
+      } 
+    } else {
+        return res.render ("usuario/login", {
+        errors: {
+          datosMal: {
+            msg: "Las credenciales son inválidas"
+          }
+        }
+      })
+    } 
+    
+  },
+    
+
 }
 module.exports = controller;
 //create  logout show 

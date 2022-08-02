@@ -1,85 +1,11 @@
 [
  {
   "id": 1,
-  "name": "maria camila",
-  "last_name": "caracciolo",
-  "email": "camilacaracciolo@hotmail.com",
-  "password": "$2b$10$IznDjAY1Nu6bfOtAC1y7VOHvnH.X1n5wu8PxsNVrm1fZ77catiKM.",
-  "category": 1
- },
- {
-  "id": 2,
-  "name": "Alan",
-  "last_name": "Serber",
-  "email": "mi@email.com",
-  "password": "$2b$10$54ljCfVeKzeybwbc.azI..cEj9rc59d1hYJ8I1i0DMmPKFI1QksiG",
-  "category": 1
- },
- {
-  "id": 3,
-  "name": "alan",
-  "last_name": "damian",
-  "email": "alan.serber01@gmail.com",
-  "password": "$2b$10$wUBwueKHRhO.V97h1vAKqOWz7i19QjxFXa.0t6vJEHRhw8HoJEXbK",
-  "category": 1
- },
- {
-  "id": 4,
-  "name": "",
-  "last_name": "",
-  "email": "",
-  "password": "$2b$10$j8FecM0kuXBSGbvlqwWuSer79uAc8n.b.0O4HmEh7W.eBDY.x/I3S",
-  "category": 1
- },
- {
-  "id": 5,
-  "name": "",
-  "last_name": "",
-  "email": "",
-  "password": "$2b$10$KXZBpiWLltDvGeqesgxiWeUIj/NBlmYYI84etbcWThsgkl060xkhq",
-  "category": 1
- },
- {
-  "id": 6,
-  "name": "Alan",
-  "last_name": "Serber",
-  "email": "alan.serber01@gmail.com",
-  "password": "$2b$10$PbvGuY2jTcRaUvZEXqTC/ux.3i33y.yDcLyf5HMni6oNOTmnG3FoS",
-  "category": 1
- },
- {
-  "id": 9,
-  "name": "Alan",
-  "last_name": "Serber",
-  "email": "alan.serber01@gmail.com",
-  "password": "$2b$10$U6fpv1/x3xITYqJ/lfFGFemuQNntaR8mr6YD249XqSR4TL4DPYehK",
+  "name": "Luca",
+  "last_name": "Reimundes Marquez",
+  "email": "lucareimundes@hotmail.com",
+  "password": "$2b$10$YNNtt4zw3AQKAK17SOO3x.GmZs0r4.xcCN2ApEAfmgD5x6ouCKE9W",
   "category": 1,
-  "image": "usuario-1658944956278.png"
- },
- {
-  "id": 10,
-  "name": "camila",
-  "last_name": "caracciolo",
-  "email": "camila123@hotmail.com",
-  "password": "$2b$10$PIW8MXTb7uOc/eRCvDR8tOkwt0XLmcYR5bW8uPR31WIId0O5BkjiS",
-  "category": 1
- },
- {
-  "id": 11,
-  "name": "maria camila",
-  "last_name": "caracciolo",
-  "email": "camilacaracciolo@gmail.com",
-  "password": "$2b$10$lTDrOoV5gjvgKtmuXEUlTOlWRHpnNk24SJcc9h/TLPyVS/iU80mf2",
-  "category": 1,
-  "imagen": "dasdasd.jpg"
- },
- {
-  "id": 12,
-  "name": "maria camila",
-  "last_name": "caracciolo",
-  "email": "camilacaracciolo2@gmail.com.ar",
-  "password": "$2b$10$N11OfqB12ZtE7OgZoyOW5.zZ7ZhzETwoTjEjKFH82vSpVRfDd4yN.",
-  "category": 1,
-  "image": "usuario-1659216986508.webp"
+  "image": "usuario-1659402457093.jpg"
  }
 ]

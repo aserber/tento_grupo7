@@ -2,44 +2,57 @@
 <html lang="en">
 
 
-    <%- include('../partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
     <%- include('../partials/header.ejs') %>
 
-    <body class="prod">
+        <body class="prod">
 
-    <h3>Ingresar</h3>
-    <style>
-        h3 {
-                font-size: 45px;
-          font-family: "Monserrat"; 
-          color: white;
-          text-decoration: underline solid 2px white;
-          }
-        </style>
+            <h3>Ingresar</h3>
+            <style>
+                h3 {
+                    font-size: 45px;
+                    font-family: "Monserrat";
+                    color: white;
+                    text-decoration: underline solid 2px white;
+                }
+            </style>
 
-    <main class="login">
-        <div class="container-login">
-            <form action="/" method="POST">
-                <input type="email" name="user" placeholder="email">
-                <input type="password" name="pass" placeholder="Contraseña">
+            <main class="login">
+                <div class="container-login">
+                    <form action="./login" method="POST">
+                        <input type="email" name="email" placeholder="email"
+                            value="<%= typeof old != 'undefined' ? old.email : '' %>">
+                        <input type="password" name="password" placeholder="Contraseña">
+                        <% if (locals.errors && errors.datosMal){%>
+                            <span class="text-danger">
+                                <%= errors.datosMal.msg %>
+                            </span>
+                            <%}%>
 
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </main>
+                                <input type="submit" value="Enviar">
+                                <div></div>
+                                <div class="form-group ">
+                                    <input type="checkbox" name="recordarme"><label
+                                        class="checkbox-inline">Recordarme</label>
+                                </div>
+                                <div class="text-center mb-3"><a href="./registro">Aun no poseo una cuenta</a></div>
 
-</body>
-<br>
-<br>
-<br><br><br>
-<br><br><br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<%- include('../partials/footer.ejs') %>
+                    </form>
+                </div>
+            </main>
+
+        </body>
+        <br>
+        <br>
+        <br><br><br>
+        <br><br><br>
+        <br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <%- include('../partials/footer.ejs') %>
 
 
 </html>
