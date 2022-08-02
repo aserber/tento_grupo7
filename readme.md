@@ -6,7 +6,7 @@ Camila Caracciolo,
 
 Descripción de los integrantes del grupo:
 
-Camila Caracciolo: Soy Camila, tengo 32 años y vivo en Capital federal. Trabajo en RRHH analizando datos y bases de datos de la Policia de la Ciudad como también nexo entre mi area y sistemas, resolviendo inconvenientes con todos los sistemas de la fuerza. Finalice una Tecnicatura Superior en Programacion pero me falta practica. Me gusta mucho el mundo de programacion y me gustaria dedicarme a esto. 
+Camila Caracciolo: Soy Camila, tengo 32 años y vivo en Capital federal. Trabajo en RRHH analizando datos y bases de datos de la Policia de la Ciudad como también nexo entre mi area y sistemas, resolviendo inconvenientes con todos los sistemas de la fuerza. Me gusta encontrar soluciones a cualquiera de los problemas que puedan surgir en el área. Finalice una Tecnicatura Superior en Programacion. Me gusta mucho el mundo de programacion y me gustaria dedicarme a esto. Tengo un conocimiento avanzado de ingles, y buen manejo del paquete Office. Concretamente con Excel.  
 
 Alan Serber: Soy Alan, tengo 38 años, trabajo haciendo soporte técnico para un juego de Android-IOS investigando queja y basandome en los registros del juego (logs). Tengo un nivel alto en ingles, es mas. He trabajado un total de 5 años haciendo soporte tecnico en ingles (2 años y medio por telefono y 2 años y medio por mail), Me encanta la tecnología, poder encontrar problemas y encontrar soluciones a esos problemas y aunque no tengo mucha experiencia, tengo muchas ganas de desarrollarme en esto. En el pasado he realizado un pequeño curso sobre dreamweaver pudiendo de esta manera diseñar algunas paginas web utilizando HTML, CSS y Bootrstrap. Ademas, soy un amante de la musica y toco la bateria.   
 
@@ -64,3 +64,47 @@ Hemos eliminado: BOTON HAMBURGUESA, PRODUCTOS SALUDABLES, RECETAS, ENFOCARNOS EN
 
 EJERCICIO 2: TABLERO DE TRABAJO:
 Utilizamos la aplicación ClickUp, recomendada por Juan Pablo, donde nos dividimos las tareas, nos ayudamos y complementamos con las tareas de diseño, creación de contenido, ejecución del código en HTML + CSS.
+
+RETROSPECTIVA
+    SPRINT 3
+
+	En base a la ejercitación del proyecto integrador podemos decir que realizamos correctamente redireccionamiento de las páginas, es decir pudimos hacer que se navegue de forma rápida y eficiente dentro del sitio. 
+    Asimismo se confeccionaron los formularios solicitados de manera correcta y eficiente. Como también mejorar la parte visual y de diseño de los mismos como el de la totalidad de la página.
+	Tanto el carrito de compras como el sitio de compras logramos realizarlo de forma funcional. 
+	Pudimos agregar los productos dejando el sitio ordenado, más allá de los inconvenientes que nos generó el uso de flex-box.
+	Todo estos puntos anteriormente detallados pudimos lograrlos gracias a que como equipo, buscamos distintas maneras de organizarnos, y nos fue de utilidad el uso de los tableros de trabajo, como también podemos ayudarnos mutuamente buscando información en diferentes páginas web de las temáticas más complejas como las medidas query y el uso de flex. 
+	Para poder mejorar deberíamos organizar mejor la división de tareas, y el tiempo de entregables dentro del equipo. Es decir poner fechas de entrega dentro del equipo y de las tareas que debe desarrollar cada uno de los integrantes.
+
+
+    SPRINT 4 Y 5
+
+    Como grupo consideramos que las decisiones que hemos tomado en el los sprint's anteriores, han sido de gran ayuda, consideramos que hemos mejorado: 
+        -No tener muchas categorías, dividir ambos productos.
+        -Apuntar a un publico especifico.
+        -Utilizar Flexbox para crear un buen diseño adaptativo para la página.
+        -Administrar los productos.
+        -Cumplir con las consignas de los sprint's para darle mas funcionalidades a la página.
+        -Detallar los productos.
+        -El compañerismo.
+        -Implementar conceptos que no entendiamos gracias al cambio de profesor.
+        -Tener actualizado el tablero de trabajo.
+Para mejorar: quizas podriamos implementar Daily / Weekly standups.
+Por que hemos encontrado impedimentos, por innovar y experimentar y a veces perdernos en la idea, para entender quien y que se realizo el dia de ayer. Que tarea se realizara hoy.
+
+
+
+A medida que avanza el proyecto pudimos ir realizando todos los entregables en tiempo y forma, completando todo lo requerido en los entregables
+
+-Uso de Flex-Box
+-Uso de Multer
+-EJS 
+-Session
+-Cookies
+-Middlewares
+-Controllers
+
+También pudimos ir mejorando las rutas, las vistas de las páginas, organizando los productos, los usuarios, entre otras actividades. Gracias a la aplicación de lo aprendido en clase sobre el proyecto, se pueden consolidar mas los conocimientos adquiridos.  
+Como equipo se debe mejorar la organización entre nosotros para con las actividades. Como también definir fechas de entrega y asignacion de tareas mediante el tablero de trabajo. 
+
+
+
