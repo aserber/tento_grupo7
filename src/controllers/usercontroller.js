@@ -65,6 +65,10 @@ const controller = {
 		fs.writeFileSync(userFilePath, JSON.stringify(user, null, ' '));
 		res.redirect('/');
 	},
+  logout: (req, res) => {
+    req.session.destroy();
+    return res.redirect('/');
+  }
     //processRegister: (req,res) => {
       //  const resultValidation = validationResult(req);
         //if(resultValidation.errors.length > 0) {
