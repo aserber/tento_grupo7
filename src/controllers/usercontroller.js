@@ -62,18 +62,17 @@ const controller = {
     } 
     
   },
-
   profile: (req, res) => {
 		return res.render('usuario/profile', {
 			usuario: req.session.usuarioLogueado
 		});
+
 	},
   logout: (req, res) => {
 		res.clearCookie('userEmail');
 		req.session.destroy();
-		return res.redirect("usuario/login");
+		return res.render("usuario/login");
 	}
 
 }
 module.exports = controller;
-//  logout show 

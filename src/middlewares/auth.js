@@ -1,8 +1,10 @@
 function authMiddleware(req, res, next) {
 	if (req.session.usuarioLogueado) {
-		return res.redirect('./profile');
-	}
-	next();
+        next()
+	} else {
+        res.render("/usuario/login");
+    }
+
 }
 
 module.exports = authMiddleware;

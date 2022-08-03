@@ -52,7 +52,7 @@ router.get('/registro', guestMiddleware, userController.register); //u
 router.post('/registro', validator, upload.single('avatar'), userController.save);
 router.get('/login', guestMiddleware,userController.login); //u
 router.post('/login', userController.ingresar);
-router.get('/logout/', userController.logout);
+router.get('/logout', userController.logout);
 router.get('/profile', authMiddleware, userController.profile);
 
 module.exports = router;

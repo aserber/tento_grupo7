@@ -5,27 +5,27 @@
         <% if (!locals.usuarioLogueado)  {%>
             <a href="/usuario/registro">Registrate</a>
             <a href="/usuario/login">Acceder</a>
+            
         <%}%>    
         <a href="/productos/Chocolate">Chocolates</a>
         <a href="/productos/Pasteleria">Pasteleria</a>
         <a href="/compras">Mis Compras</a>
+       
         <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
         <% if (locals.userType)  {%>
             <a href="/admin/administrar">Administrar</a>
         <%}%>     
         <% if (locals.usuarioLogueado)  {%>
-        <a href="./index"><i class="fas fa-sign-out-alt"></i></a>
+        <a href="/usuario/logout"><i class="fas fa-sign-out-alt"></i></a>
         <%}%>
         
             <% if (locals.usuarioLogueado) { %>
-                <a  href="./usuario/profile"><img src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="40" style="border-radius: 100%;"></a>
+                <a  href="/usuario/profile"><img src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="40" style="border-radius: 100%;"></a>
                         Hi <%= locals.usuarioLogueado.name %> 
                     </a>
 
                         <% } %>
-                    </ul>
-                </li>
-            </ul>
+                    
     </nav>
 
     
