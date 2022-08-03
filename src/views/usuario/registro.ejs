@@ -16,13 +16,11 @@
                     text-decoration: underline solid 2px white;
                 }
             </style>
-    <% if(typeof(errors) != 'undefined'){%>
-        <ul class="alert alert-danger">
-           <% errors.forEach(error => { %>
-              <li><%= error.msg%></li>
-           <%});%>
-         </ul>
-     <%}%> 
+                        <% if (locals.errors && errors.datosMal){%>
+                            <span class="text-danger">
+                                <%= errors.datosMal.msg %>
+                            </span>
+                            <%}%>
 
             <main class="register">
                 <div class="container-registro">

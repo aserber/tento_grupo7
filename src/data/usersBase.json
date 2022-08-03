@@ -5,16 +5,25 @@
   "last_name": "Reimundes Marquez",
   "email": "lucareimundes@hotmail.com",
   "password": "$2b$10$YNNtt4zw3AQKAK17SOO3x.GmZs0r4.xcCN2ApEAfmgD5x6ouCKE9W",
-  "category": 1,
+  "category": 0,
   "image": "usuario-1659402457093.jpg"
  },
  {
   "id": 2,
+<<<<<<< HEAD
   "name": "Alan",
   "last_name": "Serber",
   "email": "alan.serber01@gmail.com",
   "password": "$2b$10$qTymn1TTbqVDGJCVxZZryuY3FOcSIXKSvN6qpAxjDMjabBDRasPRq",
   "category": 1,
   "image": "usuario-1659481272738.jpg"
+=======
+  "name": "maria camila",
+  "last_name": "caracciolo",
+  "email": "camilacaracciolo@hotmail.com",
+  "password": "$2b$10$V/B4RjlnQPUIe/6L1J3KLuJX.c92kZGPiiGkTTyJ0hdSQQuZyvTku",
+  "category": 1,
+  "image": "usuario-1659480754182.png"
+>>>>>>> 14618743ec950c7522bbd44a793acc9febbef589
  }
 ]
