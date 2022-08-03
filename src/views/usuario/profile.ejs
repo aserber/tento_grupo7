@@ -5,25 +5,19 @@
     <%- include('../partials/header.ejs') %>
 
         <body class="prod">
-            <div class="container products-wrapper">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="products-title">Hi <%= usuario.name %> <%= usuario.last_name %></h2>
-                    </div>
-                    <div class="product-detail">
-                        <div class="row">
-                            <div class="col-12 col-lg-8">
-                        <img src="/images/usuariosimg/<%= usuario.image %> ">
-                        <br>
-                        <br>
-                        <div class="alert alert-success"><%= usuario.email %> </div>
-                    </div>
+
+
+            <div class="card" style="width: 18rem;">
+                <img src="/images/usuariosimg/<%= usuario.image %> " class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title"><%= usuario.name %> <%= usuario.last_name %></h5>
+                  <p class="card-text"><%= usuario.email %></p>
+                  <a href="../" class="btn btn-primary">Volver</a>
                 </div>
             </div>
-        </div></div>
+       
         </body>
 <%- include('../partials/footer.ejs') %>
 </html>            
 
 
-    
