@@ -7,5 +7,14 @@
   "password": "$2b$10$YNNtt4zw3AQKAK17SOO3x.GmZs0r4.xcCN2ApEAfmgD5x6ouCKE9W",
   "category": 0,
   "image": "usuario-1659402457093.jpg"
+ },
+ {
+  "id": 2,
+  "name": "maria camila",
+  "last_name": "caracciolo",
+  "email": "camilacaracciolo@hotmail.com",
+  "password": "$2b$10$V/B4RjlnQPUIe/6L1J3KLuJX.c92kZGPiiGkTTyJ0hdSQQuZyvTku",
+  "category": 1,
+  "image": "usuario-1659480754182.png"
  }
 ]

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+    <%- include('../partials/header.ejs') %>
+
+        <body class="prod">
+            <div class="container" style="margin-top: 40px;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2>Hi <%= usuario.name %> <%= usuario.last_name %></h2>
+                        <img src="/images/usuariosimg/<%= usuario.avatar %> ">
+                        <br>
+                        <br>
+                        <div class="alert alert-success"><%= usuario.email %> </div>
+                    </div>
+                </div>
+            </div>
+
+        </body>
+<%- include('../partials/footer.ejs') %>
+</html>            
