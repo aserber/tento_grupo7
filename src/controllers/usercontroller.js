@@ -71,7 +71,7 @@ const controller = {
   logout: (req, res) => {
 		res.clearCookie('userEmail');
 		req.session.destroy();
-		return res.render("usuario/login");
+		return res.render("web/home");
 	}
 
 }
