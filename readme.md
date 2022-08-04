@@ -78,21 +78,6 @@ RETROSPECTIVA
 
     SPRINT 4 Y 5
 
-    Como grupo consideramos que las decisiones que hemos tomado en el los sprint's anteriores, han sido de gran ayuda, consideramos que hemos mejorado: 
-        -No tener muchas categorías, dividir ambos productos.
-        -Apuntar a un publico especifico.
-        -Utilizar Flexbox para crear un buen diseño adaptativo para la página.
-        -Administrar los productos.
-        -Cumplir con las consignas de los sprint's para darle mas funcionalidades a la página.
-        -Detallar los productos.
-        -El compañerismo.
-        -Implementar conceptos que no entendiamos gracias al cambio de profesor.
-        -Tener actualizado el tablero de trabajo.
-Para mejorar: quizas podriamos implementar Daily / Weekly standups.
-Por que hemos encontrado impedimentos, por innovar y experimentar y a veces perdernos en la idea, para entender quien y que se realizo el dia de ayer. Que tarea se realizara hoy.
-
-
-
 A medida que avanza el proyecto pudimos ir realizando todos los entregables en tiempo y forma, completando todo lo requerido en los entregables
 
 -Uso de Flex-Box
