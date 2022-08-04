@@ -92,19 +92,24 @@ Para mejorar: quizas podriamos implementar Daily / Weekly standups.
 Por que hemos encontrado impedimentos, por innovar y experimentar y a veces perdernos en la idea, para entender quien y que se realizo el dia de ayer. Que tarea se realizara hoy.
 
 
+    RETROSPECTIVA 3,4,5
+        A medida que avanza el proyecto pudimos ir realizando todos los entregables en tiempo y forma, completando todo lo requerido en los entregables
 
-A medida que avanza el proyecto pudimos ir realizando todos los entregables en tiempo y forma, completando todo lo requerido en los entregables
+        -Uso de Flex-Box
+        -Uso de Multer
+        -EJS 
+        -Session
+        -Cookies
+        -Middlewares
+        -Controllers
 
--Uso de Flex-Box
--Uso de Multer
--EJS 
--Session
--Cookies
--Middlewares
--Controllers
+    También pudimos ir mejorando las rutas, las vistas de las páginas, organizando los productos, los usuarios, entre otras actividades. Gracias a la aplicación de lo aprendido en clase sobre el proyecto, se pueden consolidar mas los conocimientos adquiridos.  
+    Como equipo se debe mejorar la organización entre nosotros para con las actividades. Como también definir fechas de entrega y asignacion de tareas mediante el tablero de trabajo. 
 
-También pudimos ir mejorando las rutas, las vistas de las páginas, organizando los productos, los usuarios, entre otras actividades. Gracias a la aplicación de lo aprendido en clase sobre el proyecto, se pueden consolidar mas los conocimientos adquiridos.  
-Como equipo se debe mejorar la organización entre nosotros para con las actividades. Como también definir fechas de entrega y asignacion de tareas mediante el tablero de trabajo. 
+MARTES 2 DE AGOSTO: LANZAMIENTO DEL SPRINT 6:
+ 
+ 1) ORGANIZADA AL DÍA.
 
+ 2) DAILY WEELY STANDUPS.
 
-
+ En el dia de hoy jueves 4 de Agosto, nos hemos reunido con Camila, Francisco y Alan, y yo (Tatiana) para armar la base de datos, y hemos hecho la traducción de español a inglés, Cami actualizó el tablero, y yo implementé el Daily.
