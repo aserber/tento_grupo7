@@ -75,25 +75,10 @@ RETROSPECTIVA
 	Todo estos puntos anteriormente detallados pudimos lograrlos gracias a que como equipo, buscamos distintas maneras de organizarnos, y nos fue de utilidad el uso de los tableros de trabajo, como también podemos ayudarnos mutuamente buscando información en diferentes páginas web de las temáticas más complejas como las medidas query y el uso de flex. 
 	Para poder mejorar deberíamos organizar mejor la división de tareas, y el tiempo de entregables dentro del equipo. Es decir poner fechas de entrega dentro del equipo y de las tareas que debe desarrollar cada uno de los integrantes.
 
-
+ RETROSPECTIVA
     SPRINT 4 Y 5
 
-    Como grupo consideramos que las decisiones que hemos tomado en el los sprint's anteriores, han sido de gran ayuda, consideramos que hemos mejorado: 
-        -No tener muchas categorías, dividir ambos productos.
-        -Apuntar a un publico especifico.
-        -Utilizar Flexbox para crear un buen diseño adaptativo para la página.
-        -Administrar los productos.
-        -Cumplir con las consignas de los sprint's para darle mas funcionalidades a la página.
-        -Detallar los productos.
-        -El compañerismo.
-        -Implementar conceptos que no entendiamos gracias al cambio de profesor.
-        -Tener actualizado el tablero de trabajo.
-Para mejorar: quizas podriamos implementar Daily / Weekly standups.
-Por que hemos encontrado impedimentos, por innovar y experimentar y a veces perdernos en la idea, para entender quien y que se realizo el dia de ayer. Que tarea se realizara hoy.
-
-
-    RETROSPECTIVA 3,4,5
-        A medida que avanza el proyecto pudimos ir realizando todos los entregables en tiempo y forma, completando todo lo requerido en los entregables
+ A medida que avanza el proyecto pudimos ir realizando todos los entregables en tiempo y forma, completando todo lo requerido en los entregables
 
         -Uso de Flex-Box
         -Uso de Multer
