@@ -16,4 +16,6 @@ router.get('/compras', mainController.compras); //p
 
 router.get('/carrito', mainController.carrito);//p
 
+router.get('/nosotros', mainController.nosotros);//p
+
 module.exports = router;

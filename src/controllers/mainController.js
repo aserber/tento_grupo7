@@ -40,6 +40,10 @@ const controller = {
         return res.render('./web/compras');
     },
 
+	nosotros: (req, res) => {
+        return res.render('web/nosotros');
+    },
+
 };
 
 
