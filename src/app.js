@@ -38,7 +38,7 @@ app.use('/', mainRouter); //(web) home-index
 app.use('/usuario', userRouter); //usuarios
 app.use('/productos', productsRouter); //productos
 app.use('/admin', adminRouter); //administracion
-console.log('pruebaNoTocar');
+
 
 module.exports = app;
 
