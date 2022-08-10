@@ -20,7 +20,7 @@ const controller = {
       last_name: req.body.last_name,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
-      category: 1,
+      category: 0,
       image: req.file ? req.file.filename : '',
     }
 
