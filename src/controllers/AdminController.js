@@ -67,7 +67,7 @@ const controller = {
 		productToEdit = {
 			id: productToEdit.id,
 			...req.body,
-			image: productToEdit.image,
+			image: req.file.filename,
 		};
 		console.log(productToEdit);
 

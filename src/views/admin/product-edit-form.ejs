@@ -14,8 +14,12 @@
 			</div>
 		</div>
 		<div class="col-12">
-			<form action="/admin/detail/<%= productToEdit.id %>?_method=PATCH" method="POST">
+			<form action="/admin/detail/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
+
+					<div>
+						<input type="file" name="imagen" value="<%= productToEdit.image%>" class="form-input">
+						</div>
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre del producto:</label>
 						<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" value="<%= productToEdit.name%>" class="form-input">

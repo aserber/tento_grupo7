@@ -54,14 +54,14 @@
   "category": "Chocolate"
  },
  {
-    "id": 6,
-    "name": "Bombones de Frutas",
-    "price": "1450",
-    "discount": "5",
-    "category": "Chocolate",
-    "description": "Bombones de frutas surtidos sabor Banana, Naranja, Limon, Durazno y Manzana",
-    "image": "producto-1659362918545.JPG"
-   },
+  "id": 6,
+  "name": "Bombones de Frutas",
+  "price": "1450",
+  "discount": "5",
+  "category": "Chocolate",
+  "description": "Bombones de frutas surtidos sabor Banana, Naranja, Limon, Durazno y Manzana",
+  "image": "producto-1659362918545.JPG"
+ },
  {
   "id": 7,
   "name": "Almendras con Chocolate",
@@ -180,12 +180,12 @@
   "image": "producto-1659362747689.JPG"
  },
  {
-    "id": 22,
-    "name": "Pasas de Uva con Chocolate",
-    "description": "Confites de Pasas de Uva bañadas en chocolate semi-amargo al %60.",
-    "price": 1800,
-    "discount": 5,
-    "image": "confite2.jpg",
-    "category": "Chocolate"
-   }
+  "id": 22,
+  "name": "Pasas de Uva con Chocolate",
+  "description": "Confites de Pasas de Uva bañadas en chocolate semi-amargo al %60.",
+  "price": 1800,
+  "discount": 5,
+  "image": "confite2.jpg",
+  "category": "Chocolate"
+ }
 ]

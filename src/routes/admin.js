@@ -16,7 +16,7 @@ var storage = multer.diskStorage({
   const upload = multer({ storage })
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', adminController.edit); 
-router.patch('/detail/:id', adminController.update);
+router.patch('/detail/:id',upload.single('imagen'), adminController.update);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', adminController.destroy); 
 /*** CREATE ONE PRODUCT ***/ 
