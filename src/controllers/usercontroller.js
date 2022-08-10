@@ -20,14 +20,14 @@ const controller = {
       last_name: req.body.last_name,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
-      category: 0,
+      category: 1,
       image: req.file ? req.file.filename : '',
     }
 
     console.log(newUser)
     user.push(newUser);
     fs.writeFileSync(userFilePath, JSON.stringify(user, null, ' '));
-    res.redirect('/');
+    res.redirect('./login');
   },
 
   ingresar: (req, res) => {
@@ -38,6 +38,7 @@ const controller = {
       if (passOk){
         delete usuario.password
         req.session.usuarioLogueado = usuario
+        res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60})
         if(req.body.recordarme){
           res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60})
         }

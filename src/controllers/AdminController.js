@@ -41,7 +41,7 @@ const controller = {
 			discount: req.body.discount,
 			category: req.body.category,
 			description: req.body.description,
-			image: req.file.filename,
+			image: req.file ? req.file.filename : '',
 		}
 		console.log(newProduct)
 		products.push(newProduct);
@@ -63,14 +63,13 @@ const controller = {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id)
+		
 
 		productToEdit = {
 			id: productToEdit.id,
 			...req.body,
-			image: req.file.filename,
+			image: req.file ? req.file.filename : '',
 		};
-		console.log(productToEdit);
-
 		let indice = products.findIndex(producto => producto.id == id);
 		products[indice] = productToEdit
 

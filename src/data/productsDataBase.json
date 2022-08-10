@@ -159,7 +159,7 @@
   "discount": "0",
   "category": "Pasteleria",
   "description": "Mani cubierto de chocolate amargo",
-  "image": "fotoProducto7.jpg"
+  "image": "producto-1660108029569.jpg"
  },
  {
   "id": 20,
@@ -182,10 +182,10 @@
  {
   "id": 22,
   "name": "Pasas de Uva con Chocolate",
+  "price": "1800",
+  "discount": "5",
+  "category": "Chocolate",
   "description": "Confites de Pasas de Uva bañadas en chocolate semi-amargo al %60.",
-  "price": 1800,
-  "discount": 5,
-  "image": "confite2.jpg",
-  "category": "Chocolate"
+  "image": "producto-1660107628501.JPG"
  }
 ]
