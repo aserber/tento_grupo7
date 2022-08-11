@@ -68,7 +68,7 @@ const controller = {
 		productToEdit = {
 			id: productToEdit.id,
 			...req.body,
-			image: req.file ? req.file.filename : '',
+			image: req.file ? req.file.filename : req.body.oldImagen,
 		};
 		let indice = products.findIndex(producto => producto.id == id);
 		products[indice] = productToEdit
