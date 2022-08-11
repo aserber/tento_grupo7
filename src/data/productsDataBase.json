@@ -99,15 +99,6 @@
   "image": "fotoProducto17.jpeg"
  },
  {
-  "id": 12,
-  "name": "asdasd",
-  "price": "12000",
-  "discount": "0",
-  "category": "",
-  "description": "Bizcochuelo de 3 pisos, de Limón, con chocolate blanco, frutillas, y flores de decoración. (No comestibles).",
-  "image": "fotoProducto3.jpg"
- },
- {
   "id": 13,
   "name": "Mousse de Mix de Chocolates",
   "price": "150",
@@ -157,9 +148,9 @@
   "name": "Super Chocolate",
   "price": "500",
   "discount": "0",
-  "category": "Pasteleria",
+  "category": "",
   "description": "Mani cubierto de chocolate amargo",
-  "image": "producto-1660108029569.jpg"
+  "image": "producto-1660175935121.jpg"
  },
  {
   "id": 20,
@@ -186,6 +177,16 @@
   "discount": "5",
   "category": "Chocolate",
   "description": "Confites de Pasas de Uva bañadas en chocolate semi-amargo al %60.",
-  "image": "producto-1660107628501.JPG"
+  "image": "producto-1660176020690.JPG"
+ },
+ {
+  "id": 23,
+  "oldImagen": "producto-1660177041096.jpg",
+  "name": "torta among us",
+  "price": "12313432",
+  "discount": "34",
+  "category": "Chocolate",
+  "description": "",
+  "image": "producto-1660177041096.jpg"
  }
 ]
