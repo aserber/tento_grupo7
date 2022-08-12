@@ -30,6 +30,16 @@ const controller = {
 		});
 	},
 
+	detail: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let id = req.params.id
+		let product = products.find(product => product.id == id)
+		res.render('productos/detail', {
+			product,
+			toThousand
+		})
+	},
+
 };
 
 module.exports = controller;

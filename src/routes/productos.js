@@ -10,7 +10,8 @@ router.get('/:categoria', productsController.productCategory);
 
 /*** SEARCHE ONE PRODUCT ***/ 
 router.get('/search', productsController.search); 
-
+/*** GET ONE PRODUCT ***/
+router.get('/detail/:id', productsController.detail); 
 
 
 
