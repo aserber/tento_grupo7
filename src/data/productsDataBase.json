@@ -178,15 +178,5 @@
   "category": "Chocolate",
   "description": "Confites de Pasas de Uva bañadas en chocolate semi-amargo al %60.",
   "image": "producto-1660176020690.JPG"
- },
- {
-  "id": 23,
-  "oldImagen": "producto-1660177041096.jpg",
-  "name": "torta among us",
-  "price": "12313432",
-  "discount": "34",
-  "category": "Chocolate",
-  "description": "",
-  "image": "producto-1660177041096.jpg"
  }
 ]
