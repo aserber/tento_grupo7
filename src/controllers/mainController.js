@@ -43,6 +43,9 @@ const controller = {
 	nosotros: (req, res) => {
         return res.render('web/nosotros');
     },
+	accesodenegado: (req, res) => {
+        return res.render('web/accesodenegado');
+    },
 
 };
 

@@ -9,6 +9,7 @@ const session = require("express-session");
 const acceso = require("./middlewares/acceso")
 // ************ express() - (don't touch) ************
 const app = express();
+const guestMiddleware = require('./middlewares/guest');
 
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
@@ -37,7 +38,7 @@ const adminRouter = require('./routes/admin'); // Rutas admin
 app.use('/', mainRouter); //(web) home-index
 app.use('/usuario', userRouter); //usuarios
 app.use('/productos', productsRouter); //productos
-app.use('/admin', adminRouter); //administracion
+app.use('/admin',guestMiddleware, adminRouter); //administracion
 
 
 module.exports = app;

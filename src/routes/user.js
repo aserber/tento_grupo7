@@ -6,7 +6,7 @@ const { body } = require("express-validator");
 const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
-const guestMiddleware = require('../middlewares/guest');
+
 const authMiddleware = require('../middlewares/auth');
 //let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/usersBase.json')))
 
@@ -48,9 +48,9 @@ const upload = multer({ storage })
 //  }).withMessage('Usurio o contraseña no coinciden'),
 //] 
 
-router.get('/registro', guestMiddleware, userController.register); //u
+router.get('/registro', authMiddleware, userController.register); //u
 router.post('/registro', validator, upload.single('avatar'), userController.save);
-router.get('/login', guestMiddleware,userController.login); //u
+router.get('/login', authMiddleware,userController.login); //u
 router.post('/login', userController.ingresar);
 router.get('/logout', userController.logout);
 router.get('/profile', authMiddleware, userController.profile);

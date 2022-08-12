@@ -18,4 +18,5 @@ router.get('/carrito', mainController.carrito);//p
 
 router.get('/nosotros', mainController.nosotros);//p
 
+router.get('/accesodenegado', mainController.accesodenegado);//p
 module.exports = router;
