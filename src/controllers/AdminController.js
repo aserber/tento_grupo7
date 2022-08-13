@@ -76,6 +76,9 @@ const controller = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/');
 	},
+	error: (req, res) => {
+		return res.render('admin/error')
+	},
 	administrar: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let Chocolate = products.filter(function (products) {

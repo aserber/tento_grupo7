@@ -38,7 +38,7 @@ const controller = {
       if (passOk){
         delete usuario.password
         req.session.usuarioLogueado = usuario
-        res.cookie("userEmail", req.body.email, {maxAge: 5000 * 60 * 60})
+        res.cookie("userEmail", req.body.email, {maxAge: 500 * 60 * 60})
         if(req.body.recordarme){
           res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60})
         }

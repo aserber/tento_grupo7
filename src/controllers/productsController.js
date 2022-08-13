@@ -34,11 +34,15 @@ const controller = {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
-		res.render('productos/detail', {
+		if (product == undefined){
+			res.redirect('/admin/error')
+		} else{
+			res.render('productos/detail', {
 			product,
 			toThousand
-		})
+		})}
 	},
+
 
 };
 
