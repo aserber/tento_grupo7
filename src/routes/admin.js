@@ -26,4 +26,5 @@ router.post('/crear',upload.single('imagen'), adminController.store);
 router.get('/detail/:id', adminController.detail); 
 router.get("/administrar", adminController.administrar);
 
+router.get("/error",adminController.error)
 module.exports = router;
