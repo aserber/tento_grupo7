@@ -22,12 +22,12 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         timestamps: false,
     }
-    const Sale = sequelize.define(alias, cols, config); 
+    const sale = sequelize.define(alias, cols, config); 
 
 
     
-    Sale.associate = function (models) {
-        Sale.belongsToMany(models.Product, { 
+    sale.associate = function (models) {
+        sale.belongsToMany(models.Product, { 
             as: "product",
             through: 'product_sale',
             foreignKey: 'id_sale',
@@ -36,8 +36,8 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
 
-    Sale.associate = function (models) {
-        Sale.manyToOne(models.status, { 
+    sale.associate = function (models) {
+        sale.manyToOne(models.status, { 
             as: "status",
             foreignKey: 'id_status',
             otherKey: 'id_sale',
@@ -45,8 +45,8 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
 
-    Sale.associate = function (models) {
-        Sale.manyToOne(models.user, { 
+    sale.associate = function (models) {
+        sale.manyToOne(models.user, { 
             as: "user",
             foreignKey: 'id_user',
             otherKey: 'id_sale',
@@ -55,5 +55,5 @@ module.exports = (sequelize, dataTypes) => {
     }
 
 
-    return Sale
+    return sale
 };
