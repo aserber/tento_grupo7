@@ -35,14 +35,14 @@ module.exports = (sequelize, dataTypes) => {
     const user = sequelize.define(alias, cols, config); 
 
     user.associate = function (models) {
-        user.hasMany(models.sale, { // models.Movie -> Movies es el valor de alias en movie.js
+        user.belongsToMany(models.sale, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "sale",
             foreignKey: 'id_user'
         })
     }
 
     user.associate = function (models) {
-        user.manytoOne(models.userCategory, { // models.Movie -> Movies es el valor de alias en movie.js
+        user.belongsTo(models.userCategory, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "userCategory",
             foreignKey: 'id_userCategory'
         })

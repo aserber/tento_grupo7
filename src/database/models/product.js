@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         image: {
-            type: dataTypes.TINYINT(10).UNSIGNED
+            type: dataTypes.STRING(500)
         },
         id_productCategory: {
             type: dataTypes.INT(10),
@@ -34,7 +34,7 @@ module.exports = (sequelize, dataTypes) => {
 
 
     product.associate = function (models) {
-        product.manyToOne(models.productCategory, { // models.Movie -> Movies es el valor de alias en movie.js
+        product.belongsTo(models.productCategory, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "productCategory",
             foreignKey: 'id_productCategory',
             timestamps: false
