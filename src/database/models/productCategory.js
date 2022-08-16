@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
     const productCategory = sequelize.define(alias, cols, config); 
 
     productCategory.associate = function (models) {
-        productCategory.belongsToMany(models.product, { 
+        productCategory.hasMany(models.product, { 
             as: "product",
             foreignKey: 'id_productCategory',
         })

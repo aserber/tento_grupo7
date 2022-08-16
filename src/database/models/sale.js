@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     sale.associate = function (models) {
-        sale.manyToOne(models.status, { 
+        sale.belongsTo(models.status, { 
             as: "status",
             foreignKey: 'id_status',
             otherKey: 'id_sale',
@@ -46,7 +46,7 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     sale.associate = function (models) {
-        sale.manyToOne(models.user, { 
+        sale.belongsTo(models.user, { 
             as: "user",
             foreignKey: 'id_user',
             otherKey: 'id_sale',

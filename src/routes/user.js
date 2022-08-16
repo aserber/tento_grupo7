@@ -8,6 +8,7 @@ const multer = require('multer');
 const fs = require('fs');
 
 const authMiddleware = require('../middlewares/auth');
+const authiMiddleware = require('../middlewares/auth2');
 //let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/usersBase.json')))
 
 var storage = multer.diskStorage({
@@ -53,6 +54,7 @@ router.post('/registro', validator, upload.single('avatar'), userController.save
 router.get('/login', authMiddleware,userController.login); //u
 router.post('/login', userController.ingresar);
 router.get('/logout', userController.logout);
-router.get('/profile', authMiddleware, userController.profile);
+router.get('/profile', authiMiddleware, userController.profile);//hacer uno nuevo para profile parecido a auth
+
 
 module.exports = router;

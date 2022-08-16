@@ -172,8 +172,9 @@
  },
  {
   "id": 22,
+  "oldImagen": "producto-1660176020690.JPG",
   "name": "Pasas de Uva con Chocolate",
-  "price": "1800",
+  "price": "2000",
   "discount": "5",
   "category": "Chocolate",
   "description": "Confites de Pasas de Uva bañadas en chocolate semi-amargo al %60.",
