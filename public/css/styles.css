@@ -503,3 +503,25 @@ h6 {
 }
 /*productos y tortas fin*/
 
+.responsive img{
+    height: 250px;
+    
+    border: 2px solid #333;
+    box-shadow: 0 0 0 2px white;
+    flex: auto;
+}
+
+.tu-vieja {
+    margin: 20px;
+}
+
+.responsive {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    
+ }
