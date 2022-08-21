@@ -12,6 +12,7 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
+        tableName: "status",
         timestamps: false,
     }
     const status = sequelize.define(alias, cols, config); 

@@ -42,8 +42,7 @@ const controller = {
 			toThousand
 		})}
 	},
-
-
+	
 };
 
 module.exports = controller;

@@ -173,6 +173,22 @@ body {
     justify-content: center;
 }
 
+.search {
+    width: 60%;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px solid grey;
+    border: 10px;
+    display: flex;
+    align-self: center;
+    color:#3f2104;
+
+    }
+.boton-buscar {
+    color:white;
+    border-radius: 5px solid grey;
+    background-color:#623307;
+}
 /*agregue ete contenedor para registro y login*/
 /*FORMUALRIOS FIN*/
 
@@ -430,6 +446,8 @@ h6 {
     color: #623307;
     font-weight: bold;
 }
+
+
 
 /*descproducto fin*/
 
