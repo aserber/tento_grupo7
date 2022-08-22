@@ -55,7 +55,7 @@ header .textos-header {
 
 }
 
-.textos-header h1 {
+.textos-header h1, h3 {
     font-size: 150px;
     color: #ffffff;
     font-family: 'Montserrat';
@@ -542,4 +542,9 @@ h6 {
     justify-content: center;
     flex-direction: row;
     
+ }
+
+ .integrantes {
+    color: #623307;
+    text-decoration: underline;
  }
