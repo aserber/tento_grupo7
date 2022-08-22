@@ -6,7 +6,14 @@
     <%- include('../partials/header.ejs') %>
     <body class="prod">
 
-    <h3>Inicio</h3><br>
+      <h3>Inicio</h3><br><br><br>
+
+      <form action="../productos/detail" method="GET" class = "barrabusqueda">
+        <input type="text" placeholder="Buscar productos" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form> 
+
+
     <style>
         h3 {
                 font-size: 45px;
@@ -16,6 +23,8 @@
           }
     </style>
 
+
+<br><br>
 <div class="fotoalmedio">
   <a href="index"><h2> NUESTROS PRODUCTOS</h2></a>
   <br>

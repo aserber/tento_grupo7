@@ -548,3 +548,12 @@ h6 {
     color: #623307;
     text-decoration: underline;
  }
+
+ .barrabusqueda {
+   font-size: 17px;
+font-family: "Monserrat";
+color: #3f2104;
+align-items: center;
+justify-content: center;
+text-align: center;
+ } 
