@@ -3,7 +3,7 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const userFilePath = path.join(__dirname, '../data/usersBase.json');
 const { validationResult } = require('express-validator');
-const db = require('../database/models');
+//const db = require('../database/models');
 
 const controller = {
   register: (req, res) => {
@@ -24,6 +24,19 @@ const controller = {
       category: 1,
       image: req.file ? req.file.filename : '',
     }
+
+ // save: (req, res) => {
+ //   db.user.create({
+ //     id: user[user.length - 1].id + 1,
+ //     name: req.body.name,
+ //     last_name: req.body.last_name,
+ //     email: req.body.email,
+ //     password: bcrypt.hashSync(req.body.password, 10),
+ //     category: 1,
+ //     image: req.file ? req.file.filename : '',
+ //   })
+ //   res.redirect('./login')
+ // }
 
     console.log(newUser)
     user.push(newUser);
