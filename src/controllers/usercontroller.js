@@ -3,6 +3,7 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const userFilePath = path.join(__dirname, '../data/usersBase.json');
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
 
 const controller = {
   register: (req, res) => {
