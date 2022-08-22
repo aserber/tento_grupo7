@@ -46,7 +46,9 @@ const controller = {
 	accesodenegado: (req, res) => {
         return res.render('web/accesodenegado');
     },
-
+	faq: (req, res) => {
+        return res.render('web/faq');
+    },
 };
 
 
