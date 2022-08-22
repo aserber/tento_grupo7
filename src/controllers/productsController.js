@@ -23,7 +23,7 @@ const controller = {
 	search: (req, res) => {
 		let search = req.query.keywords;
 		let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
-		res.render('results', { 
+		res.render('productos/detail', { 
 			products: productsToSearch, 
 			search,
 			toThousand,

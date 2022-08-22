@@ -1,45 +1,41 @@
 <header>
+    <form action="../productos/detail" method="GET" class = "fotoalmedio">
+        <input type="text" placeholder="Buscar productos, marcas y más" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form> 
+
     <nav>
 
         <a href="/">Inicio</a>
-        <% if (!locals.usuarioLogueado)  {%>
+        <% if (!locals.usuarioLogueado) {%>
             <a href="/usuario/registro">Registrate</a>
             <a href="/usuario/login">Acceder</a>
-            
-        <%}%>    
-        <a href="/productos/Chocolate">Chocolates</a>
-        <a href="/productos/Pasteleria">Pasteleria</a>
-        <a href="/compras">Mis Compras</a>
-       
-        <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-        <% if (locals.userType)  {%>
-            <a href="/admin/administrar">Administrar</a>
-        <%}%>     
-        <% if (locals.usuarioLogueado)  {%>
-        <a href="/usuario/logout"><i class="fas fa-sign-out-alt"></i></a>
-        <%}%>
-        
-            <% if (locals.usuarioLogueado) { %>
-                <a  href="/usuario/profile"><img src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="40" style="border-radius: 100%;"></a>
-                    Hola <%= locals.usuarioLogueado.name %> 
-                    </a>
 
-                        <% } %>
+            <%}%>
+                <a href="/productos/Chocolate">Chocolates</a>
+                <a href="/productos/Pasteleria">Pasteleria</a>
+                <a href="/compras">Mis Compras</a>
 
+                <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <% if (locals.userType) {%>
+                    <a href="/admin/administrar">Administrar</a>
+                    <%}%>
+                        <% if (locals.usuarioLogueado) {%>
+                            <a href="/usuario/logout"><i class="fas fa-sign-out-alt"></i></a>
+                            <%}%>
 
-                        <form action="#" method="GET">
-                            <input type="search" placeholder="Buscar productos, marcas y más" name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>     
+                                <% if (locals.usuarioLogueado) { %>
+                                    <a href="/usuario/profile"><img
+                                            src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="40"
+                                            style="border-radius: 100%;"></a>
+                                    Hola <%= locals.usuarioLogueado.name %>
+                                        </a>
 
+                                        <% } %>
 
-
-        
-        
-        
     </nav>
 
-    
+
     <section class="textos-header">
         <h1>tentó</h1>
     </section>
@@ -48,11 +44,5 @@
             <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                 style="stroke: none; fill: #d0ab7a;"></path>
         </svg></div>
-
-
-
-
-
-        
 
 </header>
