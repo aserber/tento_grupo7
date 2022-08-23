@@ -164,6 +164,8 @@ hr {
   background-color: #623307;
   color: white;
   text-align: center;
+  font-family: "Montserrat";
+  font-size: 350%;
 }
 
 .product-box {
@@ -176,6 +178,7 @@ hr {
 
 .product-box a {
   display: block;
+  background-color: #b88b5c;
 }
 
 .product-box_image {
@@ -188,20 +191,20 @@ hr {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-}
+  }
 
 .product-box_data h2 {
   font-size: 2em;
   font-weight: 300;
   margin: 0;
-  background-color: #ffffff;
-  color: #623307
+  color: #d0ab7a
 }
 
 .product-box_data span {
   font-size: 1.5em;
   font-weight: 300;
-  color: #623307;
+  color: white;
+  font-weight: bolder;
   margin: 0 0 0 10px;
 }
 
@@ -217,6 +220,7 @@ hr {
 
 .product-box_data i {
   color: #623307;
+  background-color: #623307;
   font-size: 1.8em;
   width: 35px;
   height: 35px;

@@ -559,12 +559,26 @@ text-align: center;
  } 
 
  .faq {
-    font-size: 24px;
-    text-decoration: underline;
-    font-weight: bold; 
+    font-size: 26px;
+    font-weight: bold;
+    color: #d0ab7a;
+    padding: 15px;
+    padding-left:50px;
+    font-family: 'Montserrat';
  }
 
  .faqr {
     font-size: 18px;
     font-weight: bold;
+    color: #78451a;
+    font-family: 'Montserrat';
  }
+
+.letrasHeader{
+    font-family: 'Montserrat';
+}
+
+.inicio{
+    font-family: 'Montserrat';
+    font-weight: bold;
+}

@@ -3,26 +3,26 @@
 
     <nav>
 
-        <a href="/">Inicio</a>
+        <a href="/" class="letrasHeader">Inicio</a>
         <% if (!locals.usuarioLogueado) {%>
-            <a href="/usuario/registro">Registrate</a>
-            <a href="/usuario/login">Acceder</a>
+            <a href="/usuario/registro" class="letrasHeader">Registrate</a>
+            <a href="/usuario/login" class="letrasHeader">Acceder</a>
 
             <%}%>
-                <a href="/productos/Chocolate">Chocolates</a>
-                <a href="/productos/Pasteleria">Pasteleria</a>
-                <a href="/compras">Mis Compras</a>
+                <a href="/productos/Chocolate" class="letrasHeader">Chocolates</a>
+                <a href="/productos/Pasteleria" class="letrasHeader">Pasteleria</a>
+                <a href="/compras" class="letrasHeader">Mis Compras</a>
 
-                <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="/carrito" class="letrasHeader"><i class="fa-solid fa-cart-shopping"></i></a>
                 <% if (locals.userType) {%>
-                    <a href="/admin/administrar">Administrar</a>
+                    <a href="/admin/administrar" class="letrasHeader">Administrar</a>
                     <%}%>
                         <% if (locals.usuarioLogueado) {%>
                             <a href="/usuario/logout"><i class="fas fa-sign-out-alt"></i></a>
                             <%}%>
 
                                 <% if (locals.usuarioLogueado) { %>
-                                    <a href="/usuario/profile"><img
+                                    <a href="/usuario/profile" class="letrasHeader"><img
                                             src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="40"
                                             style="border-radius: 100%;"></a>
                                     Hola <%= locals.usuarioLogueado.name %>
