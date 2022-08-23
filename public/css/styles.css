@@ -557,3 +557,14 @@ align-items: center;
 justify-content: center;
 text-align: center;
  } 
+
+ .faq {
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: bold; 
+ }
+
+ .faqr {
+    font-size: 18px;
+    font-weight: bold;
+ }
