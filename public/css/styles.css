@@ -30,7 +30,7 @@ nav {
 }
 
 nav>a {
-    color: #fff;
+    color: white;
     font-weight: 30px;
     text-decoration: none;
     margin-right: 10px;
@@ -586,4 +586,8 @@ text-align: center;
 .nosotros-letras{
     font-size: 60%;
     font-family: "Montserrat";
+}
+
+.bg-light{
+    background-color: red;
 }
