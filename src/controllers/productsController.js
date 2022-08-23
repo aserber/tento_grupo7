@@ -42,7 +42,17 @@ const controller = {
 			toThousand
 		})}
 	},
+	//TATI PROBANDO
 	
-};
+	detail2: (req, res) => {
+		const detalleProduct= json.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		 db.detalleProduct.findAll()
+		 .then(function(generos){
+			 return res.render("listado detalle producto", {productCategory:productCategory})
+		 })
+
+	},
+
+}
 
 module.exports = controller;
