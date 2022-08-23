@@ -3,6 +3,7 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const userFilePath = path.join(__dirname, '../data/usersBase.json');
 const { validationResult } = require('express-validator');
+const { where } = require('sequelize/types');
 //const db = require('../database/models');
 
 const controller = {
@@ -47,6 +48,12 @@ const controller = {
   ingresar: (req, res) => {
     const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
     let usuario= users.find(user => user.email == req.body.email )
+
+  //  let usuarios = db.user.findOne({
+  //    where: req.body.email == user.body.email
+  //  })
+
+
     if (usuario){
       let passOk = bcrypt.compareSync(req.body.password, usuario.password)
       if (passOk){
