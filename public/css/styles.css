@@ -20,6 +20,19 @@ header {
     position: relative;
 }
 
+.navbar-2{
+    background: -webkit-linear-gradient(to right, #623307, #c89864), url(../img/portada.jpg); 
+    
+}
+.collapse-navbar-collapse1{
+    color: white;
+    z-index: 10;
+    font-family: "Monserrat";
+    flex-direction:row;
+    position:absolute;
+    display: flex;
+    text-align: center;
+}
 .fa-solid {
     font-size: 30px;
 }
@@ -43,6 +56,7 @@ nav>a:hover {
 }
 
 header .textos-header {
+ 
     display: flex;
     height: 210px;
     width: 100%;
@@ -52,6 +66,7 @@ header .textos-header {
     text-align: center;
     position: relative;
     z-index: 10;
+    font-family: 'Montserrat';
 
 }
 
@@ -574,9 +589,7 @@ text-align: center;
     font-family: 'Montserrat';
  }
 
-.letrasHeader{
-    font-family: 'Montserrat';
-}
+
 
 .inicio{
     font-family: 'Montserrat';
