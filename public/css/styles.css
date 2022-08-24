@@ -9,7 +9,7 @@
 header {
     width: 100%;
     height: 450px;
-    background: #78451a;
+    background: #78451a; 
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #623307, #c89864), url(../img/portada.jpg);
     /* Chrome 10-25, Safari 5.1-6 */

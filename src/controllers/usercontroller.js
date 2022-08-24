@@ -3,7 +3,7 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const userFilePath = path.join(__dirname, '../data/usersBase.json');
 const { validationResult } = require('express-validator');
-const { where } = require('sequelize/types');
+//const { where } = require('sequelize/types');
 //const db = require('../database/models');
 
 const controller = {
