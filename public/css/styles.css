@@ -28,11 +28,10 @@ header {
     color: white;
     z-index: 10;
     font-family: "Monserrat";
-    align-items: center;
-    justify-content: space-between;
     flex-direction:row;
     position:absolute;
     display: flex;
+    text-align: center;
 }
 .fa-solid {
     font-size: 30px;
