@@ -8,7 +8,7 @@ const { validationResult } = require('express-validator');
 
 const controller = {
   register: (req, res) => {
-    return res.render('usuario/registro');
+    return res.redirect('usuario/registro');
   },
   login: (req, res) => {
     return res.render('usuario/login');
