@@ -36,7 +36,7 @@ const controller = {
  //     category: 1,
  //     image: req.file ? req.file.filename : '',
  //   })
- //   res.redirect('./login')
+ //  then. res.redirect('./login')
  // }
 
     console.log(newUser)
@@ -51,7 +51,7 @@ const controller = {
 
   //  let usuarios = db.user.findOne({
   //    where: req.body.email == user.body.email
-  //  })
+  //  }) 
 
 
     if (usuario){

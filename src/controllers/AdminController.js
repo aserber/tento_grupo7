@@ -7,7 +7,7 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 //const db = require('../database/models');
 //const sequelize = db.sequelize;
-//const { Op } = require("sequelize");
+//const { Op } = require('sequelize');
 //const moment = require('moment');
 //const product = db.product;
 
@@ -47,7 +47,9 @@ const controller = {
 	//			description: req.body.description,
 	//			image: req.file ? req.file.filename : '',
 	//		})
-	//		res.redirect('/');
+	//		.then(()=> {
+	//			return res.redirect('/')})            
+    //   	.catch(error => res.send(error))
 	//	},
 
 	detail: (req, res) => {
@@ -83,7 +85,8 @@ const controller = {
 	//
 	//	let id = req.params.id
 	//	let productToEdit = product.findByPk(id, {include: ["product", "productCategory"]})	
-	//	res.render('admin/product-edit-form', { productToEdit })
+	//	.then(product => {
+	//		res.render('admin/product-edit-form', { productToEdit });
 	//	.catch(error => res.send(error))
 	//},
 
@@ -162,7 +165,13 @@ const controller = {
 	},
 
 	//administrar: (req, res) => {
-	//	db.product.findAll()
+	//	db.product.findAll({
+    //      
+    //        where: {
+    //            category: {'Chocolate', 'Pasteleria'}
+    //        }
+    //       
+    //    })
 	//	.then(products => {
 	//		res.render('admin/administrar', {products})
 	//	})
