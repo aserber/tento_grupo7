@@ -18,14 +18,29 @@ header {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+
 }
 
 .navbar-2 {
     background: -webkit-linear-gradient(to right, #623307, #c89864), url(../img/portada.jpg); 
     color: white;
     z-index: 10;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
     
 }
+
+
+
+#navbar {
+    background: -webkit-linear-gradient(to right, #623307, #c89864), url(../img/portada.jpg); 
+    color: white;
+    z-index: 10;
+}
+
 .collapse-navbar-collapse1 {
     color: white;
     z-index: 10;
@@ -603,6 +618,14 @@ text-align: center;
     font-family: "Montserrat";
 }
 
-.bg-light{
-    background-color: red;
+
+.nav-usuario {
+font-size: 23px;
+color: #8e582c;
+font-family: "Montserrat";
+font-weight: bold;
+
 }
+
+
+

@@ -25,5 +25,23 @@
   "password": "$2b$10$raoaChqdr4iHIR8fSwPCzO.Cel6JpcLewp0/5Xwv5pHUY77HWTvv2",
   "category": 1,
   "image": ""
+ },
+ {
+  "id": 4,
+  "name": "Alan",
+  "last_name": "Serber",
+  "email": "alan.serber01@gmail.com",
+  "password": "$2b$10$K0zUe/DAvtl3qFFhrIxZ/eC3yF5B0yrp2UkEZRiXMyhndOQ29hARG",
+  "category": 1,
+  "image": "usuario-1661350591253.png"
+ },
+ {
+  "id": 5,
+  "name": "Alan",
+  "last_name": "Serber",
+  "email": "alan.serber@gmail.com",
+  "password": "$2b$10$NIYnwREiulHbsZgsU167PesanSeVktZ8MDi778LNojykeQDqiu1Sa",
+  "category": 1,
+  "image": "usuario-1661368684345.JPG"
  }
 ]

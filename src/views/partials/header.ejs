@@ -1,95 +1,115 @@
 <header>
-  <nav class="navbar-2" id="hamburguesa">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- logo -->
-    <a class="navbar-brand" href="#">
-      <% if (locals.usuarioLogueado) { %>
-        <a href="/usuario/profile" class="nav-link letrasHeader"><img
-            src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="40" style="border-radius: 100%;"></a>
-        Hola <%= locals.usuarioLogueado.name %>
-        </a>
-      <% } %>
-    </a>
-
-      <!-- enlaces -->
-      <div class="collapse-navbar-collapse1" id="opciones">
-        <a class="nav-link letrasHeader" href="/">Inicio</a>
-        <% if (!locals.usuarioLogueado) {%>
-          <a href="/usuario/registro" class="nav-link letrasHeader">Registrate</a>
-          <a href="/usuario/login" class="nav-link letrasHeader">Acceder</a>
-          <%}%>
-            <a class="nav-link letrasHeader" href="/productos/Chocolate">Chocolates</a>
-            <a class="nav-link letrasHeader" href="/productos/Pasteleria">Pasteleria</a>
-            <a href="/carrito" class="nav-link letrasHeader"><i class="fa-solid fa-cart-shopping"></i></a>
-            <% if (locals.userType) {%>
-              <a href="/admin/administrar" class="nav-link letrasHeader">Administrar</a>
-              <%}%>
-            <% if (locals.usuarioLogueado) {%>
-              <a href="/usuario/logout"><i class="fas fa-sign-out-alt"></i></a>
-                <%}%>
-            <% if (locals.usuarioLogueado) { %>
-              <a href="/usuario/profile" class="nav-link letrasHeader"><img
-                  src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="40"
-                    style="border-radius: 100%;"></a></li>
-              Hola <%= locals.usuarioLogueado.name %>
-               </a>
-            <% } %>
-      </div>
-  </nav>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 
 
 
-
-  <nav>
-
-    <a href="/" class="letrasHeader">Inicio</a>
-    <% if (!locals.usuarioLogueado) {%>
-      <a href="/usuario/registro" class="letrasHeader">Registrate</a>
-      <a href="/usuario/login" class="letrasHeader">Acceder</a>
-
-      <%}%>
-        <a href="/productos/Chocolate" class="letrasHeader">Chocolates</a>
-        <a href="/productos/Pasteleria" class="letrasHeader">Pasteleria</a>
-        <a href="/compras" class="letrasHeader">Mis Compras</a>
-
-        <a href="/carrito" class="letrasHeader"><i class="fa-solid fa-cart-shopping"></i></a>
-        <% if (locals.userType) {%>
-          <a href="/admin/administrar" class="letrasHeader">Administrar</a>
-          <%}%>
-            <% if (locals.usuarioLogueado) {%>
-              <a href="/usuario/logout"><i class="fas fa-sign-out-alt"></i></a>
-              <%}%>
-
-                <% if (locals.usuarioLogueado) { %>
-                  <a href="/usuario/profile" class="letrasHeader"><img
-                      src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="40"
-                      style="border-radius: 100%;"></a>
-                  Hola <%= locals.usuarioLogueado.name %>
-                    </a>
-
-                    <% } %>
-
-
-
-  </nav>
 
   <section class="textos-header">
     <h1>tentó</h1>
   </section>
+  <div class="wave" style="height: 200px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+      style="height: 100%; width: 100%;">
+      <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: #d0ab7a;"></path>
+    </svg></div>
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-2" id="navbar-2">
+      <div class="container-fluid">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-2" id="navbarSupportedContent">
+          <ul class="nav justify-content-center">
+            
+
+       
+                <a href="/" class="nav-link letrasHeader"><h5 class="nav-usuario">Inicio</h5></a>
+           
+
+                
+  
+    
+  
+                        <% if (!locals.usuarioLogueado) {%>
+                        
+                          <a href="/usuario/registro" class="nav-link letrasHeader"><h5 class="nav-usuario">Registrate</h5></a>
+     
+                
+                 
+                     
+                        
+                          <a href="/usuario/login" class="nav-link letrasHeader"><h5 class="nav-usuario">Acceder</h5></a>
+                    
+        
+                          <%}%>
+                       
+
+                        
+   
+
+                
+                
+                    
+                      
+                        <a class="nav-link letrasHeader" href="/productos/Chocolate"><h5 class="nav-usuario">Chocolates</h5></a>
+                
+
+            
+              
+                    
+                     
+                        <a class="nav-link letrasHeader" href="/productos/Pasteleria"><h5 class="nav-usuario">Pasteleria</h5></a>
+                
+
+            
+              
+                 
+                    <a href="/carrito" class="nav-link letrasHeader"><h5 class="nav-usuario"><i class="fa-solid fa-cart-shopping"></h5></i></a>
+                  
+            <% if (locals.userType) {%>
+             
+              <a href="/admin/administrar" class="nav-link letrasHeader"><h5 class="nav-usuario">Administrar</h5></a>
+              <%}%>
+            <
+              <% if (locals.usuarioLogueado) {%>
+                <a href="/usuario/logout"><h5 class="nav-usuario"><i class="fa-solid fa-door-open"></h5></i></a>
+                    <%}%>
+                  
+                <% if (locals.usuarioLogueado) { %>
+                  <li class="navbar-derecha"><a href="/usuario/profile" class="nav-link letrasHeader-derecha"><img
+                      src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="68px" style= border-radius:50% ></a>
+                  Hola <%= locals.usuarioLogueado.name %>
+                   </a>
+                <% } %>
+              
+   
+       
+
+            
+          
+           
+            
+              
+            
+              </ul>
+            
+            
+
+            
+
+
+
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+
   <div class="wave" style="height: 200px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
       style="height: 100%; width: 100%;">
       <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
