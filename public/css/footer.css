@@ -42,6 +42,7 @@ body, html{
     font-family: "Montserrat";
     text-align: center;
     font-size: 200%;
+    text-decoration: none;
 }
 
 .containerX h5 {
@@ -118,8 +119,11 @@ body, html{
     }
 
     .footer-letras {
-        font-family: 'Montserrat'
+        font-family: 'montserrat';
+        text-decoration: none;
     }
+
+    
 
    
 }
