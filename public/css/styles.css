@@ -88,7 +88,7 @@ header .textos-header {
 }
 
 .textos-header h1, h3 {
-    font-size: 150px;
+    font-size: 140px;
     color: #ffffff;
     font-family: 'Montserrat';
 }
@@ -525,11 +525,11 @@ h6 {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 320px) {
     .contenedor img {
         width: 95%;
-
     }
+  
 }
 
 .h3-producto {
