@@ -45,41 +45,43 @@ const controller = {
     res.redirect('./login');
   },
 
-  //ingresar: (req, res) => {
-  //  const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-  //  let usuario= users.find(user => user.email == req.body.email )
+  ingresar: (req, res) => {
+    const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+    let usuario= users.find(user => user.email == req.body.email )
 //
   //  let usuarios = db.user.findOne({
   //    where: req.body.email == user.body.email
-  //  } .then => { if (usuario){
-  //    let passOk = bcrypt.compareSync(req.body.password, usuario.password)
-  //    if (passOk){
-  //      delete usuario.password
-  //      req.session.usuarioLogueado = usuario
-  //      res.cookie("userEmail", req.body.email, {maxAge: 300 * 60 * 60})
-  //      if(req.body.recordarme){
-  //        res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60})
-  //      }
-  //      res.redirect ("/");
-  //    } else {
-  //     return res.render ("usuario/login", {
-  //       errors: {
-  //         datosMal: {
-  //           msg: "Las credenciales son inválidas"
-  //         }
-  //       }
-  //     })
-  //   } 
-  // } else {
-  //     return res.render ("usuario/login", {
-  //     errors: {
-  //       datosMal: {
-  //         msg: "Las credenciales son inválidas"
-  //       }
-  //     }
-  //   })
-  // } }) 
-//  },
+  //  } .then => { 
+    if (usuario){
+      let passOk = bcrypt.compareSync(req.body.password, usuario.password)
+      if (passOk){
+        delete usuario.password
+        req.session.usuarioLogueado = usuario
+        res.cookie("userEmail", req.body.email, {maxAge: 300 * 60 * 60})
+        if(req.body.recordarme){
+          res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60})
+        }
+        res.redirect ("/");
+      } else {
+       return res.render ("usuario/login", {
+         errors: {
+           datosMal: {
+             msg: "Las credenciales son inválidas"
+           }
+         }
+       })
+     } 
+   } else {
+       return res.render ("usuario/login", {
+       errors: {
+         datosMal: {
+           msg: "Las credenciales son inválidas"
+       }
+     }
+   })
+ } 
+//}) 
+ },
   profile: (req, res) => {
 		return res.render('usuario/profile', {
 			usuario: req.session.usuarioLogueado

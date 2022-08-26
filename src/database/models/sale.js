@@ -2,12 +2,12 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'sale';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         id_status: {
-            type: dataTypes.INT(50),
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
         totalPrice: {
@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         id_user: {
-            type: dataTypes.INT(10),
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
     };

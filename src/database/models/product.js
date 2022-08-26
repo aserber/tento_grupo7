@@ -1,8 +1,8 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'product';
+    let alias = 'Product';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         detail: {
-            type: dataTypes.TEXT(400),
+            type: dataTypes.STRING(400),
             allowNull: false
         },
         price: {
@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(500)
         },
         id_productCategory: {
-            type: dataTypes.INT(10),
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
     };

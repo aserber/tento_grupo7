@@ -5,11 +5,11 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-//const db = require('../database/models');
+const db = require('../database/models');
 //const sequelize = db.sequelize;
 //const { Op } = require('sequelize');
 //const moment = require('moment');
-//const product = db.product;
+//const product = db.Product;
 
 
 const controller = {
