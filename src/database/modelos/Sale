@@ -40,8 +40,8 @@ module.exports = (sequelize, dataTypes) => {
     Sale.associate = function (models) {
         Sale.belongsTo(models.Status, { 
             as: "status",
-            foreignKey: 'id_Status',
-            otherKey: 'id_Sale',
+            foreignKey: 'id_status',
+            otherKey: 'id_sale',
             timestamps: false
         })
     }
@@ -49,8 +49,8 @@ module.exports = (sequelize, dataTypes) => {
     Sale.associate = function (models) {
         Sale.belongsTo(models.User, { 
             as: "user",
-            foreignKey: 'id_User',
-            otherKey: 'id_Sale',
+            foreignKey: 'id_user',
+            otherKey: 'id_sale',
             timestamps: false
         })
     }

@@ -18,38 +18,38 @@ const controller = {
 		return res.render('admin/crear')
 	},
 	// Create -  Method to store
-	store: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let newProduct = {
-			id: products[products.length - 1].id + 1,
-			name: req.body.name,
-			price: req.body.price,
-			discount: req.body.discount,
-			category: req.body.category,
-			description: req.body.description,
-			image: req.file ? req.file.filename : '',
-		}
-		console.log(newProduct)
-		products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/');
-
-	},
-	//store: function(req,res){
-	//	db.Product.create({ 
-	//
+	//store: (req, res) => {
+	//	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	//	let newProduct = {
+	//		id: products[products.length - 1].id + 1,
 	//		name: req.body.name,
 	//		price: req.body.price,
 	//		discount: req.body.discount,
 	//		category: req.body.category,
-	//		detail: req.body.detail,
+	//		description: req.body.description,
 	//		image: req.file ? req.file.filename : '',
-	//	})
-	//	.then(product => {
-	//		return res.redirect('/')
-	//	})            
-	//  	.catch(error => res.send(error))
+	//	}
+	//	console.log(newProduct)
+	//	products.push(newProduct);
+	//	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+	//	res.redirect('/');
+//
 	//},
+	store: function(req,res){
+		db.Product.create({ 
+	
+			name: req.body.name,
+			price: req.body.price,
+			discount: req.body.discount,
+			category: req.body.category,
+			detail: req.body.detail,
+			image: req.file ? req.file.filename : '',
+		})
+		.then(product => {
+			return res.redirect('/',{product})
+		})            
+	  	.catch(error => res.send(error))
+	},
 
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id,

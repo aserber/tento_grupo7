@@ -4,13 +4,14 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false,
         },
         name: {
             type: dataTypes.STRING(50),
-            allowNull: false
+            notEmpty: true
         },
-        detail: {
+        description: {
             type: dataTypes.STRING(400),
             allowNull: false
         },
@@ -22,10 +23,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DECIMAL(3,1),
             allowNull: false
         },
-        image: {
+        imagen: {
             type: dataTypes.STRING(500)
         },
-        id_productCategory: {
+        id_ProductCategory: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
@@ -36,25 +37,23 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Product = sequelize.define(alias, cols, config); 
 
-
-
     Product.associate = function (models) {
         Product.belongsTo(models.ProductCategory, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "ProductCategory",
+            as: "productCategory",
             foreignKey: 'id_ProductCategory',
             timestamps: false
         })
     }
 
-    Product.associate = function (models) {
-        Product.belongsToMany(models.sale, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "sale",
-            through: 'product_sale',
-            foreignKey: 'id_Product',
-            otherKey: 'id_Sale',
-            timestamps: false
-        })
-    }
+    //Product.associate = function (models) {
+    //    Product.belongsToMany(models.sale, { // models.Movie -> Movies es el valor de alias en movie.js
+    //        as: "sale",
+    //        through: 'product_sale',
+    //        foreignKey: 'id_Product',
+    //        otherKey: 'id_Sale',
+    //        timestamps: false
+    //    })
+    //}
 
 
     return Product

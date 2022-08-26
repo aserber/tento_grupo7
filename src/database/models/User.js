@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        lastName: {
+        last_name: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        image: {
+        avatar: {
             type: dataTypes.TINYINT(10).UNSIGNED
         },
         password: {
@@ -35,17 +35,17 @@ module.exports = (sequelize, dataTypes) => {
     }
     const User = sequelize.define(alias, cols, config); 
 
-    User.associate = function (models) {
-        User.hasMany(models.Sale, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "sale",
-            foreignKey: 'id_User'
-        })
-    }
+    //User.associate = function (models) {
+    //    User.hasMany(models.Sale, { // models.Movie -> Movies es el valor de alias en movie.js
+    //        as: "sale",
+    //        foreignKey: 'id_User'
+    //    })
+    //}
 
     User.associate = function (models) {
         User.belongsTo(models.UserCategory, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "userCategory",
-            foreignKey: 'id_UserCategory'
+            foreignKey: 'id_userCategory'
         })
     }
 
