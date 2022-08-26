@@ -42,26 +42,9 @@ const controller = {
 			toThousand
 		})}
 	},
-	//TATI PROBANDO
 	
-	detail2: (req, res) => {
-		const detalleProduct= json.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		 db.detailProduct.findAll()
-		 .then(function(generos){
-			 return res.render('productos/detail2')
-		 })
-
-		 //TATI PROBADO X2
-		 saved:  (req, res) => {
-			 db.detailProduct.create
-			 title: req.body.title,
-			 genre_id; req.body,genre_id,
-			 length; req.body.length,
-			 rating; req.body.rating
-
-		 }
-
-	},
+	
+	
 
 }
 
