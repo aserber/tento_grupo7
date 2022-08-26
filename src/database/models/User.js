@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'user';
+    let alias = 'User';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -30,25 +30,25 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName: "user",
+        tableName: "User",
         timestamps: false,
     }
-    const user = sequelize.define(alias, cols, config); 
+    const User = sequelize.define(alias, cols, config); 
 
-    user.associate = function (models) {
-        user.hasMany(models.sale, { // models.Movie -> Movies es el valor de alias en movie.js
+    User.associate = function (models) {
+        User.hasMany(models.Sale, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "sale",
-            foreignKey: 'id_user'
+            foreignKey: 'id_User'
         })
     }
 
-    user.associate = function (models) {
-        user.belongsTo(models.userCategory, { // models.Movie -> Movies es el valor de alias en movie.js
+    User.associate = function (models) {
+        User.belongsTo(models.UserCategory, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "userCategory",
-            foreignKey: 'id_userCategory'
+            foreignKey: 'id_UserCategory'
         })
     }
 
 
-    return user
+    return User
 };

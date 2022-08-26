@@ -6,7 +6,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        productName: {
+        name: {
             type: dataTypes.STRING(50),
             allowNull: false
         },
@@ -15,6 +15,10 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         price: {
+            type: dataTypes.DECIMAL(3,1),
+            allowNull: false
+        },
+        discount: {
             type: dataTypes.DECIMAL(3,1),
             allowNull: false
         },
@@ -30,28 +34,28 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "product",
         timestamps: false,
     }
-    const product = sequelize.define(alias, cols, config); 
+    const Product = sequelize.define(alias, cols, config); 
 
 
 
-    product.associate = function (models) {
-        product.belongsTo(models.productCategory, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "productCategory",
-            foreignKey: 'id_productCategory',
+    Product.associate = function (models) {
+        Product.belongsTo(models.ProductCategory, { // models.Movie -> Movies es el valor de alias en movie.js
+            as: "ProductCategory",
+            foreignKey: 'id_ProductCategory',
             timestamps: false
         })
     }
 
-    product.associate = function (models) {
-        product.belongsToMany(models.sale, { // models.Movie -> Movies es el valor de alias en movie.js
+    Product.associate = function (models) {
+        Product.belongsToMany(models.sale, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "sale",
             through: 'product_sale',
-            foreignKey: 'id_product',
-            otherKey: 'id_sale',
+            foreignKey: 'id_Product',
+            otherKey: 'id_Sale',
             timestamps: false
         })
     }
 
 
-    return product
+    return Product
 };

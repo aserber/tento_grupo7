@@ -36,7 +36,7 @@ const controller = {
  //     category: 1,
  //     image: req.file ? req.file.filename : '',
  //   })
- //  then. res.redirect('./login')
+ //  .then=> res.redirect('./login')
  // }
 
     console.log(newUser)

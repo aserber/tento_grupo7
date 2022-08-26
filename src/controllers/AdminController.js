@@ -9,8 +9,8 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require('sequelize');
 const moment = require('moment');
-const product = db.Product;
-
+//const products = db.Product;
+//const prodCat = db.ProductCategory;
 
 const controller = {
 	// Create - Form to create
@@ -37,33 +37,25 @@ const controller = {
 
 	},
 
-	//	store: function(req,res){
-	//		db.product.create({ 
-	//			id: products[products.length - 1].id + 1,
-	//			name: req.body.name,
-	//			price: req.body.price,
-	//			discount: req.body.discount,
-	//			category: req.body.category,
-	//			description: req.body.description,
-	//			image: req.file ? req.file.filename : '',
-	//		})
-	//		.then(()=> {
-	//			return res.redirect('/')})            
-	//   	.catch(error => res.send(error))
-	//	},
-
+	//store: function(req,res){
+	//	db.Product.create({ 
+	//
+	//		name: req.body.name,
+	//		price: req.body.price,
+	//		discount: req.body.discount,
+	//		category: req.body.category,
+	//		detail: req.body.detail,
+	//		image: req.file ? req.file.filename : '',
+	//	})
+	//	.then(product=> {
+	//		return res.redirect('/',{product})})            
+	//  	.catch(error => res.send(error))
+	//},
+//
 	detail: (req, res) => {
-		//	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		//	let id = req.params.id
-		//	let product = products.find(product => product.id == id)
-		//	res.render('admin/detail', {
-		//		product,
-		//		toThousand
-		//	})
-		//},
-		db.product.findByPk(req.params.id,
+		db.Product.findByPk(req.params.id,
 			{
-				include: ['product']
+				include: ['Product']
 			})
 			.then(product => {
 				res.render('detail.ejs', { product });
@@ -81,23 +73,24 @@ const controller = {
 		res.render('admin/product-edit-form', { productToEdit })
 	},
 
-//	edit: (req, res) => {
-//	
-//		let id = req.params.id
-//		let productToEdit = product.findByPk(id, { include: ["product"] })
-//	
-//			.then(product => {
-//				res.render('admin/product-edit-form', { productToEdit })
-//			})
-//			.catch(error => res.send(error))
-//	},
+	//edit: (req, res) => {
+	//
+	//	let id = req.params.id
+	//	let productToEdit = db.Product.findByPk(id, { include: ["Product", "ProductCategory"] })
+	//	let prodCate = db.ProductCategory.findAll()
+	//	 Promise
+	//	 .all([prodCate, productToEdit])	
+	//	.then(([prodCate, productToEdit])  => {
+	//			res.render('admin/product-edit-form', { prodCate,productToEdit })
+	//		})
+	//		.catch(error => res.send(error))
+	//},
 
 	// Update - Method to update
 	update: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id)
-
 
 		productToEdit = {
 			id: productToEdit.id,
@@ -112,7 +105,8 @@ const controller = {
 	},
 	//update: function (req,res) {
 	//    let productId = req.params.id;
-	//    product.update(
+	// 	  let productToEdit = db.Product.findByPk(id, { include: ["product", "productCategory"] })
+	//    products.update(
 	//        {
 	//           id: productToEdit.id,
 	//		...req.body,
@@ -130,23 +124,23 @@ const controller = {
 
 
 	// Delete - Delete one product from DB
-	//destroy: (req, res) => {
-	//	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-	//	let id = req.params.id;
-	//	let finalProducts = products.filter(product => product.id != id);
-	//	fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-	//	res.redirect('/');
-	//},
-
-	destroy: function (req, res) {
-		let productId = req.params.id;
-		product
-			.destroy({ where: { id: productId }, force: true }) // force: true es para asegurar que se ejecute la acción
-			.then(() => {
-				return res.redirect('/')
-			})
-			.catch(error => res.send(error))
+	destroy: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let id = req.params.id;
+		let finalProducts = products.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		res.redirect('/');
 	},
+
+	//destroy: function (req, res) {
+	//	let productId = req.params.id;
+	//	db.Product
+	//		.destroy({ where: { id: productId }, force: true }) // force: true es para asegurar que se ejecute la acción
+	//		.then(() => {
+	//			return res.redirect('/')
+	//		})
+	//		.catch(error => res.send(error))
+	//},
 
 	error: (req, res) => {
 		return res.render('admin/error')
@@ -168,20 +162,21 @@ const controller = {
 	},
 
 	//administrar: (req, res) => {
-	//	db.product.findAll()
-	//	.then(products => {
-	//	let Chocolate = products.filter(function (products) {
-	//		return products.category == 'Chocolate'
-	//	})
-	//	const Pasteleria = products.filter(function (products) {
-	//		return products.category == 'Pasteleria'
-	//	})
-	//	res.render('admin/administrar', {
-	//		Pasteleria,
-	//		Chocolate,
-	//		toThousand
-	//	});
-	//		
+	//	db.Product.findAll()
+	//		.then(Products => {
+	//			let Chocolate = Products.filter(function (Products) {
+	//				return Products.category == 'Chocolate'
+	//			})
+	//			const Pasteleria = Products.filter(function (Products) {
+	//				return Products.category == 'Pasteleria'
+	//			})
+	//			res.render('admin/administrar', {
+	//				Pasteleria,
+	//				Chocolate,
+	//				toThousand
+	//			});
+//
+	//		})
 	//},
 }
 module.exports = controller;

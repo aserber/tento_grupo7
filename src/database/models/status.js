@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'status';
+    let alias = 'Status';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -12,18 +12,18 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName: "status",
+        tableName: "Status",
         timestamps: false,
     }
-    const status = sequelize.define(alias, cols, config); 
+    const Status = sequelize.define(alias, cols, config); 
 
-    status.associate = function (models) {
-        status.hasMany(models.sale, { 
+    Status.associate = function (models) {
+        Status.hasMany(models.sale, { 
             as: "product",
-            foreignKey: 'id_status',
+            foreignKey: 'id_Status',
 
         })
     }
 
-    return status
+    return Status
 };

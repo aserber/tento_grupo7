@@ -20,41 +20,41 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName: "sale",
+        tableName: "Sale",
         timestamps: false,
     }
-    const sale = sequelize.define(alias, cols, config); 
+    const Sale = sequelize.define(alias, cols, config); 
 
 
     
-    sale.associate = function (models) {
-        sale.belongsToMany(models.Product, { 
+    Sale.associate = function (models) {
+        Sale.belongsToMany(models.Product, { 
             as: "product",
             through: 'product_sale',
-            foreignKey: 'id_sale',
-            otherKey: 'id_product',
+            foreignKey: 'id_Sale',
+            otherKey: 'id_Product',
             timestamps: false
         })
     }
 
-    sale.associate = function (models) {
-        sale.belongsTo(models.status, { 
+    Sale.associate = function (models) {
+        Sale.belongsTo(models.Status, { 
             as: "status",
-            foreignKey: 'id_status',
-            otherKey: 'id_sale',
+            foreignKey: 'id_Status',
+            otherKey: 'id_Sale',
             timestamps: false
         })
     }
 
-    sale.associate = function (models) {
-        sale.belongsTo(models.user, { 
+    Sale.associate = function (models) {
+        Sale.belongsTo(models.User, { 
             as: "user",
-            foreignKey: 'id_user',
-            otherKey: 'id_sale',
+            foreignKey: 'id_User',
+            otherKey: 'id_Sale',
             timestamps: false
         })
     }
 
 
-    return sale
+    return Sale
 };
