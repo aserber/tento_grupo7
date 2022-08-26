@@ -165,16 +165,20 @@ const controller = {
 	},
 
 	//administrar: (req, res) => {
-	//	db.product.findAll({
-    //      
-    //        where: {
-    //            category: {'Chocolate', 'Pasteleria'}
-    //        }
-    //       
-    //    })
+	//	db.product.findAll()
 	//	.then(products => {
-	//		res.render('admin/administrar', {products})
+	//	let Chocolate = products.filter(function (products) {
+	//		return products.category == 'Chocolate'
 	//	})
+	//	const Pasteleria = products.filter(function (products) {
+	//		return products.category == 'Pasteleria'
+	//	})
+	//	res.render('admin/administrar', {
+	//		Pasteleria,
+	//		Chocolate,
+	//		toThousand
+	//	});
+	//		
 	//},
 }
 module.exports = controller;
