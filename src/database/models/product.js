@@ -25,10 +25,6 @@ module.exports = (sequelize, dataTypes) => {
         },
         imagen: {
             type: dataTypes.STRING(500)
-        },
-        id_ProductCategory: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
-            allowNull: false
         }
     };
     let config = {

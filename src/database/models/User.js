@@ -23,14 +23,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         password: {
             type: dataTypes.STRING(100),
-        },
-        id_usercategory: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
-            allowNull: false
         }
     };
     let config = {
-        tableName: "User",
+        tableName: "user",
         timestamps: false,
     }
     const User = sequelize.define(alias, cols, config); 
