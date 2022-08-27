@@ -65,59 +65,59 @@ const controller = {
 
 
 	// Update - Form to edit
-	edit: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-		res.render('admin/product-edit-form', { productToEdit })
-	},
-
 	//edit: (req, res) => {
-	//
+	//	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 	//	let id = req.params.id
-	//	let productToEdit = db.Product.findByPk(id, { include: ["Product", "ProductCategory"] })
-	//	let prodCate = db.ProductCategory.findAll()
-	//	 Promise
-	//	 .all([prodCate, productToEdit])	
-	//	.then(([prodCate, productToEdit])  => {
-	//			res.render('admin/product-edit-form', { prodCate,productToEdit })
-	//		})
-	//		.catch(error => res.send(error))
+	//	let productToEdit = products.find(product => product.id == id)
+	//	res.render('admin/product-edit-form', { productToEdit })
 	//},
 
-	// Update - Method to update
-	update: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id;
-		let productToEdit = products.find(product => product.id == id)
+	edit: (req, res) => {
+	
+		let id = req.params.id
+		let productToEdit = db.Product.findByPk(id, { include: ["Product", "ProductCategory"] })
+		let prodCate = db.ProductCategory.findAll()
+		 Promise
+		 .all([prodCate, productToEdit])	
+		.then(([prodCate, productToEdit])  => {
+				res.render('admin/product-edit-form', { prodCate,productToEdit })
+			})
+			.catch(error => res.send(error))
+	},
 
-		productToEdit = {
-			id: productToEdit.id,
+	// Update - Method to update
+	//update: (req, res) => {
+	//	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	//	let id = req.params.id;
+	//	let productToEdit = products.find(product => product.id == id)
+//
+	//	productToEdit = {
+	//		id: productToEdit.id,
+	//		...req.body,
+	//		image: req.file ? req.file.filename : req.body.oldImagen,
+	//	};
+	//	let indice = products.findIndex(producto => producto.id == id);
+	//	products[indice] = productToEdit
+	//	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+	//	res.redirect('/');
+	//},
+		update: function (req,res) {
+	    let productId = req.params.id;
+	 	  let productToEdit = db.Product.findByPk(id, { include: ["product", "productCategory"] })
+	    products.update(
+	        {
+	           id: productToEdit.id,
 			...req.body,
 			image: req.file ? req.file.filename : req.body.oldImagen,
-		};
-		let indice = products.findIndex(producto => producto.id == id);
-		products[indice] = productToEdit
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/');
+			
+	        },
+	        {
+	            where: {id: productId}
+	        })
+	    .then(()=> {
+	        return res.redirect('/')})            
+	    .catch(error => res.send(error))
 	},
-	//	update: function (req,res) {
-	//	    let productId = req.params.id;
-	//	 	  let productToEdit = db.Product.findByPk(id, { include: ["product", "productCategory"] })
-	//	    products.update(
-	//	        {
-	//	           id: productToEdit.id,
-	//			...req.body,
-	//			image: req.file ? req.file.filename : req.body.oldImagen,
-	//			
-	//	        },
-	//	        {
-	//	            where: {id: productId}
-	//	        })
-	//	    .then(()=> {
-	//	        return res.redirect('/')})            
-	//	    .catch(error => res.send(error))
-	//	},
 
 
 
@@ -144,36 +144,36 @@ const controller = {
 		return res.render('admin/error')
 	},
 
-	administrar: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let Chocolate = products.filter(function (products) {
-			return products.category == 'Chocolate'
-		})
-		const Pasteleria = products.filter(function (products) {
-			return products.category == 'Pasteleria'
-		})
-		res.render('admin/administrar', {
-			Pasteleria,
-			Chocolate,
-			toThousand
-		});
-	},
-
 	//administrar: (req, res) => {
-	//	db.Product.findAll()
-	//		.then(Products => {
-	//			let Chocolate = Products.filter(function (Products) {
-	//				return Products.category == 'Chocolate'
-	//			})
-	//			const Pasteleria = Products.filter(function (Products) {
-	//				return Products.category == 'Pasteleria'
-	//			})
-	//			res.render('admin/administrar', {
-	//				Pasteleria,
-	//				Chocolate,
-	//				toThousand
-	//			});
-	//		})
+	//	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	//	let Chocolate = products.filter(function (products) {
+	//		return products.category == 'Chocolate'
+	//	})
+	//	const Pasteleria = products.filter(function (products) {
+	//		return products.category == 'Pasteleria'
+	//	})
+	//	res.render('admin/administrar', {
+	//		Pasteleria,
+	//		Chocolate,
+	//		toThousand
+	//	});
 	//},
+
+	administrar: (req, res) => {
+		db.Product.findAll()
+			.then(Products => {
+				let Chocolate = Products.filter(function (Products) {
+					return Products.category == 'Chocolate'
+				})
+				const Pasteleria = Products.filter(function (Products) {
+					return Products.category == 'Pasteleria'
+				})
+				res.render('admin/administrar', {
+					Pasteleria,
+					Chocolate,
+					toThousand
+				});
+			})
+	},
 }
 module.exports = controller;

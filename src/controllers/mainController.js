@@ -19,19 +19,23 @@ const controller = {
         return res.render('web/home');
     },
 
-	index: (req, res) => {
-		res.render('web/index', {
-			Pasteleria,
-			Chocolate,
-			toThousand
-		});
-	},
-    //index: (req, res) => {
-	//	res.render('productos/productos', {
-	//		products,
+	//index: (req, res) => {
+	//	res.render('web/index', {
+	//		Pasteleria,
+	//		Chocolate,
 	//		toThousand
-	//	})
+	//	});
 	//},
+    index: (req, res) =>{
+	 db.Product.findAll({
+		include: ['productCategory']
+	})
+		.then(product => {
+			res.render('index.ejs', {product})
+		})
+	},
+
+	
 	carrito: (req, res) => {
         return res.render('web/carrito');
     },
