@@ -24,15 +24,42 @@ SPRINT 4 Y 5
 
  A medida que avanza el proyecto pudimos ir realizando todos los entregables en tiempo y forma, completando todo lo requerido en los entregables
 
-        -Uso de Flex-Box
-        -Uso de Multer
-        -EJS 
-        -Session
-        -Cookies
-        -Middlewares
-        -Controllers
+        -Uso de Flex-Box.
+        -Uso de Multer.
+        -EJS.
+        -Session.
+        -Cookies.
+        -Middlewares.
+        -Controllers.
 
     También pudimos ir mejorando las rutas, las vistas de las páginas, organizando los productos, los usuarios, entre otras actividades. Gracias a la aplicación de lo aprendido en clase sobre el proyecto, se pueden consolidar mas los conocimientos adquiridos.  
     Como equipo se debe mejorar la organización entre nosotros para con las actividades. Como también definir fechas de entrega y asignacion de tareas mediante el tablero de trabajo. 
 
+SPRINT 5: 
+A medida que avanzó el curso, y de ir adquiriendo más conocimientos, hemos implementado todas las consignas respetando los entregables en tiempo y forma.
+    -Tablero de trabajo actualizado.
 
+    -Diagrama de bases de datos
+
+    -Spript de estructura de base de datos con:
+
+    Creacion de la base de datos y de todas sus tablas.
+    Tipos de datos de los campos y sus restricciones.
+    Relaciones entre las diferentes tablas.
+
+    -Spript de bases de datos y para:
+    -Tabla de usuarios.
+    -Tabla de productos.
+    -Tablas secundarias(categorías, marcas, colores, talles, etcétera.)
+    -Tabla de carrito de compras y productos de categorias de compras.
+
+    -Creacion de carpeta Sequelize y archivos de modelos.
+    -Archivos de configuración.
+    -Modelos con sus relaciones.
+
+    -CRUD. 
+    -De productos
+    -Usuarios
+    (Opcional de tablas secundarias).
+
+    
