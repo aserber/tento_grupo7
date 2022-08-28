@@ -2,12 +2,12 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'sale';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         id_status: {
-            type: dataTypes.INT(50),
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
         totalPrice: {
@@ -15,30 +15,30 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         id_user: {
-            type: dataTypes.INT(10),
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
     };
     let config = {
-        tableName: "sale",
+        tableName: "Sale",
         timestamps: false,
     }
-    const sale = sequelize.define(alias, cols, config); 
+    const Sale = sequelize.define(alias, cols, config); 
 
 
     
-    sale.associate = function (models) {
-        sale.belongsToMany(models.Product, { 
+    Sale.associate = function (models) {
+        Sale.belongsToMany(models.Product, { 
             as: "product",
             through: 'product_sale',
-            foreignKey: 'id_sale',
-            otherKey: 'id_product',
+            foreignKey: 'id_Sale',
+            otherKey: 'id_Product',
             timestamps: false
         })
     }
 
-    sale.associate = function (models) {
-        sale.belongsTo(models.status, { 
+    Sale.associate = function (models) {
+        Sale.belongsTo(models.Status, { 
             as: "status",
             foreignKey: 'id_status',
             otherKey: 'id_sale',
@@ -46,8 +46,8 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
 
-    sale.associate = function (models) {
-        sale.belongsTo(models.user, { 
+    Sale.associate = function (models) {
+        Sale.belongsTo(models.User, { 
             as: "user",
             foreignKey: 'id_user',
             otherKey: 'id_sale',
@@ -56,5 +56,5 @@ module.exports = (sequelize, dataTypes) => {
     }
 
 
-    return sale
+    return Sale
 };

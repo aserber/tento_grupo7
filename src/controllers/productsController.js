@@ -19,16 +19,29 @@ const controller = {
 		})
 	},
 
+	//productCategory:  (req, res) => {
+	//	let categoria = req.params.categoria
+	//	let productsFiltered = db.Products.findOne(product => product.category == categoria)
+//
+	//	.then (productsFiltered => {
+	//		res.render('productos/producto', {
+	//			productsArray : productsFiltered,
+	//			category: categoria,
+	//			toThousand
+	//		})
+	//	})
+	//	
+	//},
 	
-	search: (req, res) => {
-		let search = req.query.keywords;
-		let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
-		res.render('productos/detail', { 
-			products: productsToSearch, 
-			search,
-			toThousand,
-		});
-	},
+	//search: (req, res) => {
+	//	let search = req.query.keywords;
+	//	let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
+	//	res.render('productos/detail', { 
+	//		products: productsToSearch, 
+	//		search,
+	//		toThousand,
+	//	});
+	//},
 
 	detail: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -42,7 +55,23 @@ const controller = {
 			toThousand
 		})}
 	},
-	//TATI PROBANDO
+	//detail: (req, res) => {
+	//	db.Product.findByPk(req.params.id,
+	//		{
+	//			include: ['Product']
+	//		})
+	//		.then(Products =>{
+	//			if (Products == undefined){
+	//			res.redirect('/admin/error')
+	//		} else{
+	//			res.render('productos/detail', {
+	//			Products,
+	//			toThousand
+	//		})
+	//		}
+	//	});
+	//},
+	
 	
 	detail2: (req, res) => {
 		const detalleProduct= json.parse(fs.readFileSync(productsFilePath, 'utf-8'));

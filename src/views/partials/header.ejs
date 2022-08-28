@@ -1,8 +1,5 @@
 <header>
 
-
-
-
   <section class="textos-header">
     <h1>tentó</h1>
   </section>
@@ -13,108 +10,73 @@
     </svg></div>
 
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-2" id="navbar-2" >
+    <div class="container-fluid" >
 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-2" id="navbarSupportedContent"  >
+        <ul class="nav justify-content-center">
 
+          <a href="/" class="nav-link letrasHeader">
+            <h5 class="nav-usuario">Inicio</h5>
+          </a>
 
+          <% if (!locals.usuarioLogueado) {%>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-2" id="navbar-2">
-      <div class="container-fluid">
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse navbar-2" id="navbarSupportedContent">
-          <ul class="nav justify-content-center">
-            
+            <a href="/usuario/registro" class="nav-link letrasHeader">
+              <h5 class="nav-usuario">Registrate</h5>
+            </a>
 
-       
-                <a href="/" class="nav-link letrasHeader"><h5 class="nav-usuario">Inicio</h5></a>
-           
+            <a href="/usuario/login" class="nav-link letrasHeader">
+              <h5 class="nav-usuario">Acceder</h5>
+            </a>
 
-                
-  
-    
-  
-                        <% if (!locals.usuarioLogueado) {%>
-                        
-                          <a href="/usuario/registro" class="nav-link letrasHeader"><h5 class="nav-usuario">Registrate</h5></a>
-     
-                
-                 
-                     
-                        
-                          <a href="/usuario/login" class="nav-link letrasHeader"><h5 class="nav-usuario">Acceder</h5></a>
-                    
-        
-                          <%}%>
-                       
+            <%}%>
 
-                        
-   
+              <a class="nav-link letrasHeader" href="/productos/Chocolate">
+                <h5 class="nav-usuario">Chocolates</h5>
+              </a>
 
-                
-                
-                    
-                      
-                        <a class="nav-link letrasHeader" href="/productos/Chocolate"><h5 class="nav-usuario">Chocolates</h5></a>
-                
+              <a class="nav-link letrasHeader" href="/productos/Pasteleria">
+                <h5 class="nav-usuario">Pasteleria</h5>
+              </a>
 
-            
-              
-                    
-                     
-                        <a class="nav-link letrasHeader" href="/productos/Pasteleria"><h5 class="nav-usuario">Pasteleria</h5></a>
-                
+              <a href="/carrito" class="nav-link letrasHeader">
+                <h5 class="nav-usuario"><i class="fa-solid fa-cart-shopping"></h5></i>
+              </a>
 
-            
-              
-                 
-                    <a href="/carrito" class="nav-link letrasHeader"><h5 class="nav-usuario"><i class="fa-solid fa-cart-shopping"></h5></i></a>
-                  
-            <% if (locals.userType) {%>
-             
-              <a href="/admin/administrar" class="nav-link letrasHeader"><h5 class="nav-usuario">Administrar</h5></a>
-              <%}%>
-            <
-              <% if (locals.usuarioLogueado) {%>
-                <a href="/usuario/logout"><h5 class="nav-usuario"><i class="fa-solid fa-door-open"></h5></i></a>
+              <% if (locals.userType) {%>
+
+                <a href="/admin/administrar" class="nav-link letrasHeader">
+                  <h5 class="nav-usuario">Administrar</h5>
+                </a>
+                <%}%>
+                  < <% if (locals.usuarioLogueado) {%>
+                    <a href="/usuario/logout">
+                      <h5 class="nav-usuario"><i class="fa-solid fa-door-open"></h5></i>
+                    </a>
                     <%}%>
-                  
-                <% if (locals.usuarioLogueado) { %>
-                  <li class="navbar-derecha"><a href="/usuario/profile" class="nav-link letrasHeader-derecha"><img
-                      src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="68px" style= border-radius:50% ></a>
-                  Hola <%= locals.usuarioLogueado.name %>
-                   </a>
-                <% } %>
-              
-   
-       
 
-            
-          
-           
-            
-              
-            
-              </ul>
-            
-            
+                      <% if (locals.usuarioLogueado) { %>
+                        <li class="navbar-derecha"><a href="/usuario/profile" class="nav-link letrasHeader-derecha"><img
+                              src="/images/usuariosimg/<%= locals.usuarioLogueado.image %>" width="68px"
+                              style=border-radius:50%></a>
+                          Hola <%= locals.usuarioLogueado.name %>
+                            </a>
+                            <% } %>
 
-            
+        </ul>
 
+        </ul>
 
-
-          </ul>
-          
-        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-  <div class="wave" style="height: 200px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-      style="height: 100%; width: 100%;">
-      <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-        style="stroke: none; fill: #d0ab7a;"></path>
-    </svg></div>
+
 
 
 
