@@ -40,8 +40,8 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = function (models) {
         User.belongsTo(models.UserCategory, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "userCategory",
-            foreignKey: 'id_userCategory'
+            as: "usercategory",
+            foreignKey: 'id_usercategory'
         })
     }
 

@@ -2,30 +2,34 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Product';
     let cols = {
         id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false,
         },
         name: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING,
             notEmpty: true
         },
         description: {
-            type: dataTypes.STRING(400),
+            type: dataTypes.STRING,
             allowNull: false
         },
         price: {
-            type: dataTypes.DECIMAL(3,1),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         discount: {
-            type: dataTypes.DECIMAL(3,1),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
-        imagen: {
-            type: dataTypes.STRING(500)
+        image: {
+            type: dataTypes.STRING
+        },
+
+        id_productcategory: {
+            type: dataTypes.INTEGER
         }
+
     };
     let config = {
         tableName: "product",
@@ -35,8 +39,8 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = function (models) {
         Product.belongsTo(models.ProductCategory, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "productCategory",
-            foreignKey: 'id_ProductCategory',
+            as: "productcategory",
+            foreignKey: 'id_productcategory',
             timestamps: false
         })
     }
