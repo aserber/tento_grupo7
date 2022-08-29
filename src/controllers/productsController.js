@@ -43,18 +43,18 @@ const controller = {
 	//	});
 	//},
 
-	detail: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id
-		let product = products.find(product => product.id == id)
-		if (product == undefined){
-			res.redirect('/admin/error')
-		} else{
-			res.render('productos/detail', {
-			product,
-			toThousand
-		})}
-	},
+	//detail: (req, res) => {
+	//	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	//	let id = req.params.id
+	//	let product = products.find(product => product.id == id)
+	//	if (product == undefined){
+	//		res.redirect('/admin/error')
+	//	} else{
+	//		res.render('productos/detail', {
+	//		product,
+	//		toThousand
+	//	})}
+	//},
 	//detail: (req, res) => {
 	//	db.Product.findByPk(req.params.id,
 	//		{
@@ -73,11 +73,11 @@ const controller = {
 	//},
 	
 	
-	detail2: (req, res) => {
+	detail: (req, res) => {
 	
-		 db.detail.findByPk(req.params.id)
+		 db.Product.findByPk(req.params.id)
 		 .then(function(productos){
-			 return res.render('productos/detail2',productos)
+			 return res.render('productos/detail',productos)
 		 })
 		
 		},
