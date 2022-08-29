@@ -24,7 +24,12 @@ module.exports = (sequelize, dataTypes) => {
         },
         image: {
             type: dataTypes.STRING
+        },
+
+        id_productcategory: {
+            type: dataTypes.INTEGER
         }
+
     };
     let config = {
         tableName: "product",
@@ -33,9 +38,9 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias, cols, config); 
 
     Product.associate = function (models) {
-      Product.belongsTo(models.ProductCategory, { // models.Movie -> Movies es el valor de alias en movie.js
-        as: "productCategory",
-        foreignKey: 'id_productCategory',
+        Product.belongsTo(models.ProductCategory, { // models.Movie -> Movies es el valor de alias en movie.js
+            as: "productcategory",
+            foreignKey: 'id_productcategory',
             timestamps: false
         })
     }

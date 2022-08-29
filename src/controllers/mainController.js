@@ -21,21 +21,25 @@ const controller = {
         return res.render('web/home');
     },
 
-	index: (req, res) => {
-		res.render('web/index', {
-			Pasteleria,
-			Chocolate,
-			toThousand
-		});
-	},
-    //index: (req, res) =>{
-	// db.Product.findAll({
-	//	include: ['Product']
-	//})
-	//	.then(product => {
-	//		res.render('index.ejs', {product})
-	//	})
+	//index: (req, res) => {
+	//	res.render('web/index', {
+	//		Pasteleria,
+	//		Chocolate,
+	//		toThousand
+	//	});
 	//},
+
+    index: (req, res) =>{
+	 db.Product.findAll({
+				
+				
+			}
+	
+	)
+		.then(product => {
+			res.render('web/index', {product})
+		})
+	},
 
 	
 	carrito: (req, res) => {
