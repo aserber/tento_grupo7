@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs');
 const userFilePath = path.join(__dirname, '../data/usersBase.json');
 const { validationResult } = require('express-validator');
 //const { where } = require('sequelize/types');
@@ -15,15 +15,19 @@ const controller = {
   },
 
     save: (req, res) => {
-      db.User.create({
+    db.User.create({
     name: req.body.name,
     last_name: req.body.last_name,
     email: req.body.email,
-    password: bcrypt.hashSync(req.body.password, 10),
-    category: 1,
+    password: bcryptjs.hashSync(req.body.password, 10),
+    id_usercategory: 0,
     image: req.file ? req.file.filename : '',
       })
-     .then(() => {return res.redirect('./login')})
+     .then((usuario) => {
+      console.log(usuario.password)
+      console.log(req.body.password)
+      console.log(bcryptjs.compareSync(req.body.password,usuario.password))
+      return res.redirect('./login')})
     
     .catch(error => res.send(error))
     },
@@ -32,41 +36,42 @@ const controller = {
       
     
   ingresar: (req, res) => {
-    const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-    let usuario= users.find(user => user.email == req.body.email )
-//
-  //  let usuarios = db.user.findOne({
-  //    where: req.body.email == user.body.email
-  //  } .then => { 
-    if (usuario){
-      let passOk = bcrypt.compareSync(req.body.password, usuario.password)
-      if (passOk){
-        delete usuario.password
-        req.session.usuarioLogueado = usuario
-        res.cookie("userEmail", req.body.email, {maxAge: 300 * 60 * 60})
-        if(req.body.recordarme){
-          res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60})
-        }
-        res.redirect ("/");
-      } else {
-       return res.render ("usuario/login", {
+  
+    db.User.findOne({
+      where: {email : req.body.email}
+    }) .then ((usuario) => { 
+      if (usuario){
+        let passOk = bcryptjs.compareSync(req.body.password.toString(), usuario.password.toString())
+        console.log(usuario.password)
+        console.log(req.body.password)
+        console.log( bcryptjs.compareSync(req.body.password, usuario.password))
+        if (passOk){
+          delete usuario.password
+          req.session.usuarioLogueado = usuario
+          res.cookie("userEmail", req.body.email, {maxAge: 300 * 60 * 60})
+          if(req.body.recordarme){
+            res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60})
+          }
+          res.redirect ("/");
+        } else {
+         return res.render ("usuario/login", {
+           errors: {
+             datosMal: {
+               msg: "Las credenciales son inválidas"
+             }
+           }
+         })
+       } 
+     } else {
+         return res.render ("usuario/login", {
          errors: {
            datosMal: {
              msg: "Las credenciales son inválidas"
-           }
          }
-       })
-     } 
-   } else {
-       return res.render ("usuario/login", {
-       errors: {
-         datosMal: {
-           msg: "Las credenciales son inválidas"
        }
-     }
-   })
- } 
-//}) 
+     })
+   } 
+    })
  },
   profile: (req, res) => {
 		return res.render('usuario/profile', {

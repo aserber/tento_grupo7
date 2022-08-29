@@ -12,15 +12,15 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
 
-	productCategory:  (req, res) => {
-		let categoria = req.params.categoria
-		let productsFiltered = products.filter(product => product.category == categoria)
-		res.render('productos/producto', {
-			productsArray : productsFiltered,
-			category: categoria,
-			toThousand
-		})
-	},
+	//productCategory:  (req, res) => {
+	//	let categoria = req.params.categoria
+	//	let productsFiltered = products.filter(product => product.category == categoria)
+	//	res.render('productos/producto', {
+	//		productsArray : productsFiltered,
+	//		category: categoria,
+	//		toThousand
+	//	})
+	//},
 
 	//productCategory:  (req, res) => {
 	//	let categoria = req.params.categoria
@@ -41,21 +41,21 @@ const controller = {
 	//	
 //
 	//},
-
+	productCategory: (req, res) => {
+		let categoria = req.params.categoria
+		db.Product.findAll({ where: { id_productcategory: categoria }})
+			.then(product => {
+				
+				
+				res.render('productos/producto', {
+					product,
+					toThousand
+					
+				});
+			
+	})
+},
 	
-	
-
-	
-	//search: (req, res) => {
-	//	let search = req.query.keywords;
-	//	let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
-	//	res.render('productos/detail', { 
-	//		products: productsToSearch, 
-	//		search,
-	//		toThousand,
-	//	});
-	//},
-
 	
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id,

@@ -22,8 +22,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TINYINT(10).UNSIGNED
         },
         password: {
-            type: dataTypes.STRING(100),
-        }
+            type: dataTypes.STRING(255),
+        },
+        
     };
     let config = {
         tableName: "user",

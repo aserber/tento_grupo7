@@ -9,15 +9,21 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require('sequelize');
 const moment = require('moment');
-//const products = db.Product;
-//const prodCat = db.ProductCategory;
+
 
 const controller = {
 	// Create - Form to create
-	crear: (req, res) => {
-		return res.render('admin/crear')
-	},
+//	crear: (req, res) => {
+//		return res.render('admin/crear')
+//	},
+	crear: function (req, res) {
+	 db.ProductCategory.findAll()
 	
+	.then((prodCat) => {
+		return res.render(path.resolve(__dirname, 'admin/crear'), {prodCat})})
+	.catch(error => res.send(error))
+	},
+
 	store: function (req, res) {
 		db.Product.create({
 
@@ -38,7 +44,8 @@ const controller = {
 		db.Product.findByPk(req.params.id,
 		)
 			.then(product => {
-				res.render('detail.ejs', { 	product,
+				res.render('admin/detail', { 
+					product,
 					toThousand });
 			});
 	},
@@ -53,11 +60,11 @@ const controller = {
 
 		let id = req.params.id
 		let productToEdit = db.Product.findByPk(id)
-		let prodCate = db.ProductCategory.findAll()
+		//let prodCate = db.ProductCategory.findAll()
 		Promise
-			.all([prodCate, productToEdit])
-			.then(([prodCate, productToEdit]) => {
-				res.render('admin/product-edit-form', { prodCate, productToEdit })
+			.all([ productToEdit])
+			.then(([ productToEdit]) => {
+				res.render('admin/product-edit-form', {productToEdit })
 			})
 			.catch(error => res.send(error))
 	},
@@ -97,19 +104,20 @@ const controller = {
 
 
 	administrar: (req, res) => {
+		
 		db.Product.findAll()
 			.then(product => {
-				//let Chocolate = Products.filter(function (Products) {
-				//	return Products.category == 'Chocolate'
-				//})
-				//const Pasteleria = Products.filter(function (Products) {
-				//	return Products.category == 'Pasteleria'
-				//})
+				let Chocolate = product.filter (row => {
+					return row.id_productcategory == 1
+				})
+				const Pasteleria = product.filter(row => {
+					return row.id_productcategory  == 2
+				})
 				res.render('admin/administrar', {
-					//Pasteleria,
-					//Chocolate,
-					//toThousand
-					product
+					Pasteleria,
+					Chocolate,
+					toThousand
+					
 				});
 			})
 	},

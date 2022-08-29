@@ -9,10 +9,10 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title"><%= product.category %></h2>
+				<h2 class="products-title"><%= product.id_productcategory %></h2>
 			</div>
 			<!-- Show the "visited" products -->	
-			<% productsArray.forEach(function(product){ 
+			<% product.forEach(function(product){ 
 				let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
 			%>
 				<div class="col-12 col-sm-6 col-lg-3">

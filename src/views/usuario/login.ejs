@@ -25,7 +25,7 @@
                     <form action="./login" method="POST">
                         <input type="email" name="email" placeholder="email"
                             value="<%= typeof old != 'undefined' ? old.email : '' %>">
-                        <input type="password" name="password" placeholder="Contraseña">
+                            <input type="password" name="password" placeholder="Contraseña" id="nya" >
                         <br>
                         <% if (locals.errors && errors.datosMal){%>
                             <span class="text-danger">

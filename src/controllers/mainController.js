@@ -8,12 +8,7 @@ const sequelize = db.sequelize;
 const { Op } = require('sequelize');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-let Chocolate = products.filter(function(products){
-    return products.category == 'Chocolate'
-})
-const Pasteleria = products.filter(function(products){
-    return products.category == 'Pasteleria'
-})
+
 
 
 const controller = {
@@ -24,12 +19,22 @@ const controller = {
 	
 
     index: (req, res) =>{
-	 db.Product.findAll()
-		.then(product => {
-			res.render('web/index', {product})
-		})
-	},
-
+		db.Product.findAll()
+			.then(product => {
+				let Chocolate = product.filter (row => {
+					return row.id_productcategory == 1
+				})
+				const Pasteleria = product.filter(row => {
+					return row.id_productcategory  == 2
+				})
+				res.render('web/index', {
+					Pasteleria,
+					Chocolate,
+					toThousand
+					
+				});
+			})
+	},		
 	
 	carrito: (req, res) => {
         return res.render('web/carrito');
