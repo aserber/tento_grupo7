@@ -22,13 +22,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-<<<<<<< HEAD
         image: {
-            type: dataTypes.STRING(500)
-=======
-        imagen: {
             type: dataTypes.STRING
->>>>>>> b0c30fd32cbc169b2e3cf25e9eb31898901cf56f
         }
     };
     let config = {
@@ -38,9 +33,9 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias, cols, config); 
 
     Product.associate = function (models) {
-        Product.belongsTo(models.ProductCategory, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "productcategory",
-            foreignKey: 'id_productcategory',
+      Product.belongsTo(models.ProductCategory, { // models.Movie -> Movies es el valor de alias en movie.js
+        as: "productCategory",
+        foreignKey: 'id_productCategory',
             timestamps: false
         })
     }
