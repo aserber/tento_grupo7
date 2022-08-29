@@ -38,7 +38,8 @@ const controller = {
 		db.Product.findByPk(req.params.id,
 		)
 			.then(product => {
-				res.render('detail.ejs', { product });
+				res.render('detail.ejs', { 	product,
+					toThousand });
 			});
 	},
 

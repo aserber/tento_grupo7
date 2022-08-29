@@ -21,13 +21,7 @@ const controller = {
         return res.render('web/home');
     },
 
-	//index: (req, res) => {
-	//	res.render('web/index', {
-	//		Pasteleria,
-	//		Chocolate,
-	//		toThousand
-	//	});
-	//},
+	
 
     index: (req, res) =>{
 	 db.Product.findAll()
