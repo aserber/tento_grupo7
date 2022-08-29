@@ -74,28 +74,13 @@ const controller = {
 	
 	
 	detail2: (req, res) => {
-		const detalleProduct= json.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		 db.detailProduct.findAll()
+	
+		 db.detail.findByPk(req.params.id)
 		 .then(function(productos){
-			 return res.render('productos/detail2')
+			 return res.render('productos/detail2',productos)
 		 })
-		 detail: (req, res) => {
-			for (let i=0; i<products.length;i++){
-				if (products[i].id == req.params.id)
-				res.render("detail", {producto:products[i]})
-			}
+		
 		},
-		 //TATI PROBADO X2
-		 saved; (req, res) => {
-			 db.detailProduct.create
-			 title: req.body.title,
-			 genre_id; req.body,genre_id,
-			 length; req.body.length,
-			 rating; req.body.rating
-
-		 }
-
-	},
 
 }
 
