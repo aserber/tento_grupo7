@@ -3,7 +3,10 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const db = require('../database/models');
+//const sequelize = db.sequelize;
+//const { Op } = require('sequelize');
+const moment = require('moment');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -43,36 +46,42 @@ const controller = {
 	//	});
 	//},
 
-	detail: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id
-		let product = products.find(product => product.id == id)
-		if (product == undefined){
-			res.redirect('/admin/error')
-		} else{
-			res.render('productos/detail', {
-			product,
-			toThousand
-		})}
-	},
 	//detail: (req, res) => {
-	//	db.Product.findByPk(req.params.id,
-	//		{
-	//			include: ['Product']
-	//		})
-	//		.then(Products =>{
-	//			if (Products == undefined){
-	//			res.redirect('/admin/error')
-	//		} else{
-	//			res.render('productos/detail', {
-	//			Products,
-	//			toThousand
-	//		})
-	//		}
-	//	});
+	//	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	//	let id = req.params.id
+	//	let product = products.find(product => product.id == id)
+	//	if (product == undefined){
+	//		res.redirect('/admin/error')
+	//	} else{
+	//		res.render('productos/detail', {
+	//		product,
+	//		toThousand
+	//	})}
 	//},
+	detail: (req, res) => {
+		db.Product.findByPk(req.params.id,
+			)
+			.then(Products =>{
+				if (Products == undefined){
+				res.redirect('/admin/error')
+			} else{
+				res.render('productos/detail', {
+				Products,
+				toThousand
+			})
+			}
+		});
+	},
 	
 	
+	//detail: (req, res) => {
+	//
+	//	 db.Product.findByPk(req.params.id)
+	//	 .then(function(productos){
+	//		 return res.render('productos/detail',{productos})
+	//	 })
+	//	
+	//	},
 
 }
 

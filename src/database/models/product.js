@@ -2,29 +2,33 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Product';
     let cols = {
         id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false,
         },
         name: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING,
             notEmpty: true
         },
         description: {
-            type: dataTypes.STRING(400),
+            type: dataTypes.STRING,
             allowNull: false
         },
         price: {
-            type: dataTypes.DECIMAL(3,1),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         discount: {
-            type: dataTypes.DECIMAL(3,1),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
+<<<<<<< HEAD
         image: {
             type: dataTypes.STRING(500)
+=======
+        imagen: {
+            type: dataTypes.STRING
+>>>>>>> b0c30fd32cbc169b2e3cf25e9eb31898901cf56f
         }
     };
     let config = {
