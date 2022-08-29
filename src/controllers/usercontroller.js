@@ -52,6 +52,8 @@ const controller = {
   //  let usuarios = db.user.findOne({
   //    where: req.body.email == user.body.email
   //  } .then => { 
+
+
     if (usuario){
       let passOk = bcrypt.compareSync(req.body.password, usuario.password)
       if (passOk){
@@ -96,3 +98,5 @@ const controller = {
 
 }
 module.exports = controller;
+
+//me pide commit estooooo

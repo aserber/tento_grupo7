@@ -30,12 +30,7 @@ const controller = {
 	//},
 
     index: (req, res) =>{
-	 db.Product.findAll({
-				
-				
-			}
-	
-	)
+	 db.Product.findAll()
 		.then(product => {
 			res.render('web/index', {product})
 		})

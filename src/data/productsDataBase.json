@@ -9,15 +9,6 @@
   "image": "fotoProducto6.jpg"
  },
  {
-  "id": 1,
-  "name": "Bombones Rellenos Surtidos",
-  "price": "3000",
-  "discount": "15",
-  "category": "Chocolate",
-  "description": "Bombones rellenos surtidos de 250gr sabor Dulce de leche, Banana, Menta y Licor. ",
-  "image": "chocolate1.jpg"
- },
- {
   "id": 2,
   "name": "Bombones Macizos Surtidos",
   "price": "2000",
