@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DECIMAL(3,1),
             allowNull: false
         },
-        imagen: {
+        image: {
             type: dataTypes.STRING(500)
         }
     };
@@ -35,8 +35,8 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = function (models) {
         Product.belongsTo(models.ProductCategory, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "productCategory",
-            foreignKey: 'id_ProductCategory',
+            as: "productcategory",
+            foreignKey: 'id_productcategory',
             timestamps: false
         })
     }
