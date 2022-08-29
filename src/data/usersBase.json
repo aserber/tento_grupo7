@@ -32,7 +32,7 @@
   "last_name": "Serber",
   "email": "alan.serber01@gmail.com",
   "password": "$2b$10$K0zUe/DAvtl3qFFhrIxZ/eC3yF5B0yrp2UkEZRiXMyhndOQ29hARG",
-  "category": 1,
+  "category": 0,
   "image": "usuario-1661350591253.png"
  },
  {
@@ -41,7 +41,7 @@
   "last_name": "Serber",
   "email": "alan.serber@gmail.com",
   "password": "$2b$10$NIYnwREiulHbsZgsU167PesanSeVktZ8MDi778LNojykeQDqiu1Sa",
-  "category": 1,
+  "category": 0,
   "image": "usuario-1661368684345.JPG"
  }
 ]
