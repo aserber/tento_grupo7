@@ -35,5 +35,8 @@
     "url": "https://github.com/aserber/tento_grupo7/issues"
   },
   "homepage": "https://github.com/aserber/tento_grupo7#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
 }
