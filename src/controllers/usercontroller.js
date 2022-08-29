@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const userFilePath = path.join(__dirname, '../data/usersBase.json');
 const { validationResult } = require('express-validator');
 //const { where } = require('sequelize/types');
-//const db = require('../database/models');
+const db = require('../database/models');
 
 const controller = {
   register: (req, res) => {
@@ -14,37 +14,23 @@ const controller = {
     return res.render('usuario/login');
   },
 
-  save: (req, res) => {
-    const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-    let newUser = {
-      id: user[user.length - 1].id + 1,
-      name: req.body.name,
-      last_name: req.body.last_name,
-      email: req.body.email,
-      password: bcrypt.hashSync(req.body.password, 10),
-      category: 1,
-      image: req.file ? req.file.filename : '',
-    }
-
- // save: (req, res) => {
- //   db.user.create({
- //     id: user[user.length - 1].id + 1,
- //     name: req.body.name,
- //     last_name: req.body.last_name,
- //     email: req.body.email,
- //     password: bcrypt.hashSync(req.body.password, 10),
- //     category: 1,
- //     image: req.file ? req.file.filename : '',
- //   })
- //  .then=> res.redirect('./login')
- // }
-
-    console.log(newUser)
-    user.push(newUser);
-    fs.writeFileSync(userFilePath, JSON.stringify(user, null, ' '));
-    res.redirect('./login');
-  },
-
+    save: (req, res) => {
+      db.User.create({
+    name: req.body.name,
+    last_name: req.body.last_name,
+    email: req.body.email,
+    password: bcrypt.hashSync(req.body.password, 10),
+    category: 1,
+    image: req.file ? req.file.filename : '',
+      })
+     .then(() => {return res.redirect('./login')})
+    
+    .catch(error => res.send(error))
+    },
+    
+    
+      
+    
   ingresar: (req, res) => {
     const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
     let usuario= users.find(user => user.email == req.body.email )
@@ -52,6 +38,8 @@ const controller = {
   //  let usuarios = db.user.findOne({
   //    where: req.body.email == user.body.email
   //  } .then => { 
+
+
     if (usuario){
       let passOk = bcrypt.compareSync(req.body.password, usuario.password)
       if (passOk){
@@ -96,3 +84,5 @@ const controller = {
 
 }
 module.exports = controller;
+
+//me pide commit estooooo

@@ -27,7 +27,11 @@
 								<img class= "img2" src="/images/products/<%= product.image %>" alt="imagen de producto">
 							</figure>
 							<article class="product-box_data">
+
 									
+
+								<p><%= product.price %></p>
+
 								<span><%= product.discount %> %OFF</span>
 								<p><%= product.name %></p>
                                 <a href="edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
@@ -44,11 +48,13 @@
 		<!-- /ultima visita -->
 
 		
+
 		<!-- Ofertas -->
 	
 
 
 			<!-- /Ofertas -->
+
 			
 			<!-- footer -->
 			<%- include('../partials/footer.ejs') %>

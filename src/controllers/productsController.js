@@ -24,17 +24,27 @@ const controller = {
 
 	//productCategory:  (req, res) => {
 	//	let categoria = req.params.categoria
-	//	let productsFiltered = db.Products.findOne(product => product.category == categoria)
-//
-	//	.then (productsFiltered => {
-	//		res.render('productos/producto', {
-	//			productsArray : productsFiltered,
-	//			category: categoria,
-	//			toThousand
-	//		})
+	//	let Chocolate = db.Product.findAll(function (products) {
+	//		products.category =='Chocolate'
+	//	})
+	//	const Pasteleria =  db.Product.findAll(function (products) {
+	//		 products.category =='Pasteleria'
+	//	})
+	//	db.Products.findOne(product => product.category == categoria)
+	//	Promise
+	//	.all([Chocolate, Pasteleria])
+	//	.then (([Chocolate, Pasteleria]) => {
+	//		res.render('productos/producto', 
+	//			{ Pasteleria, Chocolate, toThousand })
+	//		.catch(error => res.send(error))
 	//	})
 	//	
+//
 	//},
+
+	
+	
+
 	
 	//search: (req, res) => {
 	//	let search = req.query.keywords;
@@ -46,43 +56,22 @@ const controller = {
 	//	});
 	//},
 
-	//detail: (req, res) => {
-	//	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-	//	let id = req.params.id
-	//	let product = products.find(product => product.id == id)
-	//	if (product == undefined){
-	//		res.redirect('/admin/error')
-	//	} else{
-	//		res.render('productos/detail', {
-	//		product,
-	//		toThousand
-	//	})}
-	//},
+	
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id,
 			)
-			.then(Products =>{
-				if (Products == undefined){
+			.then(product =>{
+				if (product == undefined){
 				res.redirect('/admin/error')
 			} else{
 				res.render('productos/detail', {
-				Products,
+				product,
 				toThousand
 			})
 			}
 		});
 	},
 	
-	
-	//detail: (req, res) => {
-	//
-	//	 db.Product.findByPk(req.params.id)
-	//	 .then(function(productos){
-	//		 return res.render('productos/detail',{productos})
-	//	 })
-	//	
-	//	},
-
 }
 
 module.exports = controller;
