@@ -43,6 +43,7 @@ const controller = {
 			discount: req.body.discount,
 			category: req.body.category,
 			detail: req.body.detail,
+			description: req.body.description,
 			image: req.file ? req.file.filename : '',
 		})
 		.then(product => {
@@ -161,17 +162,19 @@ const controller = {
 
 	administrar: (req, res) => {
 		db.Product.findAll()
-			.then(Products => {
-				let Chocolate = Products.filter(function (Products) {
-					return Products.category == 'Chocolate'
-				})
-				const Pasteleria = Products.filter(function (Products) {
-					return Products.category == 'Pasteleria'
-				})
+			.then(product => {
+				//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+				//let Chocolate = product.filter(function (product) {
+				//	return product.category == 'Chocolate'
+				//})
+				//const Pasteleria = product.filter(function (product) {
+				//	return product.category == 'Pasteleria'
+				//})
 				res.render('admin/administrar', {
-					Pasteleria,
-					Chocolate,
-					toThousand
+					//Pasteleria,
+					//Chocolate,
+					//toThousand
+					product
 				});
 			})
 	},
