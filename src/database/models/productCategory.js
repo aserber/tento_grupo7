@@ -9,7 +9,9 @@ module.exports = (sequelize, dataTypes) => {
         name: {
             type: dataTypes.STRING(100),
             allowNull: false
-        }
+        },
+        id_product: { type: dataTypes.INTEGER
+        },
     };
     let config = {
         tableName: "productcategory",
@@ -20,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
     ProductCategory.associate = function (models) {
         ProductCategory.hasMany(models.Product, { 
             as: "product",
-            foreignKey: 'id_productCategory',
+            foreignKey: 'id_product',
         })
     }
 

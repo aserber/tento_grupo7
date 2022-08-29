@@ -24,7 +24,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         imagen: {
             type: dataTypes.STRING
-        }
+        },
+        id_ProductCategory: { 
+            type: dataTypes.INTEGER
+        },
+
     };
     let config = {
         tableName: "product",
