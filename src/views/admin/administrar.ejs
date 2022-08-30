@@ -14,7 +14,7 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">PASTELERIA</h2>
+				<h2 class="products-title">Productos</h2>
 			</div>
 			<!-- Show the "visited" products -->	
 			<% Pasteleria.forEach(function(product){ 
@@ -27,7 +27,11 @@
 								<img class= "img2" src="/images/products/<%= product.image %>" alt="imagen de producto">
 							</figure>
 							<article class="product-box_data">
+
+									
+
 								<p><%= product.price %></p>
+
 								<span><%= product.discount %> %OFF</span>
 								<p><%= product.name %></p>
                                 <a href="edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
@@ -73,6 +77,13 @@
 				</div>
 			</div>
 		
+
+		<!-- Ofertas -->
+	
+
+
+			<!-- /Ofertas -->
+
 			
 			<!-- footer -->
 			<%- include('../partials/footer.ejs') %>

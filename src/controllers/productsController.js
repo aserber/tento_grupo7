@@ -45,8 +45,6 @@ const controller = {
 		let categoria = req.params.categoria
 		db.Product.findAll({ where: { id_productcategory: categoria }})
 			.then(product => {
-				
-				
 				res.render('productos/producto', {
 					product,
 					toThousand
