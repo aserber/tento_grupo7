@@ -80,6 +80,31 @@ const controller = {
     });
 
   },
+  edit: (req, res) => {
+
+		let id = req.params.id
+  db.User.findByPk(id)
+			.then((usuario) => {
+				res.render('usuario/userEdit', { usuario })
+			})
+			.catch(error => res.send(error))
+	},
+
+	// Update - Method to update
+
+
+	update: (req, res) => {
+		let usuario = {
+			...req.body,
+			avatar: req.file ? req.file.filename : req.body.oldImagen,
+		}
+
+		db.User.update(usuario, { where: { id: req.params.id } })
+			.then(() => {
+				return res.redirect('/')
+			})
+			.catch(error => res.send(error))
+	},
   logout: (req, res) => {
     res.clearCookie('userEmail');
     req.session.destroy();

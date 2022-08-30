@@ -22,35 +22,21 @@ const controller = {
 	//	})
 	//},
 
-	//productCategory:  (req, res) => {
-	//	let categoria = req.params.categoria
-	//	let Chocolate = db.Product.findAll(function (products) {
-	//		products.category =='Chocolate'
-	//	})
-	//	const Pasteleria =  db.Product.findAll(function (products) {
-	//		 products.category =='Pasteleria'
-	//	})
-	//	db.Products.findOne(product => product.category == categoria)
-	//	Promise
-	//	.all([Chocolate, Pasteleria])
-	//	.then (([Chocolate, Pasteleria]) => {
-	//		res.render('productos/producto', 
-	//			{ Pasteleria, Chocolate, toThousand })
-	//		.catch(error => res.send(error))
-	//	})
-	//	
-//
-	//},
-	productCategory: (req, res) => {
-		let categoria = req.params.categoria
-		db.Product.findAll({ where: { id_productcategory: categoria } })
+	productCategory:  (req, res) => {
+
+		db.Product.findAll()
 			.then(product => {
+				let producto = product.filter(row => {
+					return row.id_productcategory == 1
+				})
+				
 				res.render('productos/producto', {
-					product,
-					category: categoria
+					Pasteleria,
+					category: categoria,
+					toThousand
 
+					
 				});
-
 			})
 	},
 	

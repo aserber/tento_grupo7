@@ -56,6 +56,7 @@ router.get('/login', auth3Middleware,userController.login); //u
 router.post('/login', userController.ingresar);
 router.get('/logout', userController.logout);
 router.get('/profile', authiMiddleware, userController.profile);//hacer uno nuevo para profile parecido a auth
-
+router.get('/edit/:id', userController.edit); 
+router.patch('/profile/:id',upload.single('avatar'), userController.update);
 
 module.exports = router;
