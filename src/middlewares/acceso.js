@@ -17,7 +17,7 @@ module.exports = (req,res,next) =>{
     }else if(req.cookies.userEmail){
         db.User.findOne({where: {email: req.cookies.userEmail}})
         //return res.send(usuario);
-        .then(() => {
+        .then((usuario) => {
             delete usuario.password;
             req.session.usuarioLogueado = usuario;
             res.locals.usuarioLogueado = usuario;

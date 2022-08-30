@@ -106,6 +106,10 @@
 	//	});
 	//},
 
+	//	crear: (req, res) => {
+	//		return res.render('admin/crear')
+	//	},
+
 	USUARIOS
 	
   //save: (req, res) => {

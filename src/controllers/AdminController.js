@@ -13,15 +13,16 @@ const moment = require('moment');
 
 const controller = {
 	// Create - Form to create
-//	crear: (req, res) => {
-//		return res.render('admin/crear')
-//	},
+	//	crear: (req, res) => {
+	//		return res.render('admin/crear')
+	//	},
 	crear: function (req, res) {
-	 db.ProductCategory.findAll()
-	
-	.then((prodCat) => {
-		return res.render(path.resolve(__dirname, 'admin/crear'), {prodCat})})
-	.catch(error => res.send(error))
+		db.ProductCategory.findAll()
+			
+			.then((prodCat) => {
+				return res.render(( 'admin/crear'), { prodCat })
+			})
+			.catch(error => res.send(error))
 	},
 
 	store: function (req, res) {
@@ -30,7 +31,7 @@ const controller = {
 			name: req.body.name,
 			price: req.body.price,
 			discount: req.body.discount,
-			category: req.body.category,
+			id_productcategory: req.body.category,
 			description: req.body.description,
 			image: req.file ? req.file.filename : '',
 		})
@@ -44,9 +45,10 @@ const controller = {
 		db.Product.findByPk(req.params.id,
 		)
 			.then(product => {
-				res.render('admin/detail', { 
+				res.render('admin/detail', {
 					product,
-					toThousand });
+					toThousand
+				});
 			});
 	},
 
@@ -54,7 +56,7 @@ const controller = {
 
 
 	// Update - Form to edit
-	
+
 
 	edit: (req, res) => {
 
@@ -62,15 +64,15 @@ const controller = {
 		let productToEdit = db.Product.findByPk(id)
 		//let prodCate = db.ProductCategory.findAll()
 		Promise
-			.all([ productToEdit])
-			.then(([ productToEdit]) => {
-				res.render('admin/product-edit-form', {productToEdit })
+			.all([productToEdit])
+			.then(([productToEdit]) => {
+				res.render('admin/product-edit-form', { productToEdit })
 			})
 			.catch(error => res.send(error))
 	},
 
 	// Update - Method to update
-	
+
 
 	update: (req, res) => {
 		let producto = {
@@ -104,20 +106,20 @@ const controller = {
 
 
 	administrar: (req, res) => {
-		
+
 		db.Product.findAll()
 			.then(product => {
-				let Chocolate = product.filter (row => {
+				let Chocolate = product.filter(row => {
 					return row.id_productcategory == 1
 				})
 				const Pasteleria = product.filter(row => {
-					return row.id_productcategory  == 2
+					return row.id_productcategory == 2
 				})
 				res.render('admin/administrar', {
 					Pasteleria,
 					Chocolate,
 					toThousand
-					
+
 				});
 			})
 	},

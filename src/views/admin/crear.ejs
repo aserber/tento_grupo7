@@ -36,8 +36,8 @@
 						<label for="category" class="form-label">Categoría:</label>
 						<select name="category" id="category" class="form-input">
 							<option value="" disabled>Elegí</option>
-							<% prodCat.forEach(cat => { %>
-								<option value="<%= cat.id %>"><%= cat.name %></option>
+							<% prodCat.forEach(prodCat => { %>
+								<option value="<%= prodCat.id %>"><%= prodCat.name %></option>
 								<% }); %>
 						</select>
 						

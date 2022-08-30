@@ -43,16 +43,16 @@ const controller = {
 	//},
 	productCategory: (req, res) => {
 		let categoria = req.params.categoria
-		db.Product.findAll({ where: { id_productcategory: categoria }})
+		db.Product.findAll({ where: { id_productcategory: categoria } })
 			.then(product => {
 				res.render('productos/producto', {
 					product,
-					toThousand
-					
+					category: categoria
+
 				});
-			
-	})
-},
+
+			})
+	},
 	
 	
 	detail: (req, res) => {
