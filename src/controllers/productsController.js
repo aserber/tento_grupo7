@@ -7,6 +7,7 @@ const db = require('../database/models');
 //const sequelize = db.sequelize;
 //const { Op } = require('sequelize');
 const moment = require('moment');
+const { resolve } = require('path');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -21,6 +22,7 @@ const controller = {
 	//		toThousand
 	//	})
 	//},
+
 
 	//productCategory:  (req, res) => {
 	//	let categoria = req.params.categoria
@@ -41,19 +43,30 @@ const controller = {
 	//	
 //
 	//},
+	
 	productCategory: (req, res) => {
 		let categoria = req.params.categoria
-		db.Product.findAll({ where: { id_productcategory: categoria } })
+		db.Product.findAll({include:[{association:'productCategory'}]})
 			.then(product => {
-				res.render('productos/producto', {
-					product,
-					category: categoria
-
-				});
-
+				let Chocolate = product.filter(row =>{
+					return row.id_productcategory == 1
+				})
+				const Pasteleria = product.filter(row => {
+					return row.id_productcategory == 2
+				})
 			})
+			.then(products => {
+				products = {where: {categoria : id_productcategory}}
+				res.render('productos/producto',{products}
+				)
+			})
+
+			
+				
+
+			
 	},
-	
+
 	
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id,
