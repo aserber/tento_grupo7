@@ -8,7 +8,7 @@
 	<!-- /Header -->
 
 	<!-- ultima visita -->
-    <div>
+    <div class="fotoalmedio">
         <a href="/admin/crear" class="action-button edit">CREAR PRODUCTO</a>
     </div>
 	<div class="container products-wrapper">
@@ -26,14 +26,10 @@
 							<figure class="product-box_image">
 								<img class= "img2" src="/images/products/<%= product.image %>" alt="imagen de producto">
 							</figure>
-							<article class="product-box_data">
-
-									
-
-								<p><%= product.price %></p>
-
-								<span><%= product.discount %> %OFF</span>
-								<p><%= product.name %></p>
+							<article class="product-box_data">	
+								<p class="administrar-nombre1"><%= product.name %></p>
+								<p class="administrar-nombre">$<%= product.price %></p>
+								<p class="administrar-nombre"><%= product.discount %>% OFF</p>			
                                 <a href="edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
                                 <form action="delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                                     <button type="submit" class="action-button delete">ELIMINAR</button>
@@ -62,9 +58,9 @@
 									<img class= "img2" src="/images/products/<%= product.image %>" alt="imagen de producto">
 								</figure>
 								<article class="product-box_data">
-									<p><%= product.price %></p>
-									<span><%= product.discount %> %OFF</span>
-									<p><%= product.name %></p>
+								<p class="administrar-nombre1"><%= product.name %></p>
+								<p class="administrar-nombre">$<%= product.price %></p>
+								<p class="administrar-nombre"><%= product.discount %>% OFF</p>	
 									<a href="edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
 									<form action="delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
 										<button type="submit" class="action-button delete">ELIMINAR</button>

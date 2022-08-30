@@ -631,6 +631,26 @@ font-weight: bold;
     background-color: black;
 }
 
+.administrar-nombre {
+    font-size: 300%;
+    font-family: "Montserrat";
+    font-weight: bolder;
+}
+
+.administrar-nombre1 {
+    font-size: 1000%;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.edit {
+    font-size: 900px;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
 
 
 
