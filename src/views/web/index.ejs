@@ -21,10 +21,11 @@
 					<section class="product-box">
 						<a href="../admin/detail/<%= product.id %>">
 							<figure class="product-box_image">
+								
 								<img class= "img2" src="/images/products/<%= product.image %>" alt="imagen de producto">
 							</figure>
 							<article class="product-box_data">
-								
+								<span>$<%= product.price %></span>
 								<span><%= product.discount %> %OFF</span>
 								<p><%= product.name %></p>
 								<i class="fas fa-truck"></i>
@@ -52,9 +53,10 @@
 									<img class= "img2" src="/images/products/<%= product.image %>" alt="imagen de producto">
 								</figure>
 								<article class="product-box_data">
-									
+									<span>$<%= product.price %></span>
 									<span><%= product.discount %> %OFF</span>
 									<p><%= product.name %></p>
+									
 									<i class="fas fa-truck"></i>
 								</article>
 							</a>
