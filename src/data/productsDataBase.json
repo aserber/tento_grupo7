@@ -14,7 +14,7 @@
   "price": "2000",
   "discount": "15",
   "category": "Chocolate",
-  "description": "Bombones macizos surtidos de 250gr de chocolate Blanco, Leche y Amargo al %70.",
+  "description": "Bombones macizos surtidos de 250gr de chocolate Blanco, Leche y Amargo al %70",
   "image": "chocolate2.jpg"
  },
  {
@@ -22,7 +22,7 @@
   "name": "Bombones Macizos",
   "price": "3000",
   "discount": "15",
-  "category": "",
+  "category": "Chocolate",
   "description": "falta",
   "image": "chocolate3.jpg"
  },
@@ -92,7 +92,7 @@
  {
   "id": 13,
   "name": "Mousse de Mix de Chocolates",
-  "price": "150",
+  "price": "1500",
   "discount": "50",
   "category": "Pasteleria",
   "description": "Bizcochuelo de chocolate con relleno de Mousse de Chocolate, decorado con bombones.",

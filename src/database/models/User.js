@@ -19,10 +19,13 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         avatar: {
-            type: dataTypes.TINYINT(10).UNSIGNED
+            type: dataTypes.STRING
         },
         password: {
             type: dataTypes.STRING(255),
+        },
+        id_usercategory: {
+            type: dataTypes.INTEGER(11),
         },
         
     };

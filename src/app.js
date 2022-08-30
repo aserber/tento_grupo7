@@ -7,7 +7,6 @@ const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require("express-session");
 const acceso = require("./middlewares/acceso")
-const bcryptjs = require('bcryptjs');
 
 // ************ express() - (don't touch) ************
 const app = express();

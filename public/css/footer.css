@@ -80,6 +80,12 @@ body, html{
     margin-left: 15px;
 }
 
+.links-footer{
+    text-align: center !important;
+    justify-content: center !important;
+
+}
+
 @media screen and (max-width: 580px){
     .footer{
         width: 100%;
@@ -103,12 +109,20 @@ body, html{
         width: 100%;
     }
 
+    .con1 {
+        text-align: center !important;
+    }
+
     .con1 .social{
         width: 100%;
     }
 
     .con3 p{
         text-align: center;
+    }
+
+    .con4 {
+        text-align: center!important;
     }
 
     .con4 h3{

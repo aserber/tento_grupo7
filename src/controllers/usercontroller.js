@@ -21,7 +21,7 @@ const controller = {
       email: req.body.email,
       password: bcryptjs.hashSync(req.body.password, 10),
       id_usercategory: 0,
-      image: req.file ? req.file.filename : '',
+      avatar: req.file ? req.file.filename : '',
     })
       .then((usuario) => {
         console.log(usuario.password)
