@@ -12,11 +12,13 @@
                 
                 
                 <div class="card-body">
-            
-                    <h5 class="card-title"><%= usuario.name %> <%= usuario.last_name %></h5>
-                    <p class="card-text"><%= usuario.email %></p>
-                    <a href="../" class="action-button edit">Volver</a>
-                    <a href="edit/<%= usuario.id %>" class="action-button edit">Editar usuario</a>
+                    <br> <img src="/images/usuariosimg/<%= usuario.avatar%>">
+                    <br><input type="hidden"  name="oldImagen"  value="<%= usuario.avatar%>">
+               
+                   <br> <h5 class="card-title"><%= usuario.name %> <%= usuario.last_name %></h5>
+                   <br><p class="card-text"><%= usuario.email %></p>
+                   <br><a href="../" class="action-button edit">Volver</a>
+                   <br><a href="edit/<%= usuario.id %>" class="action-button edit">Editar usuario</a>
                 </div>
             </div>
     

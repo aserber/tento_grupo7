@@ -6,7 +6,7 @@ module.exports = [
     body("last_name").notEmpty().withMessage("Tenes que completar"),
     body("email").notEmpty().withMessage("Tenes que completar").bail().isEmail().withMessage("Formato de email invalido"),
     body("password").notEmpty().withMessage("Tenes que completar"),
-    body("image").custom((value,{req}) => {
+    body("avatar").custom((value,{req}) => {
         let file = req.file;
         let acceptedExtensions = [".jpg",".png",".gif"];
 
