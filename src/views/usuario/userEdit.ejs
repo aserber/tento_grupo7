@@ -6,17 +6,22 @@
 
         <body class="prod">
 
-            <form action="/usuario/profile/<%= usuario.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-            <div class="card" style="width: 50rem;">
+            <form action="/usuario/profile/<%= usuario.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="card-edit">
+            <div class="card" style="width: 40%">
                 <img src="/images/usuariosimg/<%= usuario.avatar %> " class="card-img-top" alt="product image">
                 <input type="hidden"  name="oldImagen"  value="<%= usuario.avatar%>">
                 
+                
+                
+                <input type="text" name="name" placeholder="Nombre">
+                <input type="text" name="last_name" placeholder="Apellido">
                 <input type="file" name="avatar">
                 <div class="card-body">
                     <h5 class="card-title"><%= usuario.name %> <%= usuario.last_name %></h5>
                     <p class="card-text"><%= usuario.email %></p>
-                    <button type="submit" class="buy-now-button"><a href="../" class="buy-now-button">Volver</button></a>
+                    
                     <button type="submit" class="buy-now-button">Guardar usuario</button>
+                    <a href="/usuario/profile" class="action-button edit">Volver</a>
                 </div>
             </div>
         </form>

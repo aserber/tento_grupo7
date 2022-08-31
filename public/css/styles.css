@@ -651,6 +651,14 @@ font-weight: bold;
     text-decoration: underline;
 }
 
+.card-edit{
+    justify-content: center;
+    align-items: center;
+    
+}
 
-
+.card-body {
+    justify-content: center;
+    align-items: center;
+}
 
