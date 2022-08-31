@@ -83,13 +83,15 @@ const controller = {
   edit: (req, res) => {
 
 		let id = req.params.id
-  db.User.findByPk(id)
-			.then((usuario) => {
-				res.render('usuario/userEdit', { usuario })
-			})
+    let userToEdit = db.User.findByPk(id)
+      Promise
+      .all([userToEdit])	
+      .then(([userToEdit]) => {
+	  			res.render('usuario/userEdit', { userToEdit })
+		  	})
 			.catch(error => res.send(error))
 	},
-
+ 
 	// Update - Method to update
 
 

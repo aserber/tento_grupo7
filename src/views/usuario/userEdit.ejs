@@ -6,22 +6,26 @@
 
         <body class="prod">
 
-            <form action="/usuario/profile/<%= usuario.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="card-edit">
+            <form action="/usuario/profile/<%= userToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="card-edit">
             <div class="card" style="width: 40%">
-                <img src="/images/usuariosimg/<%= usuario.avatar %> " class="card-img-top" alt="product image">
-                <input type="hidden"  name="oldImagen"  value="<%= usuario.avatar%>">
+                <img src="/images/usuariosimg/<%= userToEdit.avatar %> " class="card-img-top" alt="product image">
+                <input type="hidden"  name="oldImagen"  value="<%= userToEdit.avatar%>">
+                <br><input type="file" name="avatar">
+
+                <div class="col-12 col-md-6">
+                    <label for="name" class="form-label">Nombre del Usuario:</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" value="<%= userToEdit.name%>"  class="form-input">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="name" class="form-label">Apellido del Usuario:</label>
+                    <input type="text" id="name" name="last_name" placeholder="Nombre" value="<%= userToEdit.last_name%>"  class="form-input">
+                </div>
+                <p class="card-text"><%= userToEdit.email %></p>
                 
-                
-                
-                <input type="text" name="name" placeholder="Nombre">
-                <input type="text" name="last_name" placeholder="Apellido">
-                <input type="file" name="avatar">
                 <div class="card-body">
-                    <h5 class="card-title"><%= usuario.name %> <%= usuario.last_name %></h5>
-                    <p class="card-text"><%= usuario.email %></p>
-                    
-                    <button type="submit" class="buy-now-button">Guardar usuario</button>
-                    <a href="/usuario/profile" class="action-button edit">Volver</a>
+      
+                <button type="submit" class="buy-now-button">Guardar usuario</button>
+                <a href="/usuario/profile" class="action-button edit">Volver</a>
                 </div>
             </div>
         </form>
