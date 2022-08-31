@@ -5,7 +5,9 @@ const router = express.Router();
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
 
-router.get('/:categoria', productsController.productCategory); 
+
+
+router.get('/:category', productsController.productCategory); 
 
 /*** SEARCHE ONE PRODUCT ***/ 
 //router.get('/search',  productsController.search); 

@@ -25,17 +25,26 @@ const controller = {
 
 
 	productCategory: (req, res) => {
-		let categoria = req.params.category
 		
-		db.Product.findAll(categoria= id_productcategory)
-			.then(product => {	
-				
+		db.Product.findAll()
+			.then(products => {	
+				let product = products.filter(row => {
+					return row.id_productcategory == req.params.category
+				})
 				res.render('productos/producto', {
 					product,
 					toThousand
 				})
 			})
 	},
+
+
+
+
+
+
+
+
 
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id,
