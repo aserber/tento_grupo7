@@ -8,12 +8,15 @@
 
 
             <div class="card" style="width: 50rem;">
-                <img src="/images/usuariosimg/<%= usuario.avatar %> " class="card-img-top" alt="">
+                <img src="/images/usuariosimg/<%= usuario.avatar %>" class="card-img-top" alt="product image">
+                <input type="hidden"  name="oldImagen"  value="<%= usuario.avatar%>">
+                
+                <input type="file" name="avatar">
                 <div class="card-body">
                     <h5 class="card-title"><%= usuario.name %> <%= usuario.last_name %></h5>
                     <p class="card-text"><%= usuario.email %></p>
-                    <a href="../" class="btn btn-primary">Volver</a>
-                    <a href="edit/<%= usuario.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                    <a href="../" class="action-button edit">Volver</a>
+                    <a href="edit/<%= usuario.id %>" class="action-button edit">Editar usuario</a>
                 </div>
             </div>
     
