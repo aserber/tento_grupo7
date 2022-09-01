@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
-let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/usersBase.json')));
 
 module.exports = (req,res,next) =>{
     //Variable locals (super global - vive en las vistas )
