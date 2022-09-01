@@ -103,10 +103,13 @@ const controller = {
 
 		db.User.update(usuario, { where: { id: req.params.id } })
 			.then(() => {
-				return res.redirect('/')
+        
+				return res.render('web/home')
 			})
 			.catch(error => res.send(error))
 	},
+
+
   logout: (req, res) => {
     res.clearCookie('userEmail');
     req.session.destroy();

@@ -27,7 +27,8 @@ module.exports = (sequelize, dataTypes) => {
         },
 
         id_productcategory: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            foreignKey: true
         }
 
     };

@@ -9,9 +9,7 @@ module.exports = (sequelize, dataTypes) => {
         name: {
             type: dataTypes.STRING,
             allowNull: false
-        },
-        id_product: { type: dataTypes.INTEGER
-        },
+        }
     };
     let config = {
         tableName: "productcategory",
@@ -20,9 +18,9 @@ module.exports = (sequelize, dataTypes) => {
     const ProductCategory = sequelize.define(alias, cols, config); 
 
     ProductCategory.associate = function (models) {
-        ProductCategory.belongsTo(models.Product, { 
+        ProductCategory.hasMany(models.Product, { 
             as: "product",
-            foreignKey: 'id_product',
+            foreignKey: 'id_productcategory',
         })
     }
 

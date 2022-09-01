@@ -26,6 +26,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         id_usercategory: {
             type: dataTypes.INTEGER(11),
+            foreignKey: true
         },
         
     };
