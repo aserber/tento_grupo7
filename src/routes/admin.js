@@ -3,6 +3,7 @@ const router = express.Router();
 const adminController = require ("../controllers/adminController");
 const path = require('path');
 const multer = require('multer');
+const uploadFile = require('../middlewares/multerMiddleware')
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -12,7 +13,7 @@ var storage = multer.diskStorage({
       cb(null, 'producto-'+Date.now()+path.extname(file.originalname))
     }
   })
-   
+  
   const upload = multer({ storage })
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', adminController.edit); 
