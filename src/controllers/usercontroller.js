@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs');
-const userFilePath = path.join(__dirname, '../data/usersBase.json');
+//const userFilePath = path.join(__dirname, '../data/usersBase.json');
 const { validationResult } = require('express-validator');
 //const { where } = require('sequelize/types');
 const db = require('../database/models');
@@ -15,12 +15,15 @@ const controller = {
   },
 
   save: (req, res) => {
+    let errors = validationResult(req);
+    console.log("errores: " + errors.array())
+    if (errors.isEmpty()) {
     db.User.create({
       name: req.body.name,
       last_name: req.body.last_name,
       email: req.body.email,
       password: bcryptjs.hashSync(req.body.password, 10),
-      id_usercategory: 1,
+      id_usercategory: 0,
       avatar: req.file ? req.file.filename : '',
     })
       .then((usuario) => {
@@ -31,7 +34,7 @@ const controller = {
       })
 
       .catch(error => res.send(error))
-  },
+  } },
 
 
 

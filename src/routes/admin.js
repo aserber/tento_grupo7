@@ -4,7 +4,7 @@ const adminController = require ("../controllers/adminController");
 const path = require('path');
 const multer = require('multer');
 const uploadFile = require('../middlewares/multerMiddleware')
-
+const validacion = require('../middlewares/validationProducts')
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.resolve(__dirname, '../../public/images/products'));
@@ -22,7 +22,7 @@ router.patch('/detail/:id',upload.single('imagen'), adminController.update);
 router.delete('/delete/:id', adminController.destroy); 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/crear', adminController.crear); 
-router.post('/crear',upload.single('imagen'), adminController.store); 
+router.post('/crear',upload.single('imagen'), validacion,adminController.store); 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', adminController.detail); 
 router.get("/administrar", adminController.administrar);
