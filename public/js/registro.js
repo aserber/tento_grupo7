@@ -1,21 +1,10 @@
-window.onload = function(){
-    let name = document.querySelector('.moviesAddTitulo');
-    //let formulario = document.querySelector('#formulario');
-    //let article = document.querySelector('article');
-    name.innerHTML = 'AGREGAR tuvieja';
-    name.classList.add('titulo');
+window.addEventListener("load", function(){
 
+    let form = document.querySelector(".form");
+    //form.name.focus();
 
-//------DESDE AQUÍ CONTINÚE CON LAS VALIDACIONES DEL FORMULARIO //
-
-
-    let form = document.querySelector('.form');
-    form.name.focus()
-
-    form.onsubmit =  (e) => {
-        e.preventDefault(e)
-
-        let errors = []
+    form.addEventListener("submit", function (e) {
+        let errors = [];
 
         let name = document.querySelector('#name');
         let last_name = document.querySelector('#last_name');
@@ -25,8 +14,6 @@ window.onload = function(){
         var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
         var regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-
-        
         /// VALIDACION Nombre
         if (name.value.length < 2 ) {
             errors.push('El campo nombre no puede tener menos de dos caracteres!');
@@ -79,15 +66,17 @@ window.onload = function(){
             password.classList.add('is-valid');
             password.classList.remove('is-invalid');
         }
-        let ulErrors = document.querySelector('.errores');
-        ulErrors.classList.add('alert-warning')
-        ulErrors.innerHTML = '';
+
         if (errors.length > 0) {
-            Swal.fire({
-                icon: 'error',
-                
-                text: 'Revise los errores!',
-            })
+            e.preventDefault();
+           Swal.fire({
+               icon: 'error',
+               
+               text: 'Revise los errores!',
+           })
+            let ulErrors = document.querySelector('.errores');
+             ulErrors.classList.add('alert-warning')
+             ulErrors.innerHTML = ''
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += `<li > ${errors[i]} </li>`
             }
@@ -101,4 +90,4 @@ window.onload = function(){
         }
         
     }
-}
+)})

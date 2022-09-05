@@ -17,7 +17,7 @@
 			<form action="/admin/crear" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
 					<div>
-					<input type="file" name="imagen" >
+					<input type="file" name="imagen" id="file">
 					</div>
 					
 					<div class="col-12 col-md-6">
@@ -53,12 +53,14 @@
 				</div>
 			</form>
 		</div>
-
+		<script src="/js/newProduct.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	</div>
 	<!-- /todos los productos -->
 
 	<!-- footer -->
 	<%- include('../partials/footer.ejs') %>
 	<!-- /footer -->
+	
 </body>	
 </html>
