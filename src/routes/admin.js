@@ -17,12 +17,12 @@ var storage = multer.diskStorage({
   const upload = multer({ storage })
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', adminController.edit); 
-router.patch('/detail/:id',upload.single('imagen'), adminController.update);
+router.post('/detail/:id',upload.single('image'), adminController.update);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', adminController.destroy); 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/crear', adminController.crear); 
-router.post('/crear',upload.single('imagen'), validacion,adminController.store); 
+router.post('/crear',upload.single('imagen'), adminController.store); 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', adminController.detail); 
 router.get("/administrar", adminController.administrar);

@@ -60,13 +60,13 @@ window.addEventListener("load", function(){
       }
         // VALIDACION avatarn 
 
-        if (!allowedExtensions.test(avatar.value)) {
+        if (!allowedExtensions.test(image.value)) {
             errors.push('El campo avatarn y la concha de tu hermana debe tener al menos 8 caracteres!');
-            avatar.classList.add('is-invalid');
+            image.classList.add('is-invalid');
         }
         else{
-            avatar.classList.add('is-valid');
-            avatar.classList.remove('is-invalid');
+            image.classList.add('is-valid');
+            image.classList.remove('is-invalid');
         }
 
 
