@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
-const validator = require ("../middlewares/validateRegisterMiddlewares");
+const validacion = require ("../middlewares/validacion");
 const { body } = require("express-validator");
 const path = require('path');
 const multer = require('multer');
@@ -23,41 +23,16 @@ var storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
-//const validacionesLogin = [
-//  body('email').isEmail().withMessage('Agregar un email válido'),
-//  body('password').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
-//  body('email').custom( (value  ) =>{
-//    for (let i = 0; i < archivoUsuarios.length; i++) {
-//        if (archivoUsuarios[i].email == value) {
-//            return true    
-//        }
-//    }
-//    return res.redirect('/');
-//  }).withMessage('Usuario no se encuentra registrado...'),
-//
-//  //Aquí valido si la contraseña colocada es la misma a la que tenemos hasheada
-//  body('password').custom( (value, {req}) =>{
-//      for (let i = 0; i < archivoUsuarios.length; i++) {
-//          if (archivoUsuarios[i].email == req.body.email) {
-//              if(bcrypt.compareSync(value, archivoUsuarios[i].password)){
-//                return true;
-//              }else{
-//                return false;
-//              }
-//          }
-//      }
-//      
-//  }).withMessage('Usurio o contraseña no coinciden'),
-//] 
+
 
 router.get('/registro', authMiddleware, userController.register); //u
-router.post('/registro', validator, upload.single('avatar'), userController.save);
+router.post('/registro', validacion, upload.single('avatar'), userController.save);
 router.get('/login', auth3Middleware,userController.login); //u
 router.post('/login', userController.ingresar);
 router.get('/logout', userController.logout);
 router.get('/profile', authiMiddleware, userController.profile);//hacer uno nuevo para profile parecido a auth
 router.get('/edit/:id', userController.edit); 
-router.patch('/profile/:id',validator,upload.single('avatar'), userController.update);
+router.patch('/profile/:id',validacion,upload.single('avatar'), userController.update);
 router.get('/usuario', auth3Middleware,userController.login); //u
 
 module.exports = router;
