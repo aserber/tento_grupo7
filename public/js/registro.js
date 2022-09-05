@@ -7,13 +7,13 @@ window.onload = function(){
 
 
 //------DESDE AQUÍ CONTINÚE CON LAS VALIDACIONES DEL FORMULARIO //
-//-------------------DE REGISTRO DE PELÍCULAS------------------//    
+
 
     let form = document.querySelector('.form');
     form.name.focus()
 
-    form.onsubmit( function (e) {
-        e.preventDefault()
+    form.onsubmit =  (e) => {
+        e.preventDefault(e)
 
         let errors = []
 
@@ -85,14 +85,20 @@ window.onload = function(){
         if (errors.length > 0) {
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
+                
                 text: 'Revise los errores!',
             })
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += `<li > ${errors[i]} </li>`
             }
         }
+
+        else{
+            Swal.fire({
+                icon: 'success',
+                text: 'Revise los estabien!',
+            })
+        }
         
-        
-    })
+    }
 }
