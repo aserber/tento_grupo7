@@ -22,26 +22,36 @@
                                 <%= errors.datosMal.msg %>
                             </span>
                             <%}%>
+                        
+
+                            <h1 class="moviesAddTitulo"></h1>
 
             <main class="register">
                 <div class="container-registro">
-                    <form action="./registro" method="POST" enctype="multipart/form-data">
+
+                    <section id="formulario">
+                        <article class="mostrarFormulario">
+                            <ul class="errores"></ul>
+                    <form action="./registro" method="POST" class="form" enctype="multipart/form-data">
                         
-                        <input type="text" name="name" placeholder="Nombre" id="nya" value="<%= typeof old != 'undefined' ? old.first_name : '' %>">
-                        <input type="text" name="last_name" placeholder="Apellido" id="nya" value="<%= typeof old != 'undefined' ? old.last_name : '' %>">
-                        <input type="email" name="email" placeholder="E-mail" id="nya"  value="<%= typeof old != 'undefined' ? old.email : '' %>">
-                        <input type="password" name="password" placeholder="Contraseña" id="nya" >
-                        <input type="file"   name="avatar"  placeholder="Debes eligir tu imagen...">
+                        <input type="text" name="name" placeholder="Nombre" id="name" value="<%= typeof old != 'undefined' ? old.first_name : '' %>">
+                        <input type="text" name="last_name" placeholder="Apellido" id="last_name" value="<%= typeof old != 'undefined' ? old.last_name : '' %>">
+                        <input type="text" name="email" placeholder="E-mail" id="email">
+                        <input type="password" name="password" placeholder="Contraseña" id="password" >
+                        <input type="file"   name="avatar"  id="file" placeholder="Debes eligir tu imagen...">
                         <div class="botonera">
                             <input type="submit" value="Enviar">
                             <input type="reset" value="Borrar">
                         </div>
                         <div class="text-center my-3">Ya tengo una cuenta? <a href="./login">Inicia sesión</a></div>
                     </form>
-
+                    </article>
+                </section>
 
                 </div>
                 <br>
+                <script src="../js/registro.js"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             </main>
         </body>
 

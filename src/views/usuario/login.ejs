@@ -23,9 +23,8 @@
             <main class="login">
                 <div class="container-login">
                     <form action="./login" method="POST">
-                        <input type="email" name="email" placeholder="email"
-                            value="<%= typeof old != 'undefined' ? old.email : '' %>">
-                            <input type="password" name="password" placeholder="Contraseña" id="nya" >
+                        <input type="emai" name="email" placeholder="email" id?¡="email" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+                            <input type="password" name="password" placeholder="Contraseña" id="password" >
                         <br>
                         <% if (locals.errors && errors.datosMal){%>
                             <span class="text-danger">
@@ -44,6 +43,10 @@
 
                     </form>
                 </div>
+
+                <script src="../js/login.js"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
             </main>
 
         </body>
