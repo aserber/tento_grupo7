@@ -11,7 +11,7 @@ window.addEventListener("load", function(){
         let discount = document.querySelector('#discount');
         let category = document.querySelector('#category');
         let description = document.querySelector('#description');
-        let image = document.querySelector('#file');
+        let avatar = document.querySelector('#file');
         var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
                /// VALIDACION Nombre
         if (name.value.length < 2 ) {
@@ -58,28 +58,27 @@ window.addEventListener("load", function(){
           description.classList.add('is-valid');
           description.classList.remove('is-invalid');
       }
-        // VALIDACION imagen 
+        // VALIDACION avatarn 
 
-        if (!allowedExtensions.test(image.value)) {
-            errors.push('El campo imagen y la concha de tu hermana debe tener al menos 8 caracteres!');
-            image.classList.add('is-invalid');
+        if (!allowedExtensions.test(avatar.value)) {
+            errors.push('El campo avatarn y la concha de tu hermana debe tener al menos 8 caracteres!');
+            avatar.classList.add('is-invalid');
         }
         else{
-            image.classList.add('is-valid');
-            image.classList.remove('is-invalid');
+            avatar.classList.add('is-valid');
+            avatar.classList.remove('is-invalid');
         }
 
 
         if (errors.length > 0) {
             e.preventDefault();
-          //  Swal.fire({
-          //      icon: 'error',
-          //      
-          //      text: 'Revise los errores!',
-          //  })
+           Swal.fire({
+            icon: 'error',
+            text: 'Revise los errores!',
+          })
             let ulErrors = document.querySelector('.errores');
-      // ulErrors.classList.add('alert-warning')
-      // ulErrors.innerHTML = ''
+            ulErrors.classList.add('alert-warning')
+            ulErrors.innerHTML = ''
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += `<li > ${errors[i]} </li>`
             }

@@ -7,6 +7,12 @@
 	<%- include('../partials/header') %>
 	<!-- /Header -->
 
+
+	<section id="formulario"> 
+		<article class="mostrarFormulario">
+	<ul class="errores"></ul>
+
+
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
@@ -20,7 +26,7 @@
 					<div>
 						<img src="/images/products/<%= productToEdit.image %>" alt="product image" class="product-detail-img">
 						<input type="hidden"  name="oldImagen"  value="<%= productToEdit.image%>">
-						<input type="file" name="imagen">
+						<input type="file" name="image" id="file">
 						</div>
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre del producto:</label>
@@ -54,8 +60,10 @@
 		</div>
 
 	</div>
-
-
+	</section>
+</article>
+	<script src="/js/editProduct.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<!-- footer -->
 	<%- include('../partials/footer.ejs') %>
 	<!-- /footer -->

@@ -85,7 +85,7 @@ window.addEventListener("load", function(){
         else{
             Swal.fire({
                 icon: 'success',
-                text: 'Revise los estabien!',
+                text: 'Registrado   !',
             })
         }
         
