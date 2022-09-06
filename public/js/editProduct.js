@@ -4,14 +4,14 @@ window.addEventListener("load", function(){
     //form.name.focus();
 
     form.addEventListener("submit", function (e) {
+        e.preventDefault();
         let errors = [];
-
         let name = document.querySelector('#name');
         let price = document.querySelector('#price');
         let discount = document.querySelector('#discount');
         let category = document.querySelector('#category');
         let description = document.querySelector('#description');
-        let image = document.querySelector('#file');
+        let image = document.querySelector('#image');
         var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
                /// VALIDACION Nombre
         if (name.value.length < 2 ) {
@@ -24,7 +24,7 @@ window.addEventListener("load", function(){
         }
         /// VALIDACION Precio
         if (price.value.length < 2 ) {
-            errors.push('El campo apellido no puede tener menos de dos caracteres!');
+            errors.push('El campo price no puede estar vacio!');
             price.classList.add('is-invalid');
         }
         else{
@@ -33,7 +33,7 @@ window.addEventListener("load", function(){
         }
         /// VALIDACION discount
         if (discount.value.length < 2 ) {
-            errors.push('El campo apellido no puede tener menos de dos caracteres!');
+            errors.push('El campo discount  no puede estar vacio!');
             discount.classList.add('is-invalid');
         }
         else{
@@ -51,17 +51,17 @@ window.addEventListener("load", function(){
        //}
         //VALIDACION description
        if (description.value.length < 2 ) {
-          errors.push('El campo apellido no puede tener menos de dos caracteres!');
+          errors.push('El campo description no puede estar vacio!');
           description.classList.add('is-invalid');
       }
       else{
           description.classList.add('is-valid');
           description.classList.remove('is-invalid');
       }
-        // VALIDACION imagen 
+        // VALIDACION avatarn 
 
         if (!allowedExtensions.test(image.value)) {
-            errors.push('El campo imagen y la concha de tu hermana debe tener al menos 8 caracteres!');
+            errors.push('El campo image no puede estar vacio!');
             image.classList.add('is-invalid');
         }
         else{
@@ -71,7 +71,6 @@ window.addEventListener("load", function(){
 
 
         if (errors.length > 0) {
-            e.preventDefault();
            Swal.fire({
             icon: 'error',
             text: 'Revise los errores!',
@@ -88,6 +87,9 @@ window.addEventListener("load", function(){
             Swal.fire({
                 icon: 'success',
                 text: 'Revise los estabien!',
+            })
+            .then( ()=> {
+                form.submit()
             })
         }
         
