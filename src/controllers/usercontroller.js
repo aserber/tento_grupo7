@@ -17,6 +17,7 @@ const controller = {
   save: (req, res) => {
     let errors = validationResult(req);
     console.log("errores: " + errors.array())
+    console.log(req.body.name)
     if (errors.isEmpty()) {
     db.User.create({
       name: req.body.name,
@@ -27,8 +28,6 @@ const controller = {
       avatar: req.file ? req.file.filename : '',
     })
       .then((usuario) => {
-        console.log(usuario.password)
-        console.log(req.body.password)
         console.log(bcryptjs.compareSync(req.body.password, usuario.password))
         return res.redirect('./login')
       })
@@ -46,9 +45,6 @@ const controller = {
     }).then((usuario) => {
       if (usuario) {
         let passOk = bcryptjs.compareSync(req.body.password.toString(), usuario.password.toString())
-        console.log(usuario.password)
-        console.log(req.body.password)
-        console.log(bcryptjs.compareSync(req.body.password, usuario.password))
         if (passOk) {
           delete usuario.password
           req.session.usuarioLogueado = usuario

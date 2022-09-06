@@ -9,7 +9,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require('sequelize');
 const moment = require('moment');
-
+const { validationResult } = require('express-validator');
 
 const controller = {
 	// Create - Form to create
@@ -26,6 +26,12 @@ const controller = {
 	},
 
 	store: function (req, res) {
+		let errors = validationResult(req);
+		console.log("errores: " + errors.array())
+		let erroresArray = errors.array()
+		if (erroresArray.length > 0){
+			console.log(errors)
+		} 
 		db.Product.create({
 
 			name: req.body.name,

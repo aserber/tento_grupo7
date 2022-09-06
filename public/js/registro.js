@@ -4,8 +4,8 @@ window.addEventListener("load", function(){
     //form.name.focus();
 
     form.addEventListener("submit", function (e) {
+        e.preventDefault();
         let errors = [];
-
         let name = document.querySelector('#name');
         let last_name = document.querySelector('#last_name');
         let password = document.querySelector('#password');
@@ -36,7 +36,7 @@ window.addEventListener("load", function(){
 
 
         if (!regexEmail.test(email.value)){
-            errors.push('el mail la concha de tu hermana!');
+            errors.push('Falta el mail!');
             email.classList.add('is-invalid');
         } 
         else{
@@ -48,7 +48,7 @@ window.addEventListener("load", function(){
         /// VALIDACION imagen 
 
         if (!allowedExtensions.test(avatar.value)) {
-            errors.push('El campo imagen y la concha de tu hermana debe tener al menos 8 caracteres!');
+            errors.push('El campo imagen  debe tener al menos 8 caracteres!');
             avatar.classList.add('is-invalid');
         }
         else{
@@ -68,15 +68,15 @@ window.addEventListener("load", function(){
         }
 
         if (errors.length > 0) {
-            e.preventDefault();
+          
            Swal.fire({
-               icon: 'error',
-               
+               icon: 'error',  
                text: 'Revise los errores!',
            })
-            let ulErrors = document.querySelector('.errores');
+                       let ulErrors = document.querySelector('.errores');
              ulErrors.classList.add('alert-warning')
              ulErrors.innerHTML = ''
+            
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += `<li > ${errors[i]} </li>`
             }
@@ -85,7 +85,10 @@ window.addEventListener("load", function(){
         else{
             Swal.fire({
                 icon: 'success',
-                text: 'Registrado   !',
+                text: 'Registrado!',
+            })
+            .then( ()=> {
+                form.submit()
             })
         }
         

@@ -4,25 +4,17 @@ const adminController = require ("../controllers/adminController");
 const path = require('path');
 const multer = require('multer');
 const uploadFile = require('../middlewares/multerMiddleware')
-const validacion = require('../middlewares/validationProducts')
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '../../public/images/products'));
-    },
-    filename: function (req, file, cb) {
-      cb(null, 'producto-'+Date.now()+path.extname(file.originalname))
-    }
-  })
-  
-  const upload = multer({ storage })
+const validationProducts = require('../middlewares/validationProducts')
+
+
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', adminController.edit); 
-router.post('/detail/:id',upload.single('image'), adminController.update);
+router.post('/detail/:id',uploadFile.single('imagen'), adminController.update);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', adminController.destroy); 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/crear', adminController.crear); 
-router.post('/crear',upload.single('imagen'), adminController.store); 
+router.post('/crear',uploadFile.single('imagen'),validationProducts, adminController.store); 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', adminController.detail); 
 router.get("/administrar", adminController.administrar);
