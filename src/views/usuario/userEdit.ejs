@@ -6,7 +6,12 @@
 
         <body class="prod">
 
-            <form action="/usuario/profile/<%= userToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="card-edit">
+            <section id="formulario">
+                <article class="mostrarFormulario">
+                    <ul class="errores"></ul>
+
+
+            <form action="/usuario/profile/<%= userToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" id= "form" class="form">
             <div class="card" style="width: 40%">
                 <img src="/images/usuariosimg/<%= userToEdit.avatar %> " class="card-img-top" alt="product image">
                 <input type="hidden"  name="oldImagen"  value="<%= userToEdit.avatar%>">
@@ -18,7 +23,7 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <label for="name" class="form-label">Apellido del Usuario:</label>
-                    <input type="text" id="name" name="last_name" placeholder="Nombre" value="<%= userToEdit.last_name%>"  class="form-input">
+                    <input type="text" id="last_name" name="last_name" placeholder="Nombre" value="<%= userToEdit.last_name%>"  class="form-input">
                 </div>
                 <p class="card-text"><%= userToEdit.email %></p>
                 
@@ -29,9 +34,11 @@
                 </div>
             </div>
         </form>
-        <script src="../js/editUser.js"></script>
-                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            </main>
+        </article>
+        </section>
+        <script src="/js/editUser.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </main>
         </body>
 <%- include('../partials/footer.ejs') %>
 </html>            
