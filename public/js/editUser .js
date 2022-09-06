@@ -4,14 +4,12 @@ window.addEventListener("load", function(){
     //form.name.focus();
 
     form.addEventListener("submit", function (e) {
-        let errors = [];
+        e.preventDefault();
 
+        let errors = [];
         let name = document.querySelector('#name');
-        let price = document.querySelector('#price');
-        let discount = document.querySelector('#discount');
-        let category = document.querySelector('#category');
-        let description = document.querySelector('#description');
-        let image = document.querySelector('#file');
+        let last_name = document.querySelector('#last_name');
+        let avatar = document.querySelector('#avatar');
         var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
                /// VALIDACION Nombre
         if (name.value.length < 2 ) {
@@ -22,14 +20,14 @@ window.addEventListener("load", function(){
             name.classList.add('is-valid');
             name.classList.remove('is-invalid');
         }
-        /// VALIDACION Precio
-        if (price.value.length < 2 ) {
+        /// VALIDACION apellido
+        if (last_name.value.length < 2 ) {
             errors.push('El campo apellido no puede tener menos de dos caracteres!');
-            price.classList.add('is-invalid');
+            last_name.classList.add('is-invalid');
         }
         else{
-            price.classList.add('is-valid');
-            price.classList.remove('is-invalid');
+            last_name.classList.add('is-valid');
+            last_name.classList.remove('is-invalid');
         }
         /// VALIDACION discount
         if (discount.value.length < 2 ) {
@@ -60,18 +58,17 @@ window.addEventListener("load", function(){
       }
         // VALIDACION imagen 
 
-        if (!allowedExtensions.test(image.value)) {
+        if (!allowedExtensions.test(avatar.value)) {
             errors.push('El campo imagen y la concha de tu hermana debe tener al menos 8 caracteres!');
-            image.classList.add('is-invalid');
+            avatar.classList.add('is-invalid');
         }
         else{
-            image.classList.add('is-valid');
-            image.classList.remove('is-invalid');
+            avatar.classList.add('is-valid');
+            avatar.classList.remove('is-invalid');
         }
 
 
         if (errors.length > 0) {
-            e.preventDefault();
            Swal.fire({
             icon: 'error',
             text: 'Revise los errores!',

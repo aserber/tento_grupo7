@@ -5,13 +5,13 @@ window.addEventListener("load", function(){
 
     form.addEventListener("submit", function (e) {
         let errors = [];
-
+        e.preventDefault();
         let name = document.querySelector('#name');
         let price = document.querySelector('#price');
         let discount = document.querySelector('#discount');
         let category = document.querySelector('#category');
         let description = document.querySelector('#description');
-        let avatar = document.querySelector('#file');
+        let image = document.querySelector('#file');
         var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
                /// VALIDACION Nombre
         if (name.value.length < 2 ) {
@@ -71,7 +71,6 @@ window.addEventListener("load", function(){
 
 
         if (errors.length > 0) {
-            e.preventDefault();
            Swal.fire({
             icon: 'error',
             text: 'Revise los errores!',
