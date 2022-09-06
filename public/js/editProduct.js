@@ -4,6 +4,7 @@ window.addEventListener("load", function(){
     //form.name.focus();
 
     form.addEventListener("submit", function (e) {
+        e.preventDefault();
         let errors = [];
 
         let name = document.querySelector('#name');
