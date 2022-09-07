@@ -68,24 +68,29 @@ const controller = {
 
 		let id = req.params.id
 		let productToEdit = db.Product.findByPk(id)
-		//let prodCate = db.ProductCategory.findAll()
+		let prodCate = db.ProductCategory.findAll()
 		Promise
-			.all([productToEdit])
-			.then(([productToEdit]) => {
-				res.render('admin/product-edit-form', { productToEdit })
+			.all([productToEdit,prodCate])
+			.then(([productToEdit,prodCate]) => {
+				res.render('admin/product-edit-form', { productToEdit, prodCate })
 			})
 			.catch(error => res.send(error))
 	},
+
 
 	// Update - Method to update
 
 
 	update: (req, res) => {
 		let producto = {
-			...req.body,
+			name: req.body.name,
+			price: req.body.price,
+			discount: req.body.discount,
+			id_productcategory : req.body.category,
+			description: req.body.description,
 			image: req.file ? req.file.filename : req.body.oldImagen,
 		}
-
+		console.log (producto.id_productcategory),
 		db.Product.update(producto, { where: { id: req.params.id } })
 			.then(() => {
 				return res.redirect('/')
@@ -121,6 +126,7 @@ const controller = {
 				const Pasteleria = product.filter(row => {
 					return row.id_productcategory == 2
 				})
+				
 				res.render('admin/administrar', {
 					Pasteleria,
 					Chocolate,

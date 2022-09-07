@@ -41,14 +41,14 @@ window.addEventListener("load", function(){
             discount.classList.remove('is-invalid');
         }
          /// VALIDACION category
-       // if (discount.value.length < 2 ) {
-       //    errors.push('El campo apellido no puede tener menos de dos caracteres!');
-       //    discount.classList.add('is-invalid');
-       //}
-       //else{
-       //    discount.classList.add('is-valid');
-       //    discount.classList.remove('is-invalid');
-       //}
+      //  if (category.value.length < 2 ) {
+      //     errors.push('El campo apellido no puede tener menos de dos caracteres!');
+      //     category.classList.add('is-invalid');
+      // }
+      // else{
+      //    category.classList.add('is-valid');
+      //    category.classList.remove('is-invalid');
+      // }
         //VALIDACION description
        if (description.value.length < 2 ) {
           errors.push('El campo description no puede estar vacio!');
