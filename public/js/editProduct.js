@@ -23,8 +23,8 @@ window.addEventListener("load", function(){
             name.classList.remove('is-invalid');
         }
         /// VALIDACION Precio
-        if (price.value.length < 2 ) {
-            errors.push('El campo price no puede estar vacio!');
+        if (price.value.length <= 0 || price.value >= 100000 ) {
+            errors.push('El campo price no puede estar aaaaaaaaaaaaaaaaaaaaaa!');
             price.classList.add('is-invalid');
         }
         else{
@@ -32,8 +32,8 @@ window.addEventListener("load", function(){
             price.classList.remove('is-invalid');
         }
         /// VALIDACION discount
-        if (discount.value.length < 2 ) {
-            errors.push('El campo discount  no puede estar vacio!');
+        if (discount.value <= 0 || discount.value >= 100) {
+            errors.push('El campo discount mayor y o menor que aaa!');
             discount.classList.add('is-invalid');
         }
         else{
