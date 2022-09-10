@@ -7,32 +7,6 @@ const Op = db.Sequelize.Op;
 
 module.exports.validar = (method) => {
     switch(method){
-        case 'login': {
-          return [
-            body('email')
-            .notEmpty().withMessage('completar dirección de correo electrónico') 
-            .isEmail().withMessage('Agregar un email válido')
-            .custom( async (value) => {        
-                await db.User.findOne({ where: {email: value }}).then(user => {
-                      if (!user)
-                      throw new Error('mail incorrecto');
-                });
-            }),
-          
-        
-            body('password')
-            .notEmpty().withMessage('la contraseña no puede estar vacía')
-            .custom( async (value, {req,next}) => {   
-                await db.User.findOne({ where: {email: req.body.email }}).then(user => {
-                  if(user){
-                      if (!bcrypt.compareSync(value, user.password)) 
-                      throw new Error('Contraseña inválida.')
-                  }
-                });
-            })
-
-          ]
-        }
 
         case 'register': {
             return [

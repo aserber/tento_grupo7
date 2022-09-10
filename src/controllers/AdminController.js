@@ -12,10 +12,7 @@ const moment = require('moment');
 const { validationResult } = require('express-validator');
 
 const controller = {
-	// Create - Form to create
-	//	crear: (req, res) => {
-	//		return res.render('admin/crear')
-	//	},
+	
 	crear: function (req, res) {
 		db.ProductCategory.findAll()
 			
