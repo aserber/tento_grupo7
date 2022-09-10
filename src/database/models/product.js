@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         discount: {
             type: dataTypes.INTEGER,
-            allowNull: false
+            
         },
         image: {
             type: dataTypes.STRING
