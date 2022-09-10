@@ -25,27 +25,30 @@ const controller = {
 			.catch(error => res.send(error))
 	},
 
-	store: function (req, res) {
-		let errors = validationResult(req);
-		console.log("errores: " + errors.array())
-		let erroresArray = errors.array()
-		if (erroresArray.length > 0){
-			console.log(errors)
-		} 
-		db.Product.create({
 
-			name: req.body.name,
-			price: req.body.price,
-			discount: req.body.discount,
-			id_productcategory: req.body.category,
-			description: req.body.description,
-			image: req.file ? req.file.filename : '',
-		})
-			.then(() => {
-				return res.redirect('/')
-			})
-			.catch(error => res.send(error))
-	},
+	store: (req, res) => {
+        const resultValidation = validationResult(req);
+        db.ProductCategory.findAll()
+            .then((prodCat) => {
+                if (resultValidation.errors.length>0) {
+                    res.render('admin/crear', {prodCat: prodCat, errors: resultValidation.mapped()})
+                }
+                else {
+                    let producto = {
+                        name: req.body.name,
+						price: req.body.price,
+						discount: req.body.discount,
+						id_productcategory: req.body.category,
+						description: req.body.description,
+						image: req.file ? req.file.filename : '',
+                     
+                    }
+                    db.Product.create(producto)
+                    
+                }
+            })
+        
+    },
 
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id,
@@ -81,23 +84,36 @@ const controller = {
 	// Update - Method to update
 
 
+
+
 	update: (req, res) => {
-		let producto = {
-			name: req.body.name,
-			price: req.body.price,
-			discount: req.body.discount,
-			id_productcategory : req.body.category,
-			description: req.body.description,
-			image: req.file ? req.file.filename : req.body.oldImagen,
-		}
-		console.log (producto.id_productcategory),
-		db.Product.update(producto, { where: { id: req.params.id } })
+		const resultValidation = validationResult(req);
+		let id = req.params.id
+		let productToEdit = db.Product.findByPk(id)
+		let prodCate = db.ProductCategory.findAll()
+		Promise
+		.all([productToEdit,prodCate])
+		.then(([productToEdit,prodCate]) => {
+                if (resultValidation.errors.length>0) {
+                    res.render('admin/product-edit-form', {productToEdit, prodCate, errors: resultValidation.mapped()})
+                }
+                else {
+					let producto = {
+					name: req.body.name,
+					price: req.body.price,
+					discount: req.body.discount,
+					id_productcategory : req.body.category,
+					description: req.body.description,
+					image: req.file ? req.file.filename : req.body.oldImagen,
+				}
+				console.log (producto.id_productcategory),
+				db.Product.update(producto, { where: { id: req.params.id } })	
+				}
+			})
 			.then(() => {
 				return res.redirect('/')
 			})
-			.catch(error => res.send(error))
-	},
-
+		},
 	// Delete - Delete one product from DB
 
 
