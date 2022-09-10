@@ -20,7 +20,7 @@ router.post('/login',userController.ingresar);
 router.get('/logout', userController.logout);
 router.get('/profile', authiMiddleware, userController.profile);//
 router.get('/edit/:id', userController.edit); 
-router.patch('/profile/:id',uploadFile.single('avatar'), userController.update);
+router.patch('/profile/:id',uploadFile.single('avatar'),validaciones.validar('update'), userController.update);
 router.get('/usuario', auth3Middleware,userController.login); //u
 
 module.exports = router;
