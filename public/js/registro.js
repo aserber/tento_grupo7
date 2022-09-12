@@ -16,7 +16,7 @@ window.addEventListener("load", function(){
 
         /// VALIDACION Nombre
         if (name.value.length < 2 ) {
-            errors.push('El campo nombre no puede tener menos de dos caracteres!');
+            errors.push('El campo nombre no puede tener menos de 2 caracteres!');
             name.classList.add('is-invalid');
         }
         else{
@@ -25,7 +25,7 @@ window.addEventListener("load", function(){
         }
         /// VALIDACION Apellido
         if (last_name.value.length < 2 ) {
-            errors.push('El campo apellido no puede tener menos de dos caracteres!');
+            errors.push('El campo apellido no puede tener menos de 2 caracteres!');
             last_name.classList.add('is-invalid');
         }
         else{
@@ -36,7 +36,7 @@ window.addEventListener("load", function(){
 
 
         if (!regexEmail.test(email.value)){
-            errors.push('Falta el mail!');
+            errors.push('El email no cumple no tiene el formato correcto');
             email.classList.add('is-invalid');
         } 
         else{
@@ -48,7 +48,7 @@ window.addEventListener("load", function(){
         /// VALIDACION imagen 
 
         if (!allowedExtensions.test(avatar.value)) {
-            errors.push('El campo imagen  debe tener al menos 8 caracteres!');
+            errors.push('El campo imagen debe tener un archivo jpg, jpeg, png o gif!');
             avatar.classList.add('is-invalid');
         }
         else{
