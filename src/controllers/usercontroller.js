@@ -9,7 +9,7 @@ const db = require('../database/models');
 const controller = {
 
   register: function (req, res) {
-    db.userCategory.findAll()
+    db.UserCategory.findAll()
 
       .then((usercat) => {
         return res.render(('usuario/registro'), { usercat })
@@ -124,7 +124,7 @@ const controller = {
       else {
         let usuario = {
       ...req.body,
-      avatar: req.file ? req.file.filename : req.body.oldImagen,
+      avatar: req.file ? req.file.filename : '',
     }
     console.log (usuario.name),
     db.User.update(usuario, { where: { id: req.params.id } })
