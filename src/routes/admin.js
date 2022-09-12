@@ -11,7 +11,7 @@ const validationProducts = require('../middlewares/validationProducts')
 router.get('/edit/:id', adminController.edit); 
 router.post('/detail/:id',uploadFile.single('image'),validationProducts, adminController.update);
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/:id', adminController.destroy); 
+router.delete('/delete/:id', adminController.destroy, ); 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/crear',adminController.crear); 
 router.post('/crear',uploadFile.single('image'),validationProducts, adminController.store); 

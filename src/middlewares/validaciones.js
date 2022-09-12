@@ -11,7 +11,7 @@ module.exports.validar = (method) => {
         return [
             body('name')
             .notEmpty().withMessage('El campo nombre no puede estar vacío')
-            .isLength({min: 2}).withMessage('Longitud mínima 2 caracteres'),
+            .isLength({min: 8}).withMessage('Longitud mínima 2 caracteres'),
             
             body('last_name')
             .notEmpty().withMessage('El campo apellido no puede estar vacío')

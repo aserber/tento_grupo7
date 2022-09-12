@@ -28,6 +28,11 @@
                 <p class="card-text"><%= userToEdit.email %></p>
                 
                 <div class="card-body">
+
+
+                    <% if (locals.errors && errors.name) { %>
+                        <p style="color: red;"><%= errors.name.msg %></p>
+                    <% } %>
       
                 <button type="submit" class="buy-now-button">Guardar usuario</button>
                 <a href="/usuario/profile" class="action-button edit">Volver</a>
