@@ -16,6 +16,7 @@ module.exports.validar = (method) => {
             body('last_name')
             .notEmpty().withMessage('El campo apellido no puede estar vacío')
             .isLength({min: 2}).withMessage('Longitud mínima 2 caracteres'),
+            
             body('avatar').custom((value, {req}) =>{ // la imágen es opcional, pero si se carga tiene que ser jpg, jpeg, png ó gif
               let file = req.file;
               if(file){

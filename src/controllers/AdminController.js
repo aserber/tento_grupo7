@@ -44,7 +44,9 @@ const controller = {
                     
                 }
             })
-        
+			.then(() => {
+				return res.redirect('/')
+			})
     },
 
 	detail: (req, res) => {
