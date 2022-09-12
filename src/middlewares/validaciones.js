@@ -11,28 +11,30 @@ module.exports.validar = (method) => {
         return [
             body('name')
             .notEmpty().withMessage('El campo nombre no puede estar vacío')
-            .isLength({min: 2}).withMessage('Longitud mínima 2 caracteres'),
+            .isLength({min: 8}).withMessage('Longitud mínima 2 caracteres'),
             
             body('last_name')
             .notEmpty().withMessage('El campo apellido no puede estar vacío')
             .isLength({min: 2}).withMessage('Longitud mínima 2 caracteres'),
             
-            body('avatar').custom((value, {req}) =>{ // la imágen es opcional, pero si se carga tiene que ser jpg, jpeg, png ó gif
-              let file = req.file;
-              if(file){
-                let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"]
-                let fileExtension = path.extname(file.originalname);
-                  if (!acceptedExtensions.includes(fileExtension)){
-                    throw new Error("Extensión de imagen no valida")
-                  }
-
-              } else {
-                req.file = { 
-                  filename : 'default-admin.jpg'
-                }
-                return true
-            }
-        })
+            body("avatar").custom((value, {req}) => {
+              let file = req.file
+              let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
+      
+              
+              if (file == undefined) {
+                  throw new Error("Adjunte una image con formato: " + acceptedExtensions + " y peso máximo 10mb.")
+              }
+              else if (file.size > (1024 * 1024 * 10)) {
+                  fs.unlink(file.path, (err) => {
+                      if (err) {
+                          console.log(err)
+                      }
+                  })
+                  throw new Error("Adjunte una image con formato: " + acceptedExtensions + " y peso máximo 10mb.")
+              }
+              return true
+          })
           ]}
         case 'register': {
             return [
@@ -58,22 +60,24 @@ module.exports.validar = (method) => {
                 .isLength({min:8}).withMessage('la contraseña de be tener al menos 8 caracteres'),          
             
                 
-                body('avatar').custom((value, {req}) =>{ // la imágen es opcional, pero si se carga tiene que ser jpg, jpeg, png ó gif
-                      let file = req.file;
-                      if(file){
-                        let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"]
-                        let fileExtension = path.extname(file.originalname);
-                          if (!acceptedExtensions.includes(fileExtension)){
-                            throw new Error("Extensión de imagen no valida")
+                body("avatar").custom((value, {req}) => {
+                  let file = req.file
+                  let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
+          
+                  
+                  if (file == undefined) {
+                      throw new Error("Adjunte una image con formato: " + acceptedExtensions + " y peso máximo 10mb.")
+                  }
+                  else if (file.size > (1024 * 1024 * 10)) {
+                      fs.unlink(file.path, (err) => {
+                          if (err) {
+                              console.log(err)
                           }
-
-                      } else {
-                        req.file = { 
-                          filename : 'default-admin.jpg'
-                        }
-                        return true
-                    }
-                })
+                      })
+                      throw new Error("Adjunte una image con formato: " + acceptedExtensions + " y peso máximo 10mb.")
+                  }
+                  return true
+              })
 
             ]
         }

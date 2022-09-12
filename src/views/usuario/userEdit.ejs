@@ -11,7 +11,7 @@
                     <ul class="errores"></ul>
 
 
-            <form action="/usuario/profile/<%= userToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" id= "form" class="form">
+            <form action="/usuario/profile/<%= userToEdit.id %>" method="POST" enctype="multipart/form-data" id= "form" class="form">
             <div class="card" style="width: 40%">
                 <img src="/images/usuariosimg/<%= userToEdit.avatar %> " class="card-img-top" alt="product image">
                 <input type="hidden"  name="oldImagen"  value="<%= userToEdit.avatar%>">
@@ -20,10 +20,16 @@
                 <div class="col-12 col-md-6">
                     <label for="name" class="form-label">Nombre del Usuario:</label>
                     <input type="text" id="name" name="name" placeholder="Nombre" value="<%= userToEdit.name%>"  class="form-input">
+                    <% if (locals.errors && errors.name) { %>
+                        <p style="color: red;"><%= errors.name.msg %></p>
+                    <% } %>
                 </div>
                 <div class="col-12 col-md-6">
                     <label for="name" class="form-label">Apellido del Usuario:</label>
                     <input type="text" id="last_name" name="last_name" placeholder="Nombre" value="<%= userToEdit.last_name%>"  class="form-input">
+                    <% if (locals.errors && errors.last_name) { %>
+                        <p style="color: red;"><%= errors.last_name.msg %></p>
+                    <% } %>
                 </div>
                 <p class="card-text"><%= userToEdit.email %></p>
                 
