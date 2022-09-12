@@ -24,7 +24,7 @@ window.addEventListener("load", function(){
         }
          /// VALIDACION Precio
          if (price.value <= 0 ) {
-            errors.push('El campo price no puede estar vacio!');
+            errors.push('El campo precio no puede ser menor a 0!');
             price.classList.add('is-invalid');
         }
         else{
@@ -34,7 +34,7 @@ window.addEventListener("load", function(){
         
 /// VALIDACION discount
 if (discount.value <= 0 || discount.value > 99) {
-    errors.push('El campo discount mayor y o menor que aaa!');
+    errors.push('El campo descuento no puede ser menor a 0 y mayor a 99%!');
     discount.classList.add('is-invalid');
 }
 else{
@@ -79,7 +79,7 @@ else{
         else{
             Swal.fire({
                 icon: 'success',
-                text: 'Revise los estabien!',
+                text: 'Cambios realizados!',
             })
             .then( ()=> {
                 form.submit()

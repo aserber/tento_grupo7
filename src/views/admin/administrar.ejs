@@ -11,6 +11,7 @@
     <div class="fotoalmedio">
         <a href="/admin/crear" class="action-button edit">CREAR PRODUCTO</a>
     </div>
+	<div class="form" id="form">
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
@@ -32,7 +33,7 @@
 								<p class="administrar-nombre"><%= product.discount %>% OFF</p>			
                                 <a href="edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
                                 <form action="delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                                    <button type="submit" class="action-button delete" id="confirmar">ELIMINAR</button>
                                 </form>
 							</article>
 						</a>
@@ -51,6 +52,7 @@
 				<% Chocolate.forEach(function(product){ 
 					let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
 				%>
+				
 					<div class="col-12 col-sm-6 col-lg-3">
 						<section class="product-box">
 							
@@ -63,7 +65,8 @@
 								<p class="administrar-nombre"><%= product.discount %>% OFF</p>	
 									<a href="edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
 									<form action="delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-										<button type="submit" class="action-button delete">ELIMINAR</button>
+										<button type="submit" class="action-button delete" id="confirmar">ELIMINAR</button>
+										
 									</form>
 								</article>
 							</a>
@@ -72,13 +75,17 @@
 				<% }) %>
 				</div>
 			</div>
+		</div>
 		
+			
 
-		<!-- Ofertas -->
+			
+
 	
+		<script src="/js/administrar.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-			<!-- /Ofertas -->
 
 			
 			<!-- footer -->

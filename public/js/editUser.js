@@ -34,7 +34,7 @@ window.addEventListener("load", function(){
         /// VALIDACION imagen 
 
         if (!allowedExtensions.test(avatar.value)) {
-            errors.push('El campo imagen  debe tener al menos 8 caracteres!');
+            errors.push('El campo imagen no puede estar vacio!');
             avatar.classList.add('is-invalid');
         }
         else{
