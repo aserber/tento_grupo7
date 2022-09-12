@@ -14,7 +14,7 @@ window.addEventListener("load", function(){
         let image = document.querySelector('#image');
         var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
                /// VALIDACION Nombre
-        if (name.value.length < 2 ) {
+        if (name.value.length < 5 ) {
             errors.push('El campo nombre no puede tener menos de dos caracteres!');
             name.classList.add('is-invalid');
         }

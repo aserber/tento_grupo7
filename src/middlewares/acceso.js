@@ -9,7 +9,7 @@ module.exports = (req,res,next) =>{
     res.locals.userType = false;
     if(req.session.usuarioLogueado){
         res.locals.usuarioLogueado = req.session.usuarioLogueado;
-        if (req.session.usuarioLogueado.id_usercategory == 0){
+        if (req.session.usuarioLogueado.id_usercategory == 1){
             res.locals.userType = true
         }
         return next();
@@ -20,7 +20,7 @@ module.exports = (req,res,next) =>{
             delete usuario.password;
             req.session.usuarioLogueado = usuario;
             res.locals.usuarioLogueado = usuario;
-            if (req.session.usuarioLogueado.id_usercategory == 0){
+            if (req.session.usuarioLogueado.id_usercategory == 1){
                 res.locals.userType = true
             }
         })

@@ -8,13 +8,13 @@ const validationProducts = require('../middlewares/validationProducts')
 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:id', validationProducts,adminController.edit); 
-router.post('/detail/:id',uploadFile.single('image'), adminController.update);
+router.get('/edit/:id', adminController.edit); 
+router.post('/detail/:id',uploadFile.single('image'),validationProducts, adminController.update);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', adminController.destroy); 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/crear', validationProducts,adminController.crear); 
-router.post('/crear',uploadFile.single('image'), adminController.store); 
+router.get('/crear',adminController.crear); 
+router.post('/crear',uploadFile.single('image'),validationProducts, adminController.store); 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', adminController.detail); 
 router.get("/administrar", adminController.administrar);
