@@ -45,7 +45,7 @@ const controller = {
                 }
             })
 			.then(() => {
-				return res.redirect('/')
+				return res.render('/')
 			})
     },
 
@@ -74,7 +74,7 @@ const controller = {
 		Promise
 			.all([productToEdit,prodCate])
 			.then(([productToEdit,prodCate]) => {
-				res.render('admin/product-edit-form', { productToEdit, prodCate })
+				return res.render('admin/product-edit-form', { productToEdit, prodCate })
 			})
 			.catch(error => res.send(error))
 	},
@@ -110,7 +110,7 @@ const controller = {
 				}
 			})
 			.then(() => {
-				return res.redirect('/')
+				return res.render('/')
 			})
 		},
 	// Delete - Delete one product from DB

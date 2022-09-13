@@ -7,33 +7,48 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
 const controller = {
-  register: (req, res) => {
-    return res.redirect('usuario/registro');
+
+  register: function (req, res) {
+    db.UserCategory.findAll()
+
+      .then((usercat) => {
+        return res.render(('usuario/registro'), { usercat })
+      })
+      .catch(error => res.send(error))
   },
+
+
+
   login: (req, res) => {
     return res.render('usuario/login');
   },
 
-  save: (req, res) => {
-    let errors = validationResult(req);
-    console.log("errores: " + errors.array())
-    console.log(req.body.name)
-    if (errors.isEmpty()) {
-    db.User.create({
-      name: req.body.name,
-      last_name: req.body.last_name,
-      email: req.body.email,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      id_usercategory: 1,
-      avatar: req.file ? req.file.filename : '',
-    })
-      .then((usuario) => {
-        console.log(bcryptjs.compareSync(req.body.password, usuario.password))
-        return res.redirect('./login')
-      })
 
-      .catch(error => res.send(error))
-  } },
+  save: (req, res) => {
+    const resultValidation = validationResult(req);
+    db.UserCategory.findAll()
+      .then((usercat) => {
+        if (resultValidation.errors.length > 0) {
+          res.render('usuario/registro', { usercat: usercat, errors: resultValidation.mapped() })
+        }
+        else {
+          let usuario = {
+            name: req.body.name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            id_usercategory: 1,
+            avatar: req.file ? req.file.filename : '',
+
+          }
+          db.User.create(usuario)
+
+        }
+      })
+      .then(() => {
+        return res.render('usuario/login')
+      })
+  },
 
 
 
@@ -73,40 +88,53 @@ const controller = {
       }
     })
   },
+
   profile: (req, res) => {
     return res.render('usuario/profile', {
       usuario: req.session.usuarioLogueado
     });
 
   },
+
   edit: (req, res) => {
 
-		let id = req.params.id
+    let id = req.params.id
     let userToEdit = db.User.findByPk(id)
-      Promise
-      .all([userToEdit])	
+    Promise
+      .all([userToEdit])
       .then(([userToEdit]) => {
-	  			res.render('usuario/userEdit', { userToEdit })
-		  	})
-			.catch(error => res.send(error))
-	},
- 
-	// Update - Method to update
+        res.render('usuario/userEdit', { userToEdit })
+      })
+      .catch(error => res.send(error))
+  },
+
+  // Update - Method to update
 
 
-	update: (req, res) => {
-		let usuario = {
-			...req.body,
-			avatar: req.file ? req.file.filename : req.body.oldImagen,
-		}
+  update: (req, res) => {
+    const resultValidation = validationResult(req);
+    let id = req.params.id
+    let userToEdit = db.User.findByPk(id)
+    Promise
+    .all([userToEdit])
+    .then(([userToEdit])=> {
+      if (resultValidation.errors.length>0) {
+        res.render('usuario/userEdit', {userToEdit, errors: resultValidation.mapped()})
+      }
+      else {
+        let usuario = {
+      ...req.body,
+      avatar: req.file ? req.file.filename : '',
+    }
+    console.log (usuario.name),
+    db.User.update(usuario, { where: { id: req.params.id } })
+      .then(() => {
 
-		db.User.update(usuario, { where: { id: req.params.id } })
-			.then(() => {
-        
-				return res.render('web/home')
-			})
-			.catch(error => res.send(error))
-	},
+        return res.render('web/home')
+      })
+      
+  }})
+},
 
 
   logout: (req, res) => {

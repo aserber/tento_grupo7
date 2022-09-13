@@ -34,9 +34,21 @@
                     <form action="./registro" method="POST" class="form" enctype="multipart/form-data">
                         
                         <input type="text" name="name" placeholder="Nombre" id="name" value="<%= typeof old != 'undefined' ? old.first_name : '' %>">
+                        <% if (locals.errors && errors.name) { %>
+							<p style="color: red;"><%= errors.name.msg %></p>
+						<% } %>
                         <input type="text" name="last_name" placeholder="Apellido" id="last_name" value="<%= typeof old != 'undefined' ? old.last_name : '' %>">
+                        <% if (locals.errors && errors.last_name) { %>
+							<p style="color: red;"><%= errors.last_name.msg %></p>
+						<% } %>
                         <input type="text" name="email" placeholder="E-mail" id="email">
+                        <% if (locals.errors && errors.email) { %>
+							<p style="color: red;"><%= errors.email.msg %></p>
+						<% } %>
                         <input type="password" name="password" placeholder="Contraseña" id="password" >
+                        <% if (locals.errors && errors.password) { %>
+							<p style="color: red;"><%= errors.password.msg %></p>
+						<% } %>
                         <input type="file"   name="avatar"  id="file" placeholder="Debes eligir tu imagen...">
                         <div class="botonera">
                             <input type="submit" value="Enviar">
