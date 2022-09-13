@@ -34,7 +34,7 @@ window.addEventListener("load", function(){
         /// VALIDACION imagen 
 
         if (!allowedExtensions.test(avatar.value)) {
-            errors.push('El campo imagen no puede estar vacio!');
+            errors.push('El campo imagen debe contener un archivo jpg, jpeg, gif o png!');
             avatar.classList.add('is-invalid');
         }
         else{
