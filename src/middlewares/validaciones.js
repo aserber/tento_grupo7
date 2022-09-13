@@ -11,11 +11,11 @@ module.exports.validar = (method) => {
         return [
             body('name')
             .notEmpty().withMessage('El campo nombre no puede estar vacío')
-            .isLength({min: 8}).withMessage('Longitud mínima 2 caracteres'),
+            .isLength({min: 2}).withMessage('Mìnimo 2 caracteres'),
             
             body('last_name')
             .notEmpty().withMessage('El campo apellido no puede estar vacío')
-            .isLength({min: 2}).withMessage('Longitud mínima 2 caracteres'),
+            .isLength({min: 2}).withMessage('Mìnimo 2 caracteres'),
             
             body("avatar").custom((value, {req}) => {
               let file = req.file
@@ -40,11 +40,11 @@ module.exports.validar = (method) => {
             return [
                 body('name')
                 .notEmpty().withMessage('El campo nombre no puede estar vacío')
-                .isLength({min: 2}).withMessage('Longitud mínima 2 caracteres'),
+                .isLength({min: 2}).withMessage('Mìnimo 2 caracteres'),
                 
                 body('last_name')
                 .notEmpty().withMessage('El campo apellido no puede estar vacío')
-                .isLength({min: 2}).withMessage('Longitud mínima 2 caracteres'),
+                .isLength({min: 2}).withMessage(' Mìnimo 2 caracteres'),
                
                 body('email')
                 .notEmpty().withMessage('completar dirección de correo electrónico')
@@ -52,12 +52,12 @@ module.exports.validar = (method) => {
                 .custom( async (value, {req}) => {    
                   await db.User.findOne({ where: {email: req.body.email }}).then(user => {
                         if (user)
-                        throw new Error('El correo ya ha sido registrado, elije otro');
+                        throw new Error('El correo ya existe. Debes elegir otro');
                   });
                 }),
                 body('password')
                 .notEmpty().withMessage('la contraseña no puede estar vacía') 
-                .isLength({min:8}).withMessage('la contraseña de be tener al menos 8 caracteres'),          
+                .isLength({min:8}).withMessage('la contraseña debe tener al menos 8 caracteres'),          
             
                 
                 body("avatar").custom((value, {req}) => {
