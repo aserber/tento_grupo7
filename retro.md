@@ -35,7 +35,7 @@ SPRINT 4 Y 5
     También pudimos ir mejorando las rutas, las vistas de las páginas, organizando los productos, los usuarios, entre otras actividades. Gracias a la aplicación de lo aprendido en clase sobre el proyecto, se pueden consolidar mas los conocimientos adquiridos.  
     Como equipo se debe mejorar la organización entre nosotros para con las actividades. Como también definir fechas de entrega y asignacion de tareas mediante el tablero de trabajo. 
 
-SPRINT 5: 
+SPRINT 6: 
 A medida que avanzó el curso, y de ir adquiriendo más conocimientos, hemos implementado todas las consignas respetando los entregables en tiempo y forma.
     -Tablero de trabajo actualizado.
 
@@ -61,5 +61,8 @@ A medida que avanzó el curso, y de ir adquiriendo más conocimientos, hemos imp
     -De productos
     -Usuarios
     (Opcional de tablas secundarias).
+
+
+SPRINT 7
 
     
