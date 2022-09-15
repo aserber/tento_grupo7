@@ -35,7 +35,7 @@ SPRINT 4 Y 5
     También pudimos ir mejorando las rutas, las vistas de las páginas, organizando los productos, los usuarios, entre otras actividades. Gracias a la aplicación de lo aprendido en clase sobre el proyecto, se pueden consolidar mas los conocimientos adquiridos.  
     Como equipo se debe mejorar la organización entre nosotros para con las actividades. Como también definir fechas de entrega y asignacion de tareas mediante el tablero de trabajo. 
 
-SPRINT 6: 
+SPRINT 6:
 A medida que avanzó el curso, y de ir adquiriendo más conocimientos, hemos implementado todas las consignas respetando los entregables en tiempo y forma.
     -Tablero de trabajo actualizado.
 
@@ -62,7 +62,19 @@ A medida que avanzó el curso, y de ir adquiriendo más conocimientos, hemos imp
     -Usuarios
     (Opcional de tablas secundarias).
 
+SPRINT 7:Hemos adquiriendo mucho en este último tiempo, y respetando las consignas y los entregables, realizamos los siguientes ejercicios destinándolos a nuestra página web. 
+- La Retrospectiva, el tablero de trabajo. 
 
-SPRINT 7
+-Registro de usuarios
+ (Nombre, apellido, con los caracteres pedidos.
+Email obligatorio con la validación de si el mail es válido o ya está registrado.
+Contraseña con 8 caracteres.
+Imagen, archivo (JPG, JPEG, PNG, GIF).
 
-    
+-Login de Usuarios(que estaban aplicados a los sprint’s anteriores.
+
+-Creación y modificación de productos(nombre y descripción).
+
+-Validaciones del Back-end
+-Validaciones del Front-end
+-Registro de usuarios.

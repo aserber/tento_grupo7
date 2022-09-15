@@ -21,4 +21,6 @@ router.get('/nosotros', mainController.nosotros);//p
 router.get('/accesodenegado', mainController.accesodenegado);//p
 
 router.get('/faq', mainController.faq);//p
+
+
 module.exports = router;

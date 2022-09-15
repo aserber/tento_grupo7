@@ -39,13 +39,13 @@ const mainRouter = require('./routes/main'); // Rutas main
 const productsRouter = require('./routes/productos'); // Rutas productos
 const userRouter = require('./routes/user'); // Rutas usuarios
 const adminRouter = require('./routes/admin'); // Rutas admin
-
+const apiRouter = require('./routes/rutasapis/apis'); // Rutas admin
 
 app.use('/', mainRouter); //(web) home-index
 app.use('/usuario', userRouter); //usuarios
 app.use('/productos', productsRouter); //productos
 app.use('/admin',guestMiddleware, adminRouter); //administracion
-
+app.use('/api',apiRouter); //rutas apis
 
 module.exports = app;
 
