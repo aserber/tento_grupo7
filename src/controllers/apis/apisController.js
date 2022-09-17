@@ -24,6 +24,7 @@ module.exports = {
         .findByPk(req.params.id)
         .then(products => {
            return res.status(200).json({
+                total: products.length,
                 data: products,
                 status: 200
             })
@@ -56,28 +57,28 @@ module.exports = {
    ////    },
 
   
-    }
-   // store: (req, res) => {
-   //     db.Product
-   //     .create(req.body)
-   //     .then(product => {
-   //        return res.status(200).json({
-   //             data: product,
-   //             status: 200,
-   //             created: "OK"
-   //         })
-   //     })
-   // },
+    
+    store: (req, res) => {
+        db.Product
+        .create(req.body)
+        .then(product => {
+           return res.status(200).json({
+                data: product,
+                status: 200,
+                created: "OK"
+            })
+        })
+    },
 
-   // delete: (req, res) => {
-   //     db.Product
-   //     .destroy({
-   //       where : {id: req.params.id} 
-   //       })
-   //     .then(response => {
-   //        return res.json(response)
-   //       })
-   // },
+    delete: (req, res) => {
+      db.Product
+      .destroy({
+          where: {id: req.params.id }
+        })
+      .then(response => {
+         return res.json(response)
+        })
+  },
 
   	
    //   search: (req, res) => {
@@ -133,3 +134,4 @@ module.exports = {
 //          }) 
 //      },
 
+}

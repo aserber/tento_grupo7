@@ -7,12 +7,12 @@ module.exports = {
     list: (req, res) =>{
 
         db.User.findAll()
-            .then(user => {
+            .then(users => {
                 return res.status(200).json({
-                    total: user.length,
-                    data: user,
+                    total: users.length,
+                    data: users,
                     status: 200,
-                    url: "api/user/list"
+                    //url: "api/user/list"
                 })
             })
 
@@ -20,79 +20,55 @@ module.exports = {
 
     show: (req, res) => {
 
-        db.User
-        .findByPk(req.params.id)
-        .then(users => {
+        db.User.findByPk(req.params.id)
+        .then(user => {
            return res.status(200).json({
-                data: users,
-                status: 200
+                    data: user,
+                    status: 200,
             })
         })
 
     },
 
-      //   listByCat: (req, res) =>{
-    //
-    //    db.Product.findAll()
-    //        .then(product => {
-    //            let Chocolate = product.filter(row => {
-    //                return row.id_productcategory == 1
-    //            })
-    //            const Pasteleria = product.filter(row => {
-    //                return row.id_productcategory == 2
-    //            })
-    //            return res.status(200).json({
-    //                total: product.length,
-    //                data: Pasteleria, Chocolate
-    //                status: 200
-    //            })
-    //        })
-    //            res.render('admin/administrar', {
-	//				Pasteleria,
-	//				Chocolate,
-	//				toThousand
-
-	//			});
-   ////    },
-
   
-    }
-   // store: (req, res) => {
-   //     db.Product
-   //     .create(req.body)
-   //     .then(product => {
-   //        return res.status(200).json({
-   //             data: product,
-   //             status: 200,
-   //             created: "OK"
-   //         })
-   //     })
-   // },
+    
+    store: (req, res) => {
+        db.User
+        .create(req.body)
+        .then(user => {
+           return res.status(200).json({
+                data: user,
+                status: 200,
+                created: "OK"
+            })
+        })
+    },
 
-   // delete: (req, res) => {
-   //     db.Product
-   //     .destroy({
-   //       where : {id: req.params.id} 
-   //       })
-   //     .then(response => {
-   //        return res.json(response)
-   //       })
-   // },
+    delete: (req, res) => {
+        db.User
+        .destroy({
+            where: {id: req.params.id }
+          })
+        .then(response => {
+           return res.json(response)
+          })
+    },
+
+    
 
   	
-   //   search: (req, res) => {
-
-   //       db.Product
-   //       .findAll({
-   //           where: {[Op.like] :'%'+ req.query.keyword + '%'}
-   //       })
-   //       .then(product =>{
-  //        if (product.length > 0 ) {          
-   //           return res.status(200).json(product)
-   //       } 
-   //           return res.status(200).json("no existen productos")
-   //      })       
-   //   }
+   search: (req, res) => {
+       db.User
+       .findAll({
+           where: {[Op.like] :'%'+ req.query.keyword + '%'}
+       })
+       .then(users =>{
+       if (users.length > 0 ) {          
+           return res.status(200).json(users)
+       } 
+           return res.status(200).json("no existen usuario")
+      })       
+   }
 
   //list: (req, res) =>{
 //(esta es la de la clase)
@@ -133,3 +109,4 @@ module.exports = {
 //          }) 
 //      },
 
+}
