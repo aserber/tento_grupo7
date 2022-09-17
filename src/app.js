@@ -40,12 +40,15 @@ const productsRouter = require('./routes/productos'); // Rutas productos
 const userRouter = require('./routes/user'); // Rutas usuarios
 const adminRouter = require('./routes/admin'); // Rutas admin
 const apiRouter = require('./routes/rutasapis/apis'); // Rutas admin
+const apisUser = require('./routes/rutasapis/apisUser'); // Rutas user
 
 app.use('/', mainRouter); //(web) home-index
 app.use('/usuario', userRouter); //usuarios
 app.use('/productos', productsRouter); //productos
 app.use('/admin',guestMiddleware, adminRouter); //administracion
 app.use('/api',apiRouter); //rutas apis
+app.use('/api',apisUser); //rutas apis
+
 
 module.exports = app;
 
