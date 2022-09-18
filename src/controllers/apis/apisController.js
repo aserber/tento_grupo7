@@ -4,19 +4,7 @@ const Op = db.Sequelize.Op;
 
 
 module.exports = {
-//  list: (req, res) => {
-//
-//    db.Product.findAll()
-//      .then(product => {
-//        return res.status(200).json({
-//          total: product.length,
-//          data: product,
-//          status: 200,
-//          url: "api/products/list"
-//        })
-//      })
-//
-//  },
+
 
   show: (req, res) => {
 
@@ -26,7 +14,8 @@ module.exports = {
         return res.status(200).json({
 
           data: products,
-          status: 200
+          status: 200,
+          url: '/api/products/:id'
         })
       })
 
@@ -53,7 +42,7 @@ module.exports = {
                 meta:{
                     status:200,
                     count:products.length,
-                    url:"/api/products"
+                    url: "api/products/list"
                 },
                 countByCategory: {
                   Chocolate : Chocolate.length ,
@@ -75,7 +64,8 @@ module.exports = {
         return res.status(200).json({
           data: product,
           status: 200,
-          created: "OK"
+          created: "OK",
+          url: 'api/movies/create'
         })
       })
   },
@@ -103,7 +93,51 @@ module.exports = {
       .then(product => {
         return res.status(200).json(product)
       })
-  }
+  }, 
+
+  update: (req,res) => {
+    let productId = req.params.id;
+    db.Product.update(
+        {
+                  name: req.body.name,
+					price: req.body.price,
+					discount: req.body.discount,
+					id_productcategory : req.body.category,
+					description: req.body.description,
+					image: req.file ? req.file.filename : req.body.oldImagen,
+        },
+        {
+            where: {id: productId}
+    })
+    .then(confirm => {
+        let respuesta;
+        if(confirm){
+            respuesta ={
+                meta: {
+                    status: 200,
+                    total: confirm.length,
+                    url: 'api/products/update/:id'
+                },
+                data:confirm
+            }
+        }else{
+            respuesta ={
+                meta: {
+                    status: 204,
+                    total: confirm.length,
+                    url: 'api/products/update/:id'
+                },
+                data:confirm
+            }
+        }
+        res.json(respuesta);
+    })    
+    .catch(error => res.send(error))
+},
+
+
+
+
   //list: (req, res) =>{  
   //(esta es la de la clase)
   // db.Product.findAll()
@@ -142,5 +176,17 @@ module.exports = {
   //              } res.json(products)
   //          }) 
   //      },
-
+//  list: (req, res) => {
+//
+//    db.Product.findAll()
+//      .then(product => {
+//        return res.status(200).json({
+//          total: product.length,
+//          data: product,
+//          status: 200,
+//          url: "api/products/list"
+//        })
+//      })
+//
+//  },
 }
