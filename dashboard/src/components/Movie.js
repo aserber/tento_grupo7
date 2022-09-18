@@ -6,7 +6,7 @@ function Movie(){
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-gray-800">Todos los productos en nuestra base de datos</h1>
+					<h1 className="h3 mb-2 text-gray-800">All products in our Data Base</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4">
@@ -16,10 +16,10 @@ function Movie(){
 									<thead>
 										<tr>
                                             <th>Id</th>
+                                            <th>Nombre</th>
+                                            <th>Categoria</th>
+                                            <th>Precio</th>
                                             <th>Descripcion</th>
-                                            <th>Calificación</th>
-                                            <th>Premios</th>
-                                            <th>Duración</th>
 										</tr>
 									</thead>
 									<tbody>

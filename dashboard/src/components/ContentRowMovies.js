@@ -3,26 +3,20 @@ import SmallCard from './SmallCard';
 
 let productInDataBase = {
     color:   "primary",
-    titulo: "Movies in Data Base",
+    titulo: "Chocolates",
     valor: 21,
     icono: "fas fa-film",
 }
 
-let amount ={
-    color:   "success",
-    titulo: "Total awards",
-    valor: 79,
-    icono: "fas fa-award",
-}
 
 let user = {
     color:   "warning",
-    titulo: "Actors quantity",
+    titulo: "Pasteleria",
     valor: 49,
     icono: "fas fa-user",
 }
 
-let cardProps = [productInDataBase,amount,user];
+let cardProps = [productInDataBase,user];
 
 
 function ContentRowTop(){
