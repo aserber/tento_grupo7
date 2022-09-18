@@ -4,36 +4,56 @@ const Op  = db.Sequelize.Op;
 
 
 module.exports = {
-    list: (req, res) =>{ 
-        db.User.findAll()
-            .then(users => {
-
-                let menosPassword = users.filter(row => {
-                    return row.password.length > 1
-                  })
-                return res.status(200).json({
-                    total: users.length,
-                    url: "api/products/list",
-                    data: menosPassword,
-                    status: 200,
-                    url: "api/user/list"
-                })
-            })
-
-        },		
-
-    show: (req, res) => {
-
-        db.User.findByPk(req.params.id)
-        .then(user => {
-           return res.status(200).json({
-                    
-                    data: user,
-                    status: 200,
-                    url: '/api/user/:id'
-            })
+    list:(req,res)=>{
+        db.User.findAll({
+            attributes : [
+                "id" ,
+                "name" ,
+                "last_name",
+                "email",
+                "avatar"
+            ]
         })
+        .then(users=>{
+            let respuesta = {
+                meta :{
+                    status:200,
+                    count : users.length,
+                    url:"/api/user"
+                },
+                data:users
+            }
+            
+            res.json(respuesta)
+        })
+        .catch(error => console.log(error))
+    },
 
+
+    show: (req,res)=>{
+        let idUser = req.params.id
+        db.User.findByPk(idUser,{
+            attributes : [
+                "id" ,
+                "name" ,
+                "last_name",
+                "email",
+                "avatar"
+            ]
+        })
+        .then(user=>{
+            let respuesta = {
+                meta :{status:200,
+                    count : user.length,
+                    url:"/api/user/:id"
+                },
+                data:user
+            }
+            
+            res.json(respuesta)
+        })
+        
+        .catch(error => console.log(error))
     },
 
   
