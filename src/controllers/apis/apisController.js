@@ -38,7 +38,10 @@ module.exports = {
     Promise
     .all([products, categoria])
     .then(([products,categoria])=>{
-      
+     
+    //  let countByCategory = { }
+
+
       let Chocolate = products.filter(row => {
         return row.id_productcategory == 1
       })
@@ -50,11 +53,11 @@ module.exports = {
                 meta:{
                     status:200,
                     count:products.length,
-                    Chocolate : Chocolate.length ,
-                    Pasteleria : Pasteleria.length ,
-                    
                     url:"/api/products"
-                    
+                },
+                countByCategory: {
+                  Chocolate : Chocolate.length ,
+                  Pasteleria : Pasteleria.length ,
                 },
                 data: products
             }
