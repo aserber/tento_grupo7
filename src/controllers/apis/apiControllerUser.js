@@ -63,10 +63,7 @@ module.exports = {
            where: {[Op.like] :'%'+ req.query.keyword + '%'}
        })
        .then(users =>{
-       if (users.length > 0 ) {          
            return res.status(200).json(users)
-       } 
-           return res.status(200).json("no existen usuario")
       })       
    }
 

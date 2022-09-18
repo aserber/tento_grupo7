@@ -1,102 +1,108 @@
 const db = require('../../database/models');
 const sequelize = db.sequelize;
-const { Op } = require('sequelize');
+const Op = db.Sequelize.Op;
 
 
 module.exports = {
-    list: (req, res) =>{
+//  list: (req, res) => {
+//
+//    db.Product.findAll()
+//      .then(product => {
+//        return res.status(200).json({
+//          total: product.length,
+//          data: product,
+//          status: 200,
+//          url: "api/products/list"
+//        })
+//      })
+//
+//  },
 
-        db.Product.findAll()
-            .then(product => {
-                return res.status(200).json({
-                    total: product.length,
-                    data: product,
-                    status: 200,
-                    url: "api/products/list"
-                })
-            })
+  show: (req, res) => {
 
-        },		
+    db.Product
+      .findByPk(req.params.id)
+      .then(products => {
+        return res.status(200).json({
 
-    show: (req, res) => {
-
-        db.Product
-        .findByPk(req.params.id)
-        .then(products => {
-           return res.status(200).json({
-                total: products.length,
-                data: products,
-                status: 200
-            })
+          data: products,
+          status: 200
         })
+      })
 
-    },
-
-      //   listByCat: (req, res) =>{
-    //
-    //    db.Product.findAll()
-    //        .then(product => {
-    //            let Chocolate = product.filter(row => {
-    //                return row.id_productcategory == 1
-    //            })
-    //            const Pasteleria = product.filter(row => {
-    //                return row.id_productcategory == 2
-    //            })
-    //            return res.status(200).json({
-    //                total: product.length,
-    //                data: Pasteleria, Chocolate
-    //                status: 200
-    //            })
-    //        })
-    //            res.render('admin/administrar', {
-	//				Pasteleria,
-	//				Chocolate,
-	//				toThousand
-
-	//			});
-   ////    },
-
-  
-    
-    store: (req, res) => {
-        db.Product
-        .create(req.body)
-        .then(product => {
-           return res.status(200).json({
-                data: product,
-                status: 200,
-                created: "OK"
-            })
-        })
-    },
-
-    delete: (req, res) => {
-      db.Product
-      .destroy({
-          where: {id: req.params.id }
-        })
-      .then(response => {
-         return res.json(response)
-        })
   },
 
-  	
-   //   search: (req, res) => {
+  list : (req,res)=>{
+    let products = db.Product.findAll( {include: [{association:"productcategory"}]})
+    let categoria = db.ProductCategory.findAll({include:[{association:"product"}]})
+    Promise
+    .all([products, categoria])
+    .then(([products,categoria])=>{
+      
+      let Chocolate = products.filter(row => {
+        return row.id_productcategory == 1
+      })
+      const Pasteleria = products.filter(row => {
+        return row.id_productcategory == 2
+      })
+     
+            let respuesta ={
+                meta:{
+                    status:200,
+                    count:products.length,
+                    Chocolate : Chocolate.length ,
+                    Pasteleria : Pasteleria.length ,
+                    
+                    url:"/api/products"
+                    
+                },
+                data: products
+            }
+          res.json(respuesta)
+      })
+      .catch(error => console.log(error))
+    },
 
-   //       db.Product
-   //       .findAll({
-   //           where: {[Op.like] :'%'+ req.query.keyword + '%'}
-   //       })
-   //       .then(product =>{
-  //        if (product.length > 0 ) {          
-   //           return res.status(200).json(product)
-   //       } 
-   //           return res.status(200).json("no existen productos")
-   //      })       
-   //   }
 
-  //list: (req, res) =>{
-//(esta es la de la clase)
+
+  store: (req, res) => {
+    db.Product
+      .create(req.body)
+      .then(product => {
+        return res.status(200).json({
+          data: product,
+          status: 200,
+          created: "OK"
+        })
+      })
+  },
+
+  delete: (req, res) => {
+    db.Product
+      .destroy({
+        where: { id: req.params.id }
+      })
+      .then(response => {
+        return res.json(response)
+      })
+  },
+
+
+  search: (req, res) => {
+
+    db.Product
+      .findAll({
+        where: { 
+          name: {[Op.like]: '%' + req.query.keyword + '%' }
+      }
+    })
+
+      .then(product => {
+        return res.status(200).json(product)
+      })
+  }
+  //list: (req, res) =>{  
+  //(esta es la de la clase)
   // db.Product.findAll()
   //     .then(product => {
   //         let response = {
@@ -107,31 +113,31 @@ module.exports = {
   //         }, 
   //        data: product,
   //       } res.json(response)
-//      })
-//            .catch(e=> {
-//                let response = {
-//                    info: {
-//                        status: 404,
-//                        url: "api/products/list",
-//                        error: e
-//                    },
-//                }
-//                res.json(response)
-//            })
+  //      })
+  //            .catch(e=> {
+  //                let response = {
+  //                    info: {
+  //                        status: 404,
+  //                        url: "api/products/list",
+  //                        error: e
+  //                    },
+  //                }
+  //                res.json(response)
+  //            })
   // },		
-//    show: (req, res) => {
-//  
-//      db.Product
-//      .findByPk(req.params.id)
-//      .then(products => {
-//         let products = {
-//              info: {
-//                  status: 200,
-//                  url: "api/products/detail" + req.params.id
-//                  },
-//                  data:
-//              } res.json(products)
-//          }) 
-//      },
+  //    show: (req, res) => {
+  //  
+  //      db.Product
+  //      .findByPk(req.params.id)
+  //      .then(products => {
+  //         let products = {
+  //              info: {
+  //                  status: 200,
+  //                  url: "api/products/detail" + req.params.id
+  //                  },
+  //                  data:
+  //              } res.json(products)
+  //          }) 
+  //      },
 
 }
