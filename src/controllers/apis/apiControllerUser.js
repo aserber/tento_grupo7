@@ -1,6 +1,6 @@
 const db = require('../../database/models');
 const sequelize = db.sequelize;
-const { Op } = require('sequelize');
+const Op  = db.Sequelize.Op;
 
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
                     total: users.length,
                     data: users,
                     status: 200,
-                    //url: "api/user/list"
+                    url: "api/user/list"
                 })
             })
 
@@ -60,13 +60,13 @@ module.exports = {
    search: (req, res) => {
        db.User
        .findAll({
-           where: {[Op.like] :'%'+ req.query.keyword + '%'}
+           where: { 
+            id: { [Op.like] :'%'+ req.query.keyword + '%'} 
+           }
        })
        .then(users =>{
-       if (users.length > 0 ) {          
+       
            return res.status(200).json(users)
-       } 
-           return res.status(200).json("no existen usuario")
       })       
    }
 
