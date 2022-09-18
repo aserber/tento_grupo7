@@ -62,7 +62,9 @@ A medida que avanzó el curso, y de ir adquiriendo más conocimientos, hemos imp
     -Usuarios
     (Opcional de tablas secundarias).
 
-SPRINT 7:Hemos adquiriendo mucho en este último tiempo, y respetando las consignas y los entregables, realizamos los siguientes ejercicios destinándolos a nuestra página web. 
+SPRINT 7:
+
+Hemos adquiriendo mucho en este último tiempo, y respetando las consignas y los entregables, realizamos los siguientes ejercicios destinándolos a nuestra página web. 
 - La Retrospectiva, el tablero de trabajo. 
 
 -Registro de usuarios

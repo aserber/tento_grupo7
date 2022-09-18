@@ -65,7 +65,10 @@ module.exports = {
            }
        })
        .then(users =>{
+<<<<<<< HEAD
        
+=======
+>>>>>>> b6fc4ccb1093b93c3cd38f21c056001679ff43ee
            return res.status(200).json(users)
       })       
    }

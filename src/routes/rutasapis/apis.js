@@ -8,12 +8,13 @@ router.get('/products/:id', apiController.show); //busca 1 producto por id
 
 router.post('/products/', apiController.store); //guarda un producto
 
-//router.get('/products/search', apiController.search); // busca un producto
+router.get('/products/search', apiController.search); // busca un producto
 
 router.delete('/products/:id', apiController.delete); //borra un usuario
 
+//router.get('/products/:id', apiController.edit);
 
-
+router.post('/products/update/:id', apiController.update);
 
 
 module.exports = router;
