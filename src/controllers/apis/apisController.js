@@ -4,7 +4,7 @@ const Op = db.Sequelize.Op;
 
 
 module.exports = {
-  
+
   list : (req,res)=>{
     let products = db.Product.findAll( {include: [{association:"productcategory"}]})
     let categoria = db.ProductCategory.findAll({include:[{association:"product"}]})
@@ -68,7 +68,7 @@ module.exports = {
 
   update: (req,res) => {
     let productId = req.params.id;
-    db.Product.update(
+      db.Product.update(
         {
           name: req.body.name,
 					price: req.body.price,
