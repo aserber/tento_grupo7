@@ -6,10 +6,19 @@ const Op  = db.Sequelize.Op;
 module.exports = {
     list: (req, res) =>{
 
+        
+
         db.User.findAll()
             .then(users => {
+
+                let menosPassword = users.filter(row => {
+                    return row.password > 1
+                  })
                 return res.status(200).json({
                     total: users.length,
+                    
+                        url: "api/products/list",
+                    
                     data: users,
                     status: 200,
                     url: "api/user/list"
@@ -23,8 +32,10 @@ module.exports = {
         db.User.findByPk(req.params.id)
         .then(user => {
            return res.status(200).json({
+                    
                     data: user,
                     status: 200,
+                    url: '/api/user/:id'
             })
         })
 
@@ -65,10 +76,6 @@ module.exports = {
            }
        })
        .then(users =>{
-<<<<<<< HEAD
-       
-=======
->>>>>>> b6fc4ccb1093b93c3cd38f21c056001679ff43ee
            return res.status(200).json(users)
       })       
    }
