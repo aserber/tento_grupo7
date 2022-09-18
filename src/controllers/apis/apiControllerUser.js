@@ -4,22 +4,17 @@ const Op  = db.Sequelize.Op;
 
 
 module.exports = {
-    list: (req, res) =>{
-
-        
-
+    list: (req, res) =>{ 
         db.User.findAll()
             .then(users => {
 
                 let menosPassword = users.filter(row => {
-                    return row.password > 1
+                    return row.password.length > 1
                   })
                 return res.status(200).json({
                     total: users.length,
-                    
-                        url: "api/products/list",
-                    
-                    data: users,
+                    url: "api/products/list",
+                    data: menosPassword,
                     status: 200,
                     url: "api/user/list"
                 })
