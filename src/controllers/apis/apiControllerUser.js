@@ -67,6 +67,18 @@ module.exports = {
       })       
    }
 
+}
+
+
+
+
+
+
+
+
+
+
+
   //list: (req, res) =>{
 //(esta es la de la clase)
   // db.Product.findAll()
@@ -105,5 +117,3 @@ module.exports = {
 //              } res.json(products)
 //          }) 
 //      },
-
-}

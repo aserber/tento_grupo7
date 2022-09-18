@@ -4,23 +4,7 @@ const Op = db.Sequelize.Op;
 
 
 module.exports = {
-
-
-  show: (req, res) => {
-
-    db.Product
-      .findByPk(req.params.id)
-      .then(products => {
-        return res.status(200).json({
-
-          data: products,
-          status: 200,
-          url: '/api/products/:id'
-        })
-      })
-
-  },
-
+  
   list : (req,res)=>{
     let products = db.Product.findAll( {include: [{association:"productcategory"}]})
     let categoria = db.ProductCategory.findAll({include:[{association:"product"}]})
@@ -42,7 +26,8 @@ module.exports = {
                 meta:{
                     status:200,
                     count:products.length,
-                    url: "api/products/list"
+                    url: "api/products/list",
+                    categoria: categoria.length
                 },
                 countByCategory: {
                   Chocolate : Chocolate.length ,
@@ -53,8 +38,19 @@ module.exports = {
           res.json(respuesta)
       })
       .catch(error => console.log(error))
-    },
+  },
 
+  show: (req, res) => {
+   db.Product
+      .findByPk(req.params.id)
+      .then(products => {
+        return res.status(200).json({
+           data: products,
+          status: 200,
+          url: '/api/products/:id'
+        })
+      })
+  },
 
 
   store: (req, res) => {
@@ -70,36 +66,11 @@ module.exports = {
       })
   },
 
-  delete: (req, res) => {
-    db.Product
-      .destroy({
-        where: { id: req.params.id }
-      })
-      .then(response => {
-        return res.json(response)
-      })
-  },
-
-
-  search: (req, res) => {
-
-    db.Product
-      .findAll({
-        where: { 
-          name: {[Op.like]: '%' + req.query.keyword + '%' }
-      }
-    })
-
-      .then(product => {
-        return res.status(200).json(product)
-      })
-  }, 
-
   update: (req,res) => {
     let productId = req.params.id;
     db.Product.update(
         {
-                  name: req.body.name,
+          name: req.body.name,
 					price: req.body.price,
 					discount: req.body.discount,
 					id_productcategory : req.body.category,
@@ -133,7 +104,64 @@ module.exports = {
         res.json(respuesta);
     })    
     .catch(error => res.send(error))
-},
+  },
+
+
+  search: (req, res) => {
+
+    db.Product
+      .findAll({
+        where: { 
+          name: {[Op.like]: '%' + req.query.keyword + '%' }
+      }
+    })
+
+      .then(product => {
+        return res.status(200).json(product)
+      })
+  }, 
+
+
+  delete: (req, res) => {
+    db.Product
+      .destroy({
+        where: { id: req.params.id }
+      })
+      .then(response => {
+        return res.json(response)
+      })
+  },
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -189,4 +217,3 @@ module.exports = {
 //      })
 //
 //  },
-}
