@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenFondo from '../assets/images/mandalorian.jpg';
+import imagenFondo from '../assets/images/products/fotoProducto1.jpg';
 import GenresInDb from './GenresInDb';
 import ContentRowMovies from './ContentRowMovies';
 function ContentRowTop(){
@@ -28,7 +28,7 @@ function ContentRowTop(){
 									<div className="text-center">
 										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
 									</div>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
+									<p>Bizcochuelo de chocolate con relleno de Mousse de Chocolate, decorado con bombones</p>
 									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
 								</div>
 							</div>
