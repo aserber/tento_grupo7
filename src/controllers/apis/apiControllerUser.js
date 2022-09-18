@@ -1,18 +1,27 @@
 const db = require('../../database/models');
 const sequelize = db.sequelize;
-const { Op } = require('sequelize');
+const Op  = db.Sequelize.Op;
 
 
 module.exports = {
     list: (req, res) =>{
 
+        
+
         db.User.findAll()
             .then(users => {
+
+                let menosPassword = users.filter(row => {
+                    return row.password > 1
+                  })
                 return res.status(200).json({
                     total: users.length,
+                    
+                        url: "api/products/list",
+                    
                     data: users,
                     status: 200,
-                    //url: "api/user/list"
+                    url: "api/user/list"
                 })
             })
 
@@ -23,8 +32,10 @@ module.exports = {
         db.User.findByPk(req.params.id)
         .then(user => {
            return res.status(200).json({
+                    
                     data: user,
                     status: 200,
+                    url: '/api/user/:id'
             })
         })
 
@@ -60,7 +71,9 @@ module.exports = {
    search: (req, res) => {
        db.User
        .findAll({
-           where: {[Op.like] :'%'+ req.query.keyword + '%'}
+           where: { 
+            id: { [Op.like] :'%'+ req.query.keyword + '%'} 
+           }
        })
        .then(users =>{
            return res.status(200).json(users)
