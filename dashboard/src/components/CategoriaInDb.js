@@ -1,13 +1,35 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Categoria  from './Categoria';
 
-let category = [
+let categorias = [
     {category: 'Chocolate'},
     {category: 'Pasteleria'},
     
 ]
 
-function CategoriaInDb(){
+class CategoriaInDb extends Component {
+    constructor(){
+        super()
+            this.state = {
+                categorias: [],
+                valor: 1,
+                nombre: "componente"
+            }
+        
+    }
+
+    componentDidMount(){
+        fetch('/api/products')
+        .then(respuesta => {
+            return respuesta.json()
+        })
+        .then(categoria => {
+            this.setState({categorias:categoria.data})
+        })
+        .catch(error => console.log(error))
+    }
+
+    render(){
     return (
         <React.Fragment>
                 {/*<!-- Categories in DB -->*/}
@@ -19,7 +41,7 @@ function CategoriaInDb(){
                         <div className="card-body">
                             <div className="row">
                                 {
-                                    category.map((category,index)=>{
+                                    categorias.map((category,index)=>{
                                         return  <Categoria  {...category}  key={index} />
                                     })
                                 }
@@ -31,5 +53,5 @@ function CategoriaInDb(){
         </React.Fragment>
     )
 
-}
+}}
 export default CategoriaInDb;
