@@ -19,12 +19,12 @@ class CategoriaInDb extends Component {
     }
 
     componentDidMount(){
-        fetch('/api/products')
+        fetch('http://localhost:7001/api/categorias')
         .then(respuesta => {
             return respuesta.json()
         })
         .then(categoria => {
-            this.setState({categorias:categoria.data})
+            this.setState({categoria:categoria.data})
         })
         .catch(error => console.log(error))
     }
@@ -41,8 +41,8 @@ class CategoriaInDb extends Component {
                         <div className="card-body">
                             <div className="row">
                                 {
-                                    categorias.map((category,index)=>{
-                                        return  <Categoria  {...category}  key={index} />
+                                    categorias.map((categoria,index)=>{
+                                        return  <Categoria  {...categoria}  key={index} />
                                     })
                                 }
                             </div>
