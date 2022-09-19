@@ -1,7 +1,7 @@
 import React from 'react';
 import imagenFondo from '../assets/images/products/fotoProducto1.jpg';
-import GenresInDb from './GenresInDb';
-import ContentRowMovies from './ContentRowMovies';
+import CategoriaInDb from './CategoriaInDb';
+import ContentRowProducts from './ContentRowProducts';
 function ContentRowTop(){
     return(
         <React.Fragment>
@@ -12,7 +12,7 @@ function ContentRowTop(){
 					</div>
 				
 					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
+					<ContentRowProducts />
 					{/*<!-- End movies in Data Base -->*/}
 					
 	
@@ -36,7 +36,7 @@ function ContentRowTop(){
 						{/*<!-- End content row last movie in Data Base -->*/}
 
 						{/*<!-- Genres in DB -->*/}
-						<GenresInDb />
+						<CategoriaInDb />
 
 						{/*<!--End Genres In Db-->*/}		
 					</div>

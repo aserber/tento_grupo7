@@ -1,13 +1,13 @@
 import React from 'react';
-import Genre  from './Genre';
+import Categoria  from './Categoria';
 
-let genres = [
-    {genre: 'Chocolate'},
-    {genre: 'Pasteleria'},
+let category = [
+    {category: 'Chocolate'},
+    {category: 'Pasteleria'},
     
 ]
 
-function GenresInDb(){
+function CategoriaInDb(){
     return (
         <React.Fragment>
                 {/*<!-- Categories in DB -->*/}
@@ -19,8 +19,8 @@ function GenresInDb(){
                         <div className="card-body">
                             <div className="row">
                                 {
-                                    genres.map((genre,index)=>{
-                                        return  <Genre  {...genre}  key={index} />
+                                    category.map((category,index)=>{
+                                        return  <Categoria  {...category}  key={index} />
                                     })
                                 }
                             </div>
@@ -32,4 +32,4 @@ function GenresInDb(){
     )
 
 }
-export default GenresInDb;
+export default CategoriaInDb;

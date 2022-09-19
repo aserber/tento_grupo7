@@ -2,7 +2,7 @@ import React from 'react';
 
 //import MovieList from './MovieList';
 
-function Movie(){
+function Product(){
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
@@ -45,4 +45,4 @@ function Movie(){
         </React.Fragment>
     )
 }
-export default Movie;
+export default Product;
