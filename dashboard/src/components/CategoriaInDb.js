@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import Categoria  from './Categoria';
 
-let categorias = [
-    {category: 'Chocolate'},
-    {category: 'Pasteleria'},
-    
-]
+//let categorias = [
+//    {category: 'Chocolate'},
+//    {category: 'Pasteleria'},
+//    
+//]
 
 class CategoriaInDb extends Component {
     constructor(){
@@ -23,8 +23,8 @@ class CategoriaInDb extends Component {
         .then(respuesta => {
             return respuesta.json()
         })
-        .then(categoria => {
-            this.setState({categoria:categoria.data})
+        .then(cat => {
+            this.setState({categorias: cat.data})
         })
         .catch(error => console.log(error))
     }
@@ -41,7 +41,7 @@ class CategoriaInDb extends Component {
                         <div className="card-body">
                             <div className="row">
                                 {
-                                    categorias.map((categoria,index)=>{
+                                    this.state.categorias.map((categoria,index)=>{
                                         return  <Categoria  {...categoria}  key={index} />
                                     })
                                 }
