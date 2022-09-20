@@ -19,7 +19,7 @@ class CategoriaInDb extends Component {
     }
 
     componentDidMount(){
-        fetch('http://localhost:7001/api/categorias')
+        fetch('http://localhost:3000/api/categorias')
         .then(respuesta => {
             return respuesta.json()
         })
