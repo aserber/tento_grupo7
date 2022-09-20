@@ -45,7 +45,7 @@ const controller = {
                 }
             })
 			.then(() => {
-				return res.render('/')
+				return res.render('web/home')
 			})
     },
 
