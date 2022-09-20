@@ -10572,7 +10572,11 @@ a.text-dark:hover {
     }
 
     abbr[title]::after {
+<<<<<<< HEAD
+        content: " ("attr(title) ")"
+=======
         content: " (" attr(title) ")"
+>>>>>>> 9a892d9f369e47353230ea615587bab3ea025520
     }
 
     pre {
