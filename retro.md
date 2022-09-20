@@ -80,3 +80,5 @@ Imagen, archivo (JPG, JPEG, PNG, GIF).
 -Validaciones del Back-end
 -Validaciones del Front-end
 -Registro de usuarios.
+ 
+ SPRINT 8
