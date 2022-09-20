@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/images/logo-rock-dog-gris.png"
+import image from "../../assets/images/grupo7.png"
 function SideBar() {
   return (
     <React.Fragment>
@@ -20,7 +20,7 @@ function SideBar() {
           <li className="nav-item active">
             <a className="nav-link" href="/">
               <i className="fas fa-fw fa-tachometer-alt"></i>
-              <span>Dashboard - RockDog</span></a>
+              <span>Dashboard - Tento</span></a>
           </li>
 
           {/*<!-- Divider -->*/}

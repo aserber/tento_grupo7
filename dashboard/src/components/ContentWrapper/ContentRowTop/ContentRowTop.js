@@ -11,7 +11,7 @@ function ContentRowTop(){
   let datosPaProp =[]
   let ultimoProd;
   const fetchProductos = async () => {
-    const res = await fetch("http://localhost:3050/api/productos", {
+    const res = await fetch("localhost:7001/api/categorias", {
         method: 'GET',
         headers: {
             Accept: 'application/json',
@@ -19,7 +19,7 @@ function ContentRowTop(){
         },
     })
     const categoryArr = await res.json()
-    setCategory(categoryArr.meta.countByCategoria)
+    setCategory(categoryArr.meta.ProductCategory)
     setProductos(categoryArr.data)
 }
 
@@ -49,7 +49,7 @@ function ContentRowTop(){
     return (
         <div className="container-fluid">
                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                  <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+                  <h1 className="h3 mb-0 text-gray-800">Dashboard Tento</h1>
                 </div>
                 <div className="row">
                 {/* Content Row Movies*/}

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/images/logo-dog.png"
+import logo from "../../../assets/images/grupo7.png"
 
 function TopBar() {
   return (
