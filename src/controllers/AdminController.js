@@ -110,7 +110,7 @@ const controller = {
 				}
 			})
 			.then(() => {
-				return res.render('/')
+				return res.render('web/home')
 			})
 		},
 	// Delete - Delete one product from DB
