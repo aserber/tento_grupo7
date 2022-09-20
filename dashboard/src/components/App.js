@@ -1,14 +1,21 @@
-import React from 'react';
-import SideBar from './SideBar';
-import ContentWrapper from './ContentWrapper';
+import '../assets/css/app.css';
+import Sidebar from './SideBar/SideBar';
+import ContentWrapper from './ContentWrapper/ContentWrapper'
+
 function App() {
   return (
-    <React.Fragment>
-      	<div id="wrapper">
-          <SideBar />
+    <div>
+        <div id="wrapper">
+          {/* Sidebar */}
+          <Sidebar />
+          {/* End of Sidebar */}
+          {/* Content Wrapper */}
           <ContentWrapper />
+          {/* End of Content Wrapper */}
         </div>
-    </React.Fragment>
+        {/* End of Page Wrapper */}
+</div>
+
   );
 }
 
