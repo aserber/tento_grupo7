@@ -79,7 +79,7 @@ else{
         else{
             Swal.fire({
                 icon: 'success',
-                text: 'Revise los estabien!',
+                text: 'Cambios realizados!',
             })
             .then( ()=> {
                 form.submit()

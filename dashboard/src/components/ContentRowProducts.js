@@ -1,36 +1,85 @@
 import React from 'react';
 import SmallCard from './SmallCard';
 
-let productInDataBase = {
-    color:   "primary",
-    titulo: "Chocolates",
-    valor: 21,
-    icono: "fas fa-film",
-}
+//let productInDataBase = {
+//    color:   "primary",
+//    titulo: "Chocolates",
+//    valor: 21,
+//    icono: "fas fa-film",
+//}
+//
+//
+//let user = {
+//    color:   "warning",
+//    titulo: "Pasteleria",
+//    valor: 49,
+//    icono: "fas fa-user",
+//}
 
-
-let user = {
-    color:   "warning",
-    titulo: "Pasteleria",
-    valor: 49,
-    icono: "fas fa-user",
-}
-
-let cardProps = [productInDataBase,user];
+//let cardProps = [productInDataBase,user];
 
 
 function ContentRowTop(){
+
+    
+
+    const [equipo, setEquipo] = React.useState([])
+
+    React.useEffect(() => {
+        
+        console.log('useEffect')
+        obtenerDatos()
+        
+    }, [])
+
+    const obtenerDatos = async() => {
+        const data = await fetch ("/api/categorias")
+        const users = await data.json()
+        console.log(users)
+        setEquipo(users)
+    }
+
     return (
-        <React.Fragment>
-        {/*<!-- Content Row -->*/}
-        <div className="row">
-            {
-                cardProps.map((producto,index)=>{
-                    return <SmallCard  {...producto}  key= {index}/>
-                })
-            }      
+        <div>
+            <h1>Hola</h1>
+            <ul>
+                {
+                 equipo.map(item => (
+                     <li key= {item.id}>{item.name} </li>
+
+                 )) 
+                }
+            
+            
+            
+            </ul>
         </div>
-        </React.Fragment>
     )
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //return (
+  //    <React.Fragment>
+  //    {/*<!-- Content Row -->*/}
+  //    <div className="row">
+  //        {
+  //            cardProps.map((producto,index)=>{
+  //                return <SmallCard  {...producto}  key= {index}/>
+  //            })
+  //        }      
+  //    </div>
+  //    </React.Fragment>
+  //)
 }
 export default ContentRowTop;
