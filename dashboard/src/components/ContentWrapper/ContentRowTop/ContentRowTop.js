@@ -11,7 +11,7 @@ function ContentRowTop(){
   let datosPaProp =[]
   let ultimoProd;
   const fetchProductos = async () => {
-    const res = await fetch("localhost:7001/api/categorias", {
+    const res = await fetch("http://localhost:7001/api/categorias", {
         method: 'GET',
         headers: {
             Accept: 'application/json',

@@ -94,7 +94,8 @@ const controller = {
 		.all([productToEdit,prodCate])
 		.then(([productToEdit,prodCate]) => {
                 if (resultValidation.errors.length>0) {
-                    res.render('admin/product-edit-form', {productToEdit, prodCate, errors: resultValidation.mapped()})
+                    res.render ('admin/product-edit-form', {productToEdit, prodCate, errors: resultValidation.mapped()})
+					console.log(resultValidation)
                 }
                 else {
 					let producto = {
