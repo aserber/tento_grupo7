@@ -12,9 +12,6 @@ module.exports = {
     .all([products, categoria])
     .then(([products,categoria])=>{
      
-    //  let countByCategory = { }
-
-
       let Chocolate = products.filter(row => {
         return row.id_productcategory == 1
       })

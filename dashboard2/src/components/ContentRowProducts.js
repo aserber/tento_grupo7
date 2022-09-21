@@ -1,4 +1,5 @@
 import React from 'react';
+import {useEffect} from 'react';
 import SmallCard from './SmallCard';
 
 //let productInDataBase = {
@@ -25,7 +26,7 @@ function ContentRowTop(){
 
     const [equipo, setEquipo] = React.useState([])
 
-    React.useEffect(() => {
+    useEffect(() => {
         
         console.log('useEffect')
         obtenerDatos()
@@ -33,12 +34,14 @@ function ContentRowTop(){
     }, [])
 
     const obtenerDatos = async() => {
-        const data = await fetch ("http://localhost:3000/api/categorias")
+        const data = await fetch ("http://localhost:7001/api/categorias")
         const users = await data.json()
         console.log(users)
-        setEquipo(users)
+        setEquipo(users.data)
     }
-
+    if (!equipo || equipo.length <= 0){
+        return <p> No hay informacion </p>
+    } else {
     return (
         <div>
             <h1>Hola</h1>
@@ -54,7 +57,7 @@ function ContentRowTop(){
             
             </ul>
         </div>
-    )
+    )}
     
 
 

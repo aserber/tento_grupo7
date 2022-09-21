@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import imagenFondo from '../assets/images/products/fotoProducto1.jpg';
 import CategoriaInDb from './CategoriaInDb';
 import ContentRowProducts from './ContentRowProducts';
+
 function ContentRowTop(){
     return(
         <React.Fragment>
@@ -37,7 +38,7 @@ function ContentRowTop(){
 
 						{/*<!-- Genres in DB -->*/}
 						<CategoriaInDb />
-
+					
 						{/*<!--End Genres In Db-->*/}		
 					</div>
 				</div>
