@@ -11,7 +11,7 @@ function ContentRowTop(){
   let datosPaProp =[]
   let ultimoProd;
   const fetchProductos = async () => {
-    const res = await fetch("localhost:7001/api/categorias", {
+    const res = await fetch("http://localhost:7001/api/categorias", {
         method: 'GET',
         headers: {
             Accept: 'application/json',
@@ -29,19 +29,19 @@ function ContentRowTop(){
 		fetchProductos()
 	},[])
 
-    if(category[0].categoria){
-      datosPaProp= [
-        {titulo: category[0].categoria, icon : "fa-dog", cantidad :category[0].cantidad,color :"primary"},
-        {titulo: category[1].categoria, icon : "fa-cat", cantidad :category[1].cantidad,color :"success"},
-        {titulo: category[2].categoria, icon : "fa-otter", cantidad :category[2].cantidad,color :"warning"}
-        ]
-    }else{
-      datosPaProp =[
-        {titulo: category, icon : "fa-film", cantidad :category,color :"primary"},
-        {titulo: category, icon : "fa-award", cantidad :category,color :"success"},
-        {titulo: category, icon : "fa-user", cantidad :category,color :"warning"}
-        ]
-    }
+  if(category[0].categoria){
+    datosPaProp= [
+      {titulo: category[0].categoria, icon : "fa-dog", cantidad :category[0].cantidad,color :"primary"},
+      {titulo: category[1].categoria, icon : "fa-cat", cantidad :category[1].cantidad,color :"success"},
+      {titulo: category[2].categoria, icon : "fa-otter", cantidad :category[2].cantidad,color :"warning"}
+      ]
+  }else{
+    datosPaProp =[
+      {titulo: category, icon : "fa-film", cantidad :category,color :"primary"},
+      {titulo: category, icon : "fa-award", cantidad :category,color :"success"},
+      {titulo: category, icon : "fa-user", cantidad :category,color :"warning"}
+      ]
+  }
     
     if(productos[productos.length-1].id){
       ultimoProd = productos[productos.length-1]
