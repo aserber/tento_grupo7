@@ -9,10 +9,14 @@ function LastProdInDb (props){
                       </div>
                       <div className="card-body">
                         <div className="text-center">
+<<<<<<< HEAD
                         
+=======
+                          <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: '40rem'}} src={`https://github.com/aserber/tento_grupo7/blob/master/ProyeBase/public/images/products/${props.imagen}?raw=true `} alt=" UltimoProd" />
+>>>>>>> 930005e4937443dbc35c6659674b917cde21423e
                         </div>
                         <p>{props.descripcion}</p>
-                        <a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:7001/productos/details/${props.id}`}>view Producto detail</a>
+                        <a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:7001/productos/detail/${props.id}`}>view Producto detail</a>
                       </div>
                     </div>
                   </div>

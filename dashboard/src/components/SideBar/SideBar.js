@@ -9,7 +9,7 @@ function SideBar() {
           {/*<!-- Sidebar - Brand -->*/}
           <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
             <div className="sidebar-brand-icon">
-              <img className="w-100" src={image} alt="RockDog" />
+              <img className="w-100" src={image} alt="Tento" />
             </div>
           </a>
 
@@ -31,7 +31,7 @@ function SideBar() {
 
           {/*<!-- Nav Item - Pages -->*/}
           <li className="nav-item">
-            <a className="nav-link collapsed" href={`http://localhost:3050/productos`}>
+            <a className="nav-link collapsed" href={`http://localhost:3000/productos`}>
             <i className="fas fa-dog"></i>
               <span>Productos</span>
             </a>
@@ -39,7 +39,7 @@ function SideBar() {
 
           {/*<!-- Nav Item - Charts -->*/}
           <li className="nav-item">
-            <a className="nav-link" href={`http://localhost:3050/users/perfiles`}>
+            <a className="nav-link" href={`http://localhost:7001/users/profile`}>
               <i className="fas fa-light fa-users"></i>
               <span>Usuarios</span></a>
           </li>
