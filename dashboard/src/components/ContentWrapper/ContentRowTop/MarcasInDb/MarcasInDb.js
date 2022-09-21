@@ -12,11 +12,7 @@ function MarcasInDb (){
                           <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
                               <div className="card-body">
-<<<<<<< HEAD
                               Por hacer
-=======
-                               Falta
->>>>>>> 930005e4937443dbc35c6659674b917cde21423e
                               </div>
                             </div>
                           </div>
