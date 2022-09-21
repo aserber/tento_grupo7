@@ -41,12 +41,12 @@ const controller = {
                      
                     }
                     db.Product.create(producto)
-                    
+                    .then(() => {
+						return res.render('web/home')
+					})
                 }
             })
-			.then(() => {
-				return res.render('web/home')
-			})
+			
     },
 
 	detail: (req, res) => {
@@ -108,11 +108,11 @@ const controller = {
 				}
 				console.log (producto.id_productcategory),
 				db.Product.update(producto, { where: { id: req.params.id } })	
-				}
+				.then(() => {
+					return res.render('web/home')
+				})				}
 			})
-			.then(() => {
-				return res.render('web/home')
-			})
+			
 		},
 	// Delete - Delete one product from DB
 
