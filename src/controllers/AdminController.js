@@ -40,7 +40,9 @@ const controller = {
 						image: req.file ? req.file.filename : '',
                      
                     }
-                    db.Product.create(producto)
+					fs.copyFileSync(path.resolve(__dirname, '../../public/images/products/' + producto.image ), path.resolve(__dirname,"../../dashboard2/src/assets/images" + producto.image))
+                    
+					db.Product.create(producto)
                     .then(() => {
 						return res.render('web/home')
 					})
