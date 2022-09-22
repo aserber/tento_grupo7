@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import CategoriaInDb from './CategoriaInDb';
 import ContentRowProducts from './ContentRowProducts';
 
+
 function importAll(r) {
     return r.keys().map(r);
   }
@@ -37,6 +38,7 @@ function ContentRowTop(){
 				<div className="container-fluid">
 					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
 						<h1 className="h3 mb-0 text-gray-800"> Dashboard Tentó</h1>
+						
 					</div>
 				
 					{/*<!-- Content Row Movies-->*/}

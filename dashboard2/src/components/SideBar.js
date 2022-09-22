@@ -1,5 +1,6 @@
 import React from 'react';
-import image from '../assets/images/tento.jpeg';
+
+import image from '../assets/images/grupo7.png';
 
 function SideBar(){
     return(

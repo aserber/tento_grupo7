@@ -8080,6 +8080,9 @@ button.bg-dark:hover {
 .w-100 {
     width: 100% !important
 }
+.w-101 {
+    width: 7% !important
+}
 
 .w-auto {
     width: auto !important
@@ -10633,6 +10636,7 @@ a.text-dark:hover {
     .table td,
     .table th {
         background-color: #fff !important
+        
     }
 
     .table-bordered td,
