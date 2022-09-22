@@ -82,3 +82,46 @@ Imagen, archivo (JPG, JPEG, PNG, GIF).
 -Registro de usuarios.
  
  SPRINT 8
+ A lo largo de este amplio recorrido del curso, hemos adquirido muchos conocimientos, experiencias, como solucionar problemas, y también sin querer como generarlo. Demás esta decir que gracias a nuestro profesor Lucas ha sido muy amable con todos nosotros en cuanto, nuestras dudas, nuestras necesidades como alumnos, siempre tratandonos con profesionalismo. Hemos progresado mucho y llegamos al objetivo del cierre, de todos nuestros sprint's, a veces teniendo dificultades como grupo, pero ha sido un placer compartir un semestre con personas que han interpretado nuestros errores, nuestros aciertos, y también fuimos conociéndonos entre todos, es difícil despedirse de la rutina y de personas que se han hecho costumbre de ver sus caras todos los martes y jueves.
+
+ Hemos implementado en este último sprint:
+
+ 1) La retrospectiva.
+ 2) El tablero de trabajo.
+ 3) API de usuarios
+ - api/users que contiene: count (cantidad total de usuarios en la base), users (array con la colección de usuarios cada uno con):
+ -Id,
+ -Name,
+ -Email,
+ -Detail {url para obtener el detalle}
+ 4) /api/user/:id 
+ -Devuelve un objeto literal con la estructura:
+ . PROPIEDAD POR CADA CAMPO EN BASE.
+ . UNA URL PARA IMAGEN DEL PERFIL (para mostrar la imagen).
+ . SIN INFORMACIÓN SENSIBLE (PASSWORD,CATEGORIA.
+ CUMPLIMOS CON EL ENTREGABLE DE URL FUNCIONALES DEVOLVIENDO DATOS DE USUARIOS EN FORMATO JSON.
+
+5) API de productos: api/products/
+(COUNT)-Cantidad total de productos en la base.
+(COUNT BY CATEGORY)-Objeto literal con una propiedad por categoria con el total de productos.
+(PRODUCTS)-Array con la coleccion de productos cada uno con:
+Su id,
+name,
+descripción,
+array con principal relacion de uno a muchos(ej:categories).
+
+ API de productos id: api/products/:id
+Devuelve un objeto literal:
+.UNA PROPIEDAD POR CADA CAMPO,
+.UN ARRAY POR CADA RELACIÓN DE UNO A MUCHOS(categories,etc),
+.UNA URL PARA LA IMAGEN DEL PRODUCTO.
+
+7) Dashboard en react:
+-TOTAL DE PRODUCTOS.
+-TOTAL DE USUARIOS.
+-TOTAL DE CATEGORIAS.
+-PANEL DEL DETALLE DE ÚLTIMO PRODUCTO O USUARIO CREADO.
+-PANEL DE CATEGORIAS CON EL TOTAL DE PRODUCTOS DE CADA UNA.
+-PANEL CON EL LISTADO DE PRODUCTOS.
+
+
