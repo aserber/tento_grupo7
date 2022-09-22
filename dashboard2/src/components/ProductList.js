@@ -13,5 +13,5 @@ function ProductsList(props){
             </div>
         </React.Fragment>
     )
-}console.log (props)
+}
 export default ProductsList;

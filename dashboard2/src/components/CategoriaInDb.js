@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Categoria  from './Categoria';
 
+
 //let categorias = [
 //    {category: 'Chocolate'},
 //    {category: 'Pasteleria'},
@@ -24,7 +25,8 @@ class CategoriaInDb extends Component {
             return respuesta.json()
         })
         .then(cat => {
-            this.setState({categorias: cat.data, isFetch: false})
+            this.setState
+            ({categorias: cat.data, isFetch: false})
         })
         .catch(error => console.log(error))
     }
@@ -42,6 +44,7 @@ class CategoriaInDb extends Component {
                             <div className="row">
                                 {
                                     this.state.categorias.map((categoria,index)=>{
+                                        
                                         return  <Categoria  {...categoria}  key={index} />
                                     })
                                 }
