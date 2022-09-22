@@ -1,7 +1,6 @@
 import React from 'react';
 
-import image from '../assets/images/grupo7.png';
-
+import image from '../assets/images/tento..png';
 function SideBar(){
     return(
         <React.Fragment>
