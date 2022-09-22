@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from "react";
-import imagenFondo from '../assets/images/products/fotoProducto1.jpg';
 import CategoriaInDb from './CategoriaInDb';
 import ContentRowProducts from './ContentRowProducts';
 
@@ -7,8 +6,10 @@ function importAll(r) {
     return r.keys().map(r);
   }
   
-const images = importAll(require.context('../assets/images', false, /\.(png|jpe?g|svg)$/));
-
+const images = importAll(require.context('../assets/images', false, /\.(png|jpe?g|svg|jpg)$/));
+console.log(images)
+const imagen = images.find(row => row.default.includes("1663803564999"))
+console.log(imagen)
 function ContentRowTop(){ 
 
     const [producto, setProducto] = useState([])
@@ -29,8 +30,9 @@ function ContentRowTop(){
     if (!producto || producto.length <= 0){
         return <p> No hay informacion </p>
     } else {
+		{console.log (producto[producto.length - 1].image)}
     return(
-        <React.Fragment>
+		        <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
 				<div className="container-fluid">
 					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
@@ -52,7 +54,7 @@ function ContentRowTop(){
 								</div>
 								<div className="card-body">
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={images[0].default}  alt=" "/> 
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagen.default}  alt=" "/> 
 									</div>
 									<p>Bizcochuelo de chocolate con relleno de Mousse de Chocolate, decorado con bombones</p>
 									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View product detail</a>
