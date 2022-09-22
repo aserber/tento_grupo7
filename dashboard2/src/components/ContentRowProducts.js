@@ -48,7 +48,7 @@ function ContentRowTop(){
             <ul>
                 {
                  equipo.map(item => (
-                     <li key= {item.id}>{item.name} </li>
+                     <li key= {item.id}>{item.name} {item.product.length} </li>
 
                  )) 
                 }
