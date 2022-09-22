@@ -12,7 +12,7 @@ function Product() {
     }, [])
 
     const obtenerDatos = async () => {
-        const data = await fetch("http://localhost:7001/api/products	")
+        const data = await fetch("http://localhost:7001/api/products")
         const users = await data.json()
         console.log(users)
         setEquipo(users.data)
@@ -32,41 +32,25 @@ function Product() {
                         <div className="card-body">
                             <div className="table-responsive">
                                 <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Nombre</th>
+                                            <th>Categoria</th>
+                                            <th>Precio</th>
+                                            <th>Descripcion</th>
+                                        </tr>
+                                    </thead>
                                     {equipo.map(item => (
-                                        <thead key={item.id}>
+                                        <tbody key={item.id}>
                                             <tr>
-                                                <th>Id</th> 
-                                                <tbody>
-                                                    <tr>
-                                                        <td>{item.id}</td>
-                                                    </tr>
-                                                </tbody>
-                                                <th>Nombre</th> 
-                                                <tbody>
-                                                    <tr>
-                                                        <td>{item.name}</td>
-                                                    </tr>
-                                                </tbody>
-                                                <th>Categoria</th> 
-                                                <tbody>
-                                                    <tr>
-                                                        <td>{item.productcategory.name}</td>
-                                                    </tr>
-                                                </tbody>
-                                                <th>Precio</th> 
-                                                <tbody>
-                                                    <tr>
-                                                        <td>{item.price}</td>
-                                                    </tr>
-                                                </tbody>
-                                                <th>Descripcion</th> 
-                                                <tbody>
-                                                    <tr>
-                                                        <td>{item.description}</td>
-                                                    </tr>
-                                                </tbody>
+                                                <td>{item.id}</td>
+                                                <td>{item.name}</td>
+                                                <td>{item.productcategory.name}</td>
+                                                <td>{item.price}</td>
+                                                <td>{item.description}</td>
                                             </tr>
-                                        </thead>
+                                        </tbody>
 
                                     ))}
 

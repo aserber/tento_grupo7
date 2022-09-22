@@ -21,8 +21,7 @@ function ContentRowTop(){
         obtenerDatos()
         
     }, [])
-
-    const obtenerDatos = async() => {
+	const obtenerDatos = async() => {
         const data = await fetch ("http://localhost:7001/api/products")
         const users = await data.json()
         console.log(users)
@@ -31,7 +30,7 @@ function ContentRowTop(){
     if (!producto || producto.length <= 0){
         return <p> No hay informacion </p>
     } else {
-		{console.log (producto[producto.length - 1].image)}
+		
     return(
 		        <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
