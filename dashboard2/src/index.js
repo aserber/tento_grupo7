@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import './assets/css/app.css';
 import reportWebVitals from './reportWebVitals';
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"></link>
 
 ReactDOM.render(
   <React.StrictMode>

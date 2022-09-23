@@ -38,16 +38,18 @@ function ContentRowTop() {
         return <p> No hay informacion </p>
     } else {
         return (
-            <div>   
-                <ul>
+            
+            <div className="row">   
+                
                     {
                         equipo.map(item => (
                             <SmallCard  {...item} key={item} />
 
                         ))
                     }
-                </ul>
+                
             </div>
+       
         )
     }
 
