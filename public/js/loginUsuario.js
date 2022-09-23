@@ -4,34 +4,15 @@ window.addEventListener("load", function(){
     //form.name.focus();
 
     form.addEventListener("submit", function (e) {
-        
+        e.preventDefault();
         let errors = [];
-        let name = document.querySelector('#name');
-        let last_name = document.querySelector('#last_name');
+        
         let password = document.querySelector('#password');
         let email = document.querySelector('#email');
-        let avatar = document.querySelector('#file');
-        var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+        
         var regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-        /// VALIDACION Nombre
-        if (name.value.length < 2 ) {
-            errors.push('El campo nombre no puede tener menos de 2 caracteres!');
-            name.classList.add('is-invalid');
-        }
-        else{
-            name.classList.add('is-valid');
-            name.classList.remove('is-invalid');
-        }
-        /// VALIDACION Apellido
-        if (last_name.value.length < 2 ) {
-            errors.push('El campo apellido no puede tener menos de 2 caracteres!');
-            last_name.classList.add('is-invalid');
-        }
-        else{
-            last_name.classList.add('is-valid');
-            last_name.classList.remove('is-invalid');
-        }
+        
         /// VALIDACION Email
 
 
@@ -45,16 +26,7 @@ window.addEventListener("load", function(){
         }
 
         
-        /// VALIDACION imagen 
-
-        if (!allowedExtensions.test(avatar.value)) {
-            errors.push('El campo imagen debe tener un archivo jpg, jpeg, png o gif!');
-            avatar.classList.add('is-invalid');
-        }
-        else{
-            avatar.classList.add('is-valid');
-            avatar.classList.remove('is-invalid');
-        }
+        
 
         
         /// VALIDACION password
@@ -68,7 +40,7 @@ window.addEventListener("load", function(){
         }
 
         if (errors.length > 0) {
-            
+            e.preventDefault();
            Swal.fire({
                icon: 'error',  
                text: 'Revise los errores!',

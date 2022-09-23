@@ -21,10 +21,13 @@
             </style>
 
             <main class="login">
+                <section id="formulario">
+                    <article class="mostrarFormulario">
+                <ul class="errores"></ul>
                 <div class="container-login">
-                    <form action="./login" method="POST">
-                        <input type="emai" name="email" placeholder="email" id?¡="email" value="<%= typeof old != 'undefined' ? old.email : '' %>">
-                            <input type="password" name="password" placeholder="Contraseña" id="password" >
+                    <form action="./login" class="form" method="POST">
+                        <input type="text" class= "email" name="email" id="email" placeholder="email" id?¡="email" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+                            <input type="password" name="password" class= "password" id="password" placeholder="Contraseña" id="password" >
                         <br>
                         <% if (locals.errors && errors.datosMal){%>
                             <span class="text-danger">
@@ -42,10 +45,13 @@
                                 <div class="text-center mb-3"><a href="./registro">Aun no poseo una cuenta</a></div>
 
                     </form>
+                </section>
+            </article>
                 </div>
 
 
-
+                <script src="/js/loginUsuario.js"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             </main>
 
         </body>
