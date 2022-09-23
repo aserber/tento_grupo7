@@ -68,7 +68,7 @@ section {
 
 body {
     margin: 0;
-    font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Montserrat;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -398,7 +398,8 @@ h6 {
 
 .h1,
 h1 {
-    font-size: 2.5rem
+    font-size: 2.5rem;
+    font-family: Montserrat
 }
 
 .h2,
@@ -413,7 +414,8 @@ h3 {
 
 .h4,
 h4 {
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    font-family: Montserrat
 }
 
 .h5,
@@ -494,7 +496,7 @@ mark {
 
 .initialism {
     font-size: 90%;
-    text-transform: uppercase
+   
 }
 
 .blockquote {
@@ -10410,7 +10412,7 @@ button.bg-dark:hover {
 .dropdown .dropdown-menu .dropdown-header,
 .sidebar .sidebar-heading,
 .text-uppercase {
-    text-transform: uppercase !important
+    text-transform: lowercase 
 }
 
 .text-capitalize {
@@ -11253,7 +11255,7 @@ a:focus {
     margin: 0;
     white-space: nowrap;
     padding: .5rem 1.5rem;
-    text-transform: uppercase;
+    
     font-weight: 800;
     font-size: .65rem;
     color: #b7b9cc
@@ -11327,7 +11329,7 @@ a:focus {
     font-weight: 800;
     padding: 1.5rem 1rem;
     text-align: center;
-    text-transform: uppercase;
+   
     letter-spacing: .05rem;
     z-index: 1
 }
@@ -12243,4 +12245,8 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
     width: 100%
+}
+
+.tento  {
+    font-family: "Montserrat" !important
 }

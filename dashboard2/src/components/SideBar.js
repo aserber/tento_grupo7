@@ -10,7 +10,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <h1 className= "tento">tentó</h1> 
+                        <h1>tentó</h1> 
                         
                     </div>
                 </a>
