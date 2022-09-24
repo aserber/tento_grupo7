@@ -4,8 +4,7 @@ window.addEventListener("load", function(){
     //form.name.focus();
 
     form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        let errors = [];
+            let errors = [];
         
         let password = document.querySelector('#password');
         let email = document.querySelector('#email');
@@ -21,8 +20,8 @@ window.addEventListener("load", function(){
             email.classList.add('is-invalid');
         } 
         else{
-            last_name.classList.add('is-valid');
-            last_name.classList.remove('is-invalid');
+            email.classList.add('is-valid');
+            email.classList.remove('is-invalid');
         }
 
         
@@ -53,16 +52,8 @@ window.addEventListener("load", function(){
                 ulErrors.innerHTML += `<li > ${errors[i]} </li>`
             }
         }
-
-        else{
-            Swal.fire({
-                icon: 'success',
-                text: 'Registrado!',
-            })
-            .then( ()=> {
-                form.submit()
-            })
-        }
+        form.submit()
+        
         
     }
 )})

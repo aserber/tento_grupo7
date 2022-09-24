@@ -26,7 +26,7 @@
                 <ul class="errores"></ul>
                 <div class="container-login">
                     <form action="./login" class="form" method="POST">
-                        <input type="text" class= "email" name="email" id="email" placeholder="email" id?¡="email" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+                        <input type="email" class= "email" name="email" id="email" placeholder="email" id?¡="email" value="<%= typeof old != 'undefined' ? old.email : '' %>">
                             <input type="password" name="password" class= "password" id="password" placeholder="Contraseña" id="password" >
                         <br>
                         <% if (locals.errors && errors.datosMal){%>
