@@ -14,7 +14,7 @@ router.get('/index', mainController.index); // m
 
 router.get('/compras', mainController.compras); //p
 
-router.get('/carrito', mainController.carrito);//p
+router.get('/carrito', mainController.mant);//p
 
 router.get('/nosotros', mainController.nosotros);//p
 
@@ -22,5 +22,6 @@ router.get('/accesodenegado', mainController.accesodenegado);//p
 
 router.get('/faq', mainController.faq);//p
 
+router.get('/mantenimiento', mainController.mant);//p
 
 module.exports = router;

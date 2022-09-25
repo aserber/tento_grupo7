@@ -10410,8 +10410,8 @@ button.bg-dark:hover {
 }
 
 .dropdown .dropdown-menu .dropdown-header,
-.sidebar .sidebar-heading,
-.text-uppercase {
+.sidebar .sidebar-heading
+ {
     text-transform: lowercase 
 }
 

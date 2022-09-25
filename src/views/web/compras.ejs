@@ -17,7 +17,7 @@
 
     <main class="registercompras">
         <div class="container-miscompras">
-            <form action="/" method="POST">
+            <form action="/mantenimiento" method="get">
                 <input class="textInput" type="text" name="name" placeholder="Nombre y apellido">
                 <input class="textInput" type="text" name="user" placeholder="Nombre de usuario">
                 <input class="textInput" type="email" name="email" placeholder="E-mail">
@@ -25,7 +25,7 @@
                 <input class="textInput" type="text" name="addres" placeholder="Domicilio"><br>
                 <div class="medios">
                     <h4>Medios de pago</h4>
-                    <div class="profile">
+                    <div class="profile">   
                         <div>
                             <input type="radio" id="pago" name="pago" value="pago">
                             <label for="pago"> Efectivo</label>
@@ -37,7 +37,7 @@
                     </div>
                 </div> <br><br>
                 <div class="botonera">
-                    <input type="submit" value="Confirmar">
+                    <a href="/mantenimiento"><input type="submit" value="Confirmar"></a>
                     <input type="reset" value="Borrar">
                 </div>
             </form>
