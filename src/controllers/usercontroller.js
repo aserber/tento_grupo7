@@ -37,7 +37,7 @@ const controller = {
             last_name: req.body.last_name,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
-            id_usercategory: 1,
+            id_usercategory: 2,
             avatar: req.file ? req.file.filename : '',
 
           }
@@ -124,7 +124,7 @@ const controller = {
       else {
         let usuario = {
       ...req.body,
-      avatar: req.file ? req.file.filename : '',
+      avatar: req.file ? req.file.filename : req.body.oldImagen,
     }
     console.log (usuario.name),
     db.User.update(usuario, { where: { id: req.params.id } })

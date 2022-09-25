@@ -15,7 +15,7 @@ const validaciones = require("../middlewares/validaciones");
 
 router.get('/registro', authMiddleware, userController.register); //u
 router.post('/registro', uploadFile.single('avatar'),validaciones.validar('register'), userController.save);
-router.get('/login', auth3Middleware,userController.login); //u
+router.get('/login', auth3Middleware,validaciones.validar('login'),userController.login); //u
 router.post('/login',userController.ingresar);
 router.get('/logout', userController.logout);
 router.get('/profile', authiMiddleware, userController.profile);//

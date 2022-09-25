@@ -81,6 +81,23 @@ module.exports.validar = (method) => {
 
             ]
         }
+        case 'login': {
+            return [
+                body ('email').isEmail().withMessage('Agregar un email válido'),
+                
+                body('password').isLength({min: 8 }).withMessage('La contraseña debe tener un mínimo de 8 caractéres'),
+                
+                body('email').custom( (value  ) =>{
+                    db.User.findOne({where:{email :value}})
+                    .then(result=>{
+                        if(result){
+                        return true
+                        }
+                        return false
+                    })
+                }).withMessage('Usuario no se encuentra registrado...')
+                ]
+          }
     }
 
 }

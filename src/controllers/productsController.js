@@ -30,16 +30,21 @@ const controller = {
 		Promise
 			.all([categoria, products])
 			.then(([categoria, products])  => {	
+				
 				let product = products.filter(row => {
 					return row.id_productcategory == req.params.category
-				})
-				res.render('productos/producto', {
-					product,
-					categoria,
-					toThousand
-				})
+				}) 
+				if (product == undefined || categoria == undefined) {
+					res.redirect('admin/error')
+				} else {
+					res.render('productos/producto', {
+						product,
+						categoria,
+						toThousand
+						})
+				}
 			})
-	},
+		},
 
 
 	detail: (req, res) => {
@@ -47,7 +52,7 @@ const controller = {
 		)
 			.then(product => {
 				if (product == undefined) {
-					res.redirect('/admin/error')
+					res.redirect('admin/error')
 				} else {
 					res.render('productos/detail', {
 						product,
@@ -55,7 +60,7 @@ const controller = {
 					})
 				}
 			});
-	},
+	}
 
 }
 
