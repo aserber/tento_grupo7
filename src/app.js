@@ -12,6 +12,9 @@ const acceso = require("./middlewares/acceso")
 const app = express();
 const guestMiddleware = require('./middlewares/guest');
 
+
+
+
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false }));
@@ -42,6 +45,7 @@ const adminRouter = require('./routes/admin'); // Rutas admin
 const apiRouter = require('./routes/rutasapis/apis'); // Rutas admin
 const apisUser = require('./routes/rutasapis/apisUser'); // Rutas user
 const apiCat = require('./routes/rutasapis/apiCat'); // Rutas user
+const { application } = require('express');
 
 app.use('/', mainRouter); //(web) home-index
 app.use('/usuario', userRouter); //usuarios
@@ -50,6 +54,9 @@ app.use('/admin',guestMiddleware, adminRouter); //administracion
 app.use('/api',apiRouter); //rutas apis
 app.use('/api',apisUser); //rutas apis
 app.use('/api',apiCat); //rutas apis
+app.get("*",(req,res)=>{
+    res.render('./web/404')
+})
 
 module.exports = app;
 
