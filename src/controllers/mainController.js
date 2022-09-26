@@ -15,7 +15,9 @@ const controller = {
 	home: (req, res) => {
         return res.render('web/home');
     },
-
+	mant: (req, res) => {
+        return res.render('web/mantenimiento');
+    },
 	
 
     index: (req, res) =>{
