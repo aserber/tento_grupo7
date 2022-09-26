@@ -507,11 +507,13 @@ mark {
 .blockquote-footer {
     display: block;
     font-size: 80%;
-    color: #858796
+    background-color: black
 }
 
 .blockquote-footer::before {
-    content: "\2014\00A0"
+    content: "\2014\00A0";
+    background-color: black;
+
 }
 
 .img-fluid {
@@ -4818,8 +4820,8 @@ input[type=submit].btn-block {
 
 .card-footer {
     padding: .75rem 1.25rem;
-    background-color: #f8f9fc;
-    border-top: 1px solid #e3e6f0
+    background-color: white;
+    border-top: 1px solid black
 }
 
 .card-footer:last-child {
@@ -6089,11 +6091,13 @@ a.close.disabled {
 }
 
 .modal-footer>:not(:first-child) {
-    margin-left: .25rem
+    margin-left: .25rem;
+    background-color: black;
 }
 
 .modal-footer>:not(:last-child) {
-    margin-right: .25rem
+    margin-right: .25rem;
+    background-color: black;
 }
 
 .modal-scrollbar-measure {
@@ -12235,16 +12239,20 @@ form.user .btn-user {
 
 footer.sticky-footer {
     padding: 2rem 0;
-    flex-shrink: 0
+    flex-shrink: 0;
+    background-color: black;
 }
 
 footer.sticky-footer .copyright {
     line-height: 1;
-    font-size: .8rem
+    font-size: .8rem;
+    background-color: black;
 }
 
 body.sidebar-toggled footer.sticky-footer {
-    width: 100%
+    width: 100%;
+    background-color: black;
+
 }
 
 .tento  {
