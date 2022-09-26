@@ -143,11 +143,13 @@ h2 {
     color: white;
     align-items: bottom;
     margin-top: 120px;
+    justify-content: space-around !important
 }
 
 .footer2 {
     font-size: 15px;
     align-items:flex-start;
+    justify-content: space-around !important;
 }
 
 .redessociales {

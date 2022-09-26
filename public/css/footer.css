@@ -23,16 +23,18 @@ body, html{
 
 .footer .container{
     
-    width: 90%;
+    width: 1000%;
     height: 250px;
-    margin-left: 70px;
+    margin-left: 150px;
     display: flex;
     flex-direction: row;
+    align-items: space-between;
 }
 
 .container .containerX{
     width: 25%;
     height: 100%;
+    align-items: space-between;
     /* border: 1px solid #ffffff; */
 }
 
