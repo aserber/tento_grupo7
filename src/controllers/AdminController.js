@@ -101,7 +101,11 @@ const controller = {
                 }
                 else {
 					let producto = {
-						...req.body,
+					name: req.body.name,
+					price: req.body.price,
+					discount: req.body.discount,
+					id_productcategory: req.body.category,
+					description: req.body.description,
 					image: req.file ? req.file.filename : req.body.oldImagen,
 				}
 				console.log (producto.id_productcategory),
