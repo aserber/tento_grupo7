@@ -8,7 +8,7 @@
 
             <section id="formulario">
                 <article class="mostrarFormulario">
-                    <ul class="errores"></ul>
+                    
 
 
             <form action="/usuario/profile/<%= userToEdit.id %>" method="POST" enctype="multipart/form-data" id= "form" class="form">
@@ -41,10 +41,13 @@
                     <% } %>
       
                 <button type="submit" class="buy-now-button">Guardar usuario</button>
-                <a href="/usuario/profile" class="action-button edit">Volver</a>
+                <a href="/usuario/profile" class="action-button edit">Volver</a><br><br>
+                <ul class="errores"></ul>
                 </div>
             </div>
         </form>
+        <br><br>
+        
         </article>
         </section>
         <script src="/js/editUser.js"></script>

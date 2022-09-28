@@ -664,3 +664,13 @@ font-weight: bold;
     align-items: center;
 }
 
+.errores {
+    font-size: 15px;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    background-color: transparent !important;
+    justify-content: center !important;
+    align-items: center !important;
+   
+}
+

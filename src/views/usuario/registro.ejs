@@ -8,7 +8,7 @@
         <body class="prod">
 
 
-            <h3>Registro</h3>
+            <h3 class="inicio">Ingresar</h3><br>
             <style>
                 h3 {
                     font-size: 45px;
@@ -30,7 +30,7 @@
 
                     <section id="formulario">
                         <article class="mostrarFormulario">
-                            <ul class="errores"></ul>
+                            
                     <form action="./registro" method="POST" class="form" enctype="multipart/form-data">
                         
                         <input type="text" name="name" placeholder="Nombre" id="name" value="<%= typeof old != 'undefined' ? old.first_name : '' %>">
@@ -55,6 +55,7 @@
                             <input type="reset" value="Borrar">
                         </div>
                         <div class="text-center my-3">Ya tengo una cuenta? <a href="./login">Inicia sesión</a></div>
+                        <ul class="errores"></ul>
                     </form>
                     </article>
                 </section>
