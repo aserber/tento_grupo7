@@ -33,7 +33,7 @@ window.addEventListener("load", function(){
         }
         
 /// VALIDACION discount
-if (discount.value <= 0 || discount.value > 99) {
+if (discount.value < 0 || discount.value > 99) {
     errors.push('El campo descuento no puede ser menor a 0 y mayor a 99%!');
     discount.classList.add('is-invalid');
 }
